@@ -1,0 +1,14 @@
+.container{
+    background: white;
+    padding: 20px;
+    width: 859px;
+    height: 489;
+    margin-top: 12%;
+    border: slategrey;
+    border-style: none;
+    height: 250px;
+    /* margin-left: -24%; */
+    position: absolute;
+    left: 261px;
+    top: 30px;
+}

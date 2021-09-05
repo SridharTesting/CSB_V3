@@ -1,0 +1,283 @@
+
+
+body {
+  background: #333;
+  color: #fff;
+}
+
+.navbar {
+  border-bottom: #008ed6 3px solid;
+  opacity: 0.8;
+}
+
+#home-section {
+  /* background: url("assets/Images/big.jpg"); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 600px;
+}
+
+#home-section .dark-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 700px;
+  background-color:  white;
+}
+
+#home-section .home-inner {
+  padding-top: 150px;
+}
+
+#home-section .card-form {
+  opacity: 0.8;
+}
+
+#home-section .fas,
+#create-section .fas {
+  color: #008ed6;
+  background: #fff;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+#explore-section .fas,
+#share-section .fas {
+  background: #333;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.navbar-custom {
+    background-color:  #00008B;
+}
+
+/* Modify brand and text color */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color: White;
+}
+
+.glyphicon-log-out{
+   color:white;
+    top: 22px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    right: 150%;
+    -moz-osx-font-smoothing: grayscale;
+    padding-left: 10px;
+    }
+    .logout
+{
+  top: 2%;/* width: 1%; */ font-size: 1.5em;
+  padding-right: 0;
+}
+
+
+
+* {box-sizing: border-box}
+
+/* Container needed to position the overlay. Adjust the width as needed */
+.container {
+position: relative;
+width: 50%;
+max-width: 300px;
+}
+
+/* Make the image to responsive */
+.image {
+display: block;
+width: 100%;
+height: auto;
+}
+
+/* The overlay effect - lays on top of the container and over the image */
+.overlay {
+position: absolute;
+bottom: 0;
+background: rgb(0, 0, 0);
+background: rgba(0, 0, 0, 0.5); /* Black see-through */
+color: #f1f1f1;
+width: 100%;
+transition: .5s ease;
+opacity:0;
+color: white;
+font-size: 20px;
+padding: 20px;
+text-align: center;
+}
+
+/* When you mouse over the container, fade in the overlay title */
+/* .container:hover .overlay {
+opacity: 1;
+} */
+
+
+
+
+.card-container{
+position: relative;
+width: 100%;
+display: flex;
+/* justify-content: center; */
+align-items: center;
+flex-wrap: wrap;
+flex-direction: row;
+ padding: 60px;
+}
+
+.card-container .card{
+position: relative;
+max-width: 260px;
+height: 215px;
+background: rgb(195, 195, 195);
+margin: 50px 20px;
+padding: 20px 15px;
+display: flex;
+flex-direction: column;
+/* box-shadow: 0 7px 7px 3px rgba(0, 0, 0, 0.212); */
+transition: 0.5s ease-in-out;
+border-radius: 30px;
+}
+
+/* .card-container .card:hover{
+height: 420px;
+} */
+
+.card-container .card .imgBx{
+  border-width: 0.10px;
+  border-style: solid;
+  border-color: purple;
+color: #ffffff;
+background: white;
+position: relative;
+width: 260px;
+height: 260px;
+top: -60px;
+left: -16px;
+z-index: 10;
+/* box-shadow: 0 5px 20px rgba(0, 0, 0, 0.185); */
+border-radius: 30px;
+}
+
+.card-container .card .imgBx h4{
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 5px;
+border-width: 0.10px;
+border-style: solid;
+border-color: purple;
+
+}
+
+.card-container .card .imgBx img{
+max-width: 100%;
+border-radius: 4px;
+}
+
+.card-container .card .content{
+position: relative;
+margin-top: -140px;
+padding: 10px 5px;
+text-align: center;
+color:gray;
+visibility: hidden;
+opacity: 0;
+transition: 0.3s ease-in-out;
+line-height: 29px;
+}
+
+.square_btn{
+  display: flex;
+  padding: 7px 33px;
+border-radius: 25px;
+  text-decoration: none;
+  margin-top: -3%;
+  margin-left: 71%;
+  width: 210px;
+  color: #FFF;
+ background-color: purple;
+  transition: .4s;
+}
+
+.card-container .card .content p{
+padding: 12px;
+}
+
+/* .card-container .card:hover .content{
+visibility: visible;
+opacity: 1;
+margin-top: -40px;
+transition-delay: 0.3s;
+} */
+
+@media all and (max-width: 750px) {
+.navbar .nav{
+    display: none;
+}
+}
+
+.mat-radio-button ~ .mat-radio-button {
+  margin-left: 16px;
+}
+
+button{
+  margin-left:100px;
+  border-radius: 15px;
+  width:200px;
+  background-color:purple;
+  border-style: none;
+  cursor: pointer;
+}
+
+#contact{
+  color:gray;
+}
+
+h1{
+  border-width: 0.10px;
+  border-style: solid;
+  border-color: purple;
+  border-radius: 10px;
+  color: grey;
+  width: 81%;
+  margin-left: 28px;
+  margin-top: 5px;
+}
+
+
+.dropzone{
+  width: 132px;
+  height: 131px;
+  border: 2px dotted #ccc;
+  color: #000;
+  line-height: 300px;
+  text-align: center;
+  background-color: white;
+  margin-left: 62px;
+  margin-top: 35px;
+}
+ngx-dropzone{
+  width:80%;
+  height: 60%;
+  margin-top: 26px;
+  margin-left: 25px;
+}
+
+input{
+  margin-left: 35px;
+  margin-top: 5px;
+  width: 80%;
+
+}
+
+
+

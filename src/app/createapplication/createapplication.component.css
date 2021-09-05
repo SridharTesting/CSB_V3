@@ -1,0 +1,22 @@
+
+  mat-select{
+    
+    /* White / 100 */
+    
+    background: #F9F9F9;
+    /* Main / 04 */
+    
+    border: 2px solid #007ACC;
+    box-sizing: border-box;
+    border-radius: 4px;
+      }
+    
+    
+    
+      ::ng-deep .mat-select-placeholder {
+     color:#00416D ;
+      }
+      .btn{
+        text-transform: none;
+        height: 44px;
+      }

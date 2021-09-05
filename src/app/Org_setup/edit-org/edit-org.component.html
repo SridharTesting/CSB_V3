@@ -1,0 +1,110 @@
+<div>
+  <form  [formGroup]="registerForm" (ngSubmit)="updateOrg()">
+      <h3>Organization Details:</h3>
+      
+        <div class="form-row">
+          <div class="col-md-7">
+            <div class="md-form">
+              <label for="orgname" style="margin-left:-17%">Name<span style="color: #ff0000">*</span></label>
+              <input type="text"  class="form-control" id="orgname" formControlName="orgName" placeholder="Organization name" 
+               [ngClass]="{ 'is-invalid': submitted &amp;&amp; registerForm.controls.orgName.errors }" required />
+              <div *ngIf="submitted &amp;&amp; registerForm.controls.orgName.errors" class="text-danger">
+                <div *ngIf="registerForm.controls.orgName.errors.required">Please enter a valid Name</div>
+                
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="md-form">
+              <label for="orgtype" style="margin-left:-17%">Type</label>
+              <label class="container1" > 
+              <input type="checkbox"   data-md-icheck (change)="toggleVisibility($event)"/>
+      Head office <span *ngIf="marked"></span><span *ngIf="!marked"></span>
+  
+    <span class="checkmark"></span>
+            </label>
+            
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="md-form">
+              <label for="inputAddress" style="margin-left:-26%">Address1<span style="color: #ff0000">*</span></label>
+              <input type="text" class="form-control" id="inputAddress" formControlName="add1"
+              placeholder="1234 Main St" 
+              [ngClass]="{ 'is-invalid': submitted &amp;&amp; registerForm.controls.add1.errors }" required />
+              <div *ngIf="submitted &amp;&amp; registerForm.controls.add1.errors" class="text-danger">
+                <div *ngIf="registerForm.controls.add1.errors.required">Please enter a valid Address </div>
+              </div>
+            </div>
+          </div>
+    
+      
+      
+        </div>
+  
+       
+        <hr><br>
+  
+        <br>
+        <h3 ><b>Contact Details:</b></h3>
+  
+        <div class="form-row" style="margin-top: -3%;">
+          <div class="col-md-2">
+            <div class="md-form">
+              <label for="contactname" style="margin-left: -35%;">Name<span style="color: #ff0000">*</span></label>
+              <input type="text" class="form-control" id="contactname" formControlName="contactName" 
+              placeholder="Abcd" />
+              <div *ngIf="submitted &amp;&amp; registerForm.controls.contactName.errors" class="text-danger">
+                <div *ngIf="registerForm.controls.contactName.errors.required">Enter a valid name</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-3">
+            <div class="md-form">
+              <label for="contactnumber" style="margin-left: -20%;">Mobile Number<span style="color: #ff0000">*</span></label>
+              <input type="text" class="form-control" id="contactnumber" style="margin-left: 37%;"formControlName="contact" 
+              placeholder="8234672914"  
+              [ngClass]="{ 'is-invalid': submitted &amp;&amp; registerForm.controls.contact.errors }" 
+              onKeyPress="if(this.value.length==10) return false;" required />
+              <div *ngIf="submitted &amp;&amp; registerForm.controls.contact.errors" class="text-danger">
+                <div *ngIf="registerForm.controls.contact.errors.required">Cotact is required</div>
+                <div *ngIf="registerForm.controls.contact.errors.pattern">Please enter numbers</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="md-form">
+              <label for="email">Email Id<span style="color: #ff0000">*</span></label>
+              <input type="email" class="form-control" id="emailId" style="margin-left:34%" formControlName="email" 
+              [ngClass]="{ 'is-invalid': submitted &amp;&amp; registerForm.controls.email.errors }" required />
+              <div *ngIf="submitted &amp;&amp; registerForm.controls.email.errors" class="text-danger">
+                <div *ngIf="registerForm.controls.email.errors.required">Please enter a valid EmailId</div>
+                <div *ngIf="registerForm.controls.email.errors.pattern">Please enter a valid EmailId</div>
+              </div>
+            </div>
+           
+          </div>
+          <div class="col-md-2">
+            <div class="md-form">
+              <label for="inputZip">Zip Code</label>
+              <input type="text" class="form-control" id="inputZip" style="margin-left:59%" formControlName="zipCode" />
+              
+            </div>
+          </div>
+        </div>
+  
+       
+        
+        
+        
+        
+      
+  
+        <button type="submit" class="btn btn-primary btn-xs btn-block" style="    
+        margin-left: 89%;
+  margin-top: 14%;">Update</button>
+      
+       
+      </form>
+  </div>

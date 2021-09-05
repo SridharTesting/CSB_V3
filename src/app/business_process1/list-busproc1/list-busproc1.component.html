@@ -1,0 +1,92 @@
+<div class="article_title">
+    <h1 id="top">
+     Business Process Level1 Setup
+    </h1>
+  </div>
+  <mat-divider id="divider"></mat-divider>
+  
+  <mat-drawer-container>
+    <mat-drawer-content class="content" > 
+        <div *ngIf="this.businessprocess1List.length>0">
+          
+        <div class="test" >
+          
+          <div class="container">
+            
+                <div class="row col-md-6 col-md-offset-2 custyle">
+                <table class="table table-striped custab">
+                <thead>
+                    <tr>
+                        
+                        <th>Organization Name</th>
+                        <th>Process Level1 Name</th>
+                        <th>Process Level1 Description</th>
+                        <th>Update</th>
+                        <th>Delete</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let businessprocess1 of businessprocess1List| paginate: { id: 'listing_pagination',
+                    itemsPerPage: 5,
+                    currentPage: page,
+                    totalItems: totalRecords }" >
+                        
+                      <td>{{businessprocess1.orgName}}</td>
+                      <td>{{businessprocess1.busproLevel1Name}}</td>
+                      <td>{{businessprocess1.busproLevel1Desc}}</td>
+                      
+                       <td> <button mat-icon-button color="accent" 
+                        (click)="editBusProc1(businessprocess1.busproLevel1Id)">
+                          <mat-icon class="mat-18">system_update</mat-icon>
+                         </button></td> 
+                                              <td> <button mat-icon-button color="warn"  (click)="deleteBusProc1(businessprocess1.busproLevel1Id)">
+                     
+                                                 <mat-icon class="mat-18">delete</mat-icon>
+                                                </button>
+                                                
+                                            </td>
+                        
+                      
+                        
+  
+                        
+                    </tr>
+                </tbody>
+                </table>
+              
+                
+                <div class="pagination">
+                  <pagination-controls  id="listing_pagination" maxSize="5" directionLinks="true" (pageChange)="page = $event"></pagination-controls>
+                </div>
+          
+                <button type="button" class="btn btn-primary btn-xs  btn-block" style=" margin-left: -10%;  float: right; margin-right: 15%;margin-top: -7%;"
+              
+
+     (click)="addNewBusProc1()">Add new Process</button>
+                <router-outlet></router-outlet>
+                </div>
+            </div>
+          
+        
+        </div>
+        
+          
+        
+
+      </div>
+        <div *ngIf="this.businessprocess1List.length===0">
+            <button type="button" class="btn btn-primary btn-xs  btn-block"
+              
+
+            (click)="addNewBusProc1()">Add new Process</button>
+            <router-outlet></router-outlet>
+        </div>
+
+      
+</mat-drawer-content>
+
+</mat-drawer-container>
+
+
+

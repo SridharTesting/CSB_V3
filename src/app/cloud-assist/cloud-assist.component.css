@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+    font-family: "Lato", sans-serif;
+  }
+  * {box-sizing: border-box}
+  
+  .sidebar {
+    margin: 0;
+    padding: 0;
+    width: 258px;
+    background-color:#87CEFA;
+    position: fixed;
+    height: 65%;
+    overflow: auto;
+    margin-left: -61px;
+  }
+  
+  .sidebar a {
+    display: block;
+    color:  black;
+    padding: 16px;
+    text-decoration: none;
+  }
+   
+  .sidebar a.active {
+    background-color: #00008B;
+    color: white;
+  }
+  
+  .sidebar a:hover:not(.active) {
+    background-color:#00008B;
+    color: white;
+  }
+  
+  div.content {
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1000px;
+  }
+
+  @media screen and (max-width: 700px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .sidebar a {float: left;}
+    div.content {margin-left: 0;}
+  }
+  
+  @media screen and (max-width: 400px) {
+    .sidebar a {
+      text-align: center;
+      float: none;
+    }
+}
+.container{
+    padding-left: 150px;
+    padding-top: 80px;
+}
+.tab-content.active {
+    display: block;
+    padding-left: 0px;
+    padding-top: 15px;
+}
+input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea {
+    background-color: white;
+    border: none;
+    border-bottom: 1px solid #399cbd;
+    border-radius: 47;
+    outline: none;
+    height: 3rem;
+    width: 80%;
+    font-size: 16px;
+    margin: 2px 5px 8px 2px;
+    padding: -9px;
+    -webkit-box-shadow: none;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    -webkit-transition: border .3s, -webkit-box-shadow .3s;
+    transition: border .3s, -webkit-box-shadow .3s;
+    transition: box-shadow .3s, border .3s;
+    transition: box-shadow .3s, border .3s, -webkit-box-shadow .3s;
+}
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #4e555b;
+    margin-top:200px;
+}
+.btn-secondary:not(:disabled):not(.disabled).active, .btn-secondary:not(:disabled):not(.disabled):active, .show>.btn-secondary.dropdown-toggle {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #4e555b;
+    margin-top: 200px;
+    margin-left: 20px;
+}
+.heading
+{
+    margin-left: 70px;
+    margin-top: 3%;
+    width:90%;
+    font-size: 21px;
+    line-height: 2rem;
+    font-weight: 500;
+}
+.heading1
+{
+  margin-left: 72px;
+    font-size: 21px;
+    line-height: 2rem;
+    font-weight: 500;
+}
+input, button, select, textarea {
+    font-family: inherit;
+    font-size: 20px;
+    line-height: inherit;
+}
+.card 
+{
+  margin-left: 15%;
+  margin-top: -1px;
+  height:490px;
+}
+.heading2
+{
+  margin-left: 71px;
+    font-size: 20px;
+    font-weight: 500;
+}

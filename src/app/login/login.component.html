@@ -1,0 +1,47 @@
+
+
+
+<div class="container">
+  <div id="icon" style="margin-left: 36%;
+  margin-top: 3%;">
+  <img src="assets/Images/boss_man-512.png" style="width: 32px;height:32px;margin-left: -21px;margin-top: -6px;">
+  </div><div id="label"><h1 style="text-align: center;font-family: Arial, Helvetica, sans-serif; color: purple;"
+class="mt-5">User Login</h1></div>
+<form [formGroup]="loginForm"  (ngSubmit)="login()" class="text-center ">
+
+
+   <div class="form-group mt-5" >
+
+    <input type="email" class="form-control mx-auto" id="exampleInputEmail1"
+    style="width: 80%;  "
+     formControlName="email" required aria-describedby="emailHelp" placeholder="Enter email">
+  </div>
+
+
+
+
+   <div class="form-group mt-5">
+
+    <input type="password" class="form-control mx-auto" id="exampleInputPassword1" style="width: 80%;"
+     placeholder="Password" formControlName="password"  required>
+  </div>
+<div style="margin-left: 58px;width: 80%;">
+  <select class="form-control" formControlName="org"
+  id="org"  style="background-color: lightgrey;margin-top: 40px;" (change)="onChangeOfDropdown($event.target.value)">
+    <option value="" selected="selected" style="color: purple;">Select Organization</option>
+    <option *ngFor="let lob of lobList |dropdownLOB"  [ngValue]="{id: lob.orgId, name: lob.orgName}">
+
+      {{lob.orgName}}
+
+
+       </option>
+  </select>
+</div>
+   <div>
+     <button mat-raised-button color="primary" class="mt-3" type="submit">Login</button>
+   </div>
+   <div class="mt-5" *ngIf="invalidLogin">
+     <mat-error >Login Unsuccessfull</mat-error>
+   </div>
+</form>
+</div>

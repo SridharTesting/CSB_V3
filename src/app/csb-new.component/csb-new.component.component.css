@@ -1,0 +1,158 @@
+.navbar-default {
+  background-color: #ffffff !important; 
+  border-color: #ffffff !important;
+  }
+  .navbar-default {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  }
+  .breadcrumb>li+li:before {
+  padding: 0 5px;
+  background-color: #F8F8F8;
+  content: "";
+  }
+  .table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
+  padding: 8px;
+  line-height: 1.42857143;
+  vertical-align: top;
+  border-top: 0px solid #ddd;
+  }
+  
+  .card-body {
+      -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
+      padding: 5.25rem;}
+
+      mat-select{
+          border:1px solid #3997d6;
+          height: 36px;
+          border-radius: 2px;
+        }
+      
+        mat-option {
+          text-overflow: unset;
+         min-width: fit-content;
+        }
+      ::ng-deep.mat-select-trigger{
+        margin-top: 6px;
+      }
+
+      ::ng-deep.mat-select-value-text{
+
+          margin-left: 77px;
+      }
+      .btn{
+        text-transform: none;
+        height: 44px;
+      }
+
+      .card-title{
+
+        
+      }
+      .card1{
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 32px;
+    
+        
+        display: flex;
+        align-items: center; color: rgba(34, 40, 49, 0.8);
+
+      }
+
+      .header{
+
+        font-family: Open Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
+line-height: 32px;
+/* identical to box height, or 133% */
+
+display: flex;
+align-items: center;
+font-feature-settings: 'tnum' on, 'lnum' on;
+
+/* Secondary / 80 */
+
+color: rgba(34, 40, 49, 0.8);
+
+      }
+
+      .content{
+font-family: Open Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 28px;
+/* identical to box height, or 140% */
+
+display: flex;
+align-items: center;
+font-feature-settings: 'tnum' on, 'lnum' on;
+
+/* Secondary / 80 */
+
+color: rgba(34, 40, 49, 0.8);
+
+
+          
+        }
+        .card1{
+          font-family: Open Sans;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 24px;
+          line-height: 32px;
+      
+          
+          display: flex;
+          align-items: center; color: rgba(34, 40, 49, 0.8);
+
+        }
+
+        .header{
+
+          font-family: Open Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
+line-height: 32px;
+/* identical to box height, or 133% */
+
+display: flex;
+align-items: center;
+font-feature-settings: 'tnum' on, 'lnum' on;
+
+/* Secondary / 80 */
+
+color:rgba(34, 40, 49, 0.9);
+
+        }
+
+        .content{
+font-family: Open Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 28px;
+/* identical to box height, or 140% */
+
+display: flex;
+align-items: center;
+font-feature-settings: 'tnum' on, 'lnum' on;
+
+/* Secondary / 80 */
+
+color: rgba(34, 40, 49, 0.8);
+
+
+        }
+        ::ng-deep .mat-select-value-text {
+          margin-left: 10px;
+        }
+     
+        .text {cursor: click;}

@@ -1,0 +1,303 @@
+
+<html lang="en">
+  <app-header></app-header>
+  <app-menu-headers></app-menu-headers>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="submit-files-apr.component.css">
+  <title>Bootstrap Theme</title>
+</head>
+
+<body data-spy="scroll" data-target="#main-nav" id="home">
+
+
+  <!-- HOME SECTION -->
+  <header id="home-section">
+    <div class="dark-overlay">
+
+<div style="margin-top:157px;color: white;margin-left: 30px;">
+  <h2 class="display-4" style="color: grey;margin-left: 72px;font-size: 26px;">
+
+    <strong>Submit Questioner APR Analysis</strong>
+    <div class="d-inline-block" style="margin-left:856px;
+    margin-top: 11px;">
+      <h2 style="margin-left:-60px;
+      margin-top: -45px;">
+      <i class="fa fa-university" aria-hidden="true" style="
+      position: fixed;
+
+      font-size: 40px;
+      color:#2e75b6;"></i></h2>
+     <h2 style="color: white;color:#2e75b6;
+      position: fixed;
+      margin-left:-15px;
+      margin-top: -10px;
+      font-size: 20px;
+      font-weight: bold;"> {{orgName}}</h2>
+      </div>
+  </h2>
+    </div>
+<!-- Responsive Cards Start -->
+
+
+<div class="card-container" style="margin-top: -68px;margin-left: 15px;">
+
+
+  <div class="card">
+
+      <div class="imgBx">
+        <a (click)=" uploadfiles()">
+          <ngx-dropzone style="width:80%;
+          height: 60%;
+          margin-top: 26px;
+          margin-left: 25px;" (change)="onSelect0($event)">
+            <label class="mx-auto">
+              <i class="fa fa-upload" style="color:greenyellow;margin-left: 34px;" aria-hidden="true"></i><br>Drag and Drop</label>
+            <ngx-dropzone-preview *ngFor="let f of files1" [removable]="true" (removed)="onRemove0(f)">
+              <ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
+            </ngx-dropzone-preview>
+          </ngx-dropzone>
+
+        <input  type="file" >
+
+          <h1 (click)="onApplicationClicked()"><i class="fa fa-upload" style="color: greenyellow;    margin-left: 23px;"  aria-hidden="true"></i><strong>&nbsp;Application</strong></h1>
+        </a>
+      </div>
+
+
+  </div>
+  <div class="card">
+      <div class="imgBx">
+        <a (click)=" submitQuestions()">
+          <ngx-dropzone (change)="onSelect1($event)">
+            <label class="mx-auto">
+              <i class="fa fa-upload" style="color:greenyellow;margin-left: 34px;" aria-hidden="true"></i><br>Drag and Drop</label>
+            <ngx-dropzone-preview *ngFor="let f of files2" [removable]="true" (removed)="onRemove1(f)">
+              <ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
+            </ngx-dropzone-preview>
+          </ngx-dropzone>
+
+        <input  type="file" >
+        <h1 (click)="onInfrastructureClicked()"><i class="fa fa-upload" style="color:greenyellow;     margin-left: 13px;"  aria-hidden="true"></i><strong>&nbsp;Infrastructure</strong></h1>
+      </a>
+
+      </div>
+
+  </div>
+  <div class="card">
+
+      <div class="imgBx">
+        <a (click)=" maintainInfo()">
+          <ngx-dropzone (change)="onSelect2($event)">
+            <label class="mx-auto">
+              <i class="fa fa-upload" style="color:greenyellow;margin-left: 34px;" aria-hidden="true"></i><br>Drag and Drop</label>
+            <ngx-dropzone-preview *ngFor="let f of files3" [removable]="true" (removed)="onRemove2(f)">
+              <ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
+            </ngx-dropzone-preview>
+          </ngx-dropzone>
+
+        <input  type="file" >
+          <h1 (click)="onProcessClicked()"><i class="fa fa-upload" style="color:greenyellow;     margin-left: 46px;" aria-hidden="true"></i><strong>&nbsp;Process</strong></h1>
+          </a>
+      </div>
+      <!-- <div class="content">
+
+          <p>Admin have access to all organization and provide clarity of vision and concrete
+            on to successfully adopt cloud.
+           </p>
+
+      </div> -->
+  </div>
+ <div class="card">
+      <div class="imgBx">
+        <a (click)=" goBack()">
+          <img  src="../../../assets/Images/back.png"
+          style="height:70px; width: 70px; margin-left: 87px; margin-top: 85px;margin-bottom: 48px;">
+          <h2 style="margin-left: 102px;font-size: 26px;color: gray;  margin-top: 14px;"><strong>Back</strong></h2>
+          </a>      </div>
+      <!-- <div class="content">
+
+          <p class="para">A  provides an organization with the clarity of vision and concrete
+            steps required to successfully adopt cloud ok.
+
+
+           </p>
+      </div> -->
+
+  </div>
+
+  <a
+  (click)="ApplicationTemplateClicked()"
+  class="square_btn"
+  style="
+    padding-left: 49px;
+    margin-left: 40px;
+    margin-top: -10px;
+    height: 43px;
+    padding-top: 7px;
+    font-size: 19px;
+    font-size: 19px;
+  ">
+  <img
+    src="../../../../assets/Images/output-onlinepngtools.png"
+    style="
+      width: 23px;
+      margin-bottom: 0px;
+      margin-left: 0;
+      margin-top: 5px;
+      height: 23px;
+    "
+  />&nbsp;&nbsp;Questioner </a>
+  <a
+  (click)="InfrastructureTemplateClicked()"
+  class="square_btn"
+  style="
+    padding-left: 49px;
+    margin-left: 96px;
+    margin-top: -10px;
+    height: 43px;
+    padding-top: 7px;
+    font-size: 19px;
+    font-size: 19px;
+  ">
+  <img
+    src="../../../../assets/Images/output-onlinepngtools.png"
+    style="
+      width: 23px;
+      margin-bottom: 0px;
+      margin-left: 0;
+      margin-top: 5px;
+      height: 23px;
+    "
+  />&nbsp;&nbsp;Questioner </a>
+  <a
+  (click)="ProcessTemplateClicked()"
+  class="square_btn"
+  style="
+    padding-left: 49px;
+    margin-left: 90px;
+    margin-top: -10px;
+    height: 43px;
+    padding-top: 7px;
+    font-size: 19px;
+    font-size: 19px;
+  ">
+  <img
+    src="../../../../assets/Images/output-onlinepngtools.png"
+    style="
+      width: 23px;
+      margin-bottom: 0px;
+      margin-left: 0;
+      margin-top: 5px;
+      height: 23px;
+    "
+  />&nbsp;&nbsp;Questioner </a>
+
+</div>
+<!-- Responsive Cards End -->
+
+
+
+
+
+
+
+<div class="row welcome text-center" style="padding-top: 5px;background-color: white;">
+  <div class="col-12" id="contact">
+    <h2>Contact Us </h2>
+  </div>
+  <div class="col-12 social padding">
+    <a href="#"><i class="fab fa-facebook" style="width: 50px; height: 50px;font-size: 30px;"></i></a>
+    &nbsp;&nbsp;&nbsp;
+    <a href="#"><i class="fab fa-linkedin" style="width: 50px; height: 50px;font-size: 30px;"></i></a>
+    &nbsp;&nbsp;&nbsp;
+    <a href="#" style="width: 250px;"><i style="width: 50px; height: 50px;font-size: 30px;" class="far fa-envelope"></i></a>
+
+  </div>
+
+  </div>
+
+
+
+
+
+
+
+    </div>
+  </header>
+
+
+
+  <!-- CONTACT MODAL -->
+  <div class="modal fade text-dark" id="contactModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Contact Us</h5>
+          <button class="close" data-dismiss="modal">
+            <span>&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea class="form-control"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary btn-block">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
+
+  <script>
+    // Get the current year for the copyright
+    $('#year').text(new Date().getFullYear());
+
+    // Init Scrollspy
+    $('body').scrollspy({ target: '#main-nav' });
+
+    // Smooth Scrolling
+    $("#main-nav a").on('click', function (event) {
+      if (this.hash !== "") {
+        event.preventDefault();
+
+        const hash = this.hash;
+
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 800, function () {
+
+          window.location.hash = hash;
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>

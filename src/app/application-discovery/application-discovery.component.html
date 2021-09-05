@@ -1,0 +1,205 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>DTB-Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/src/assets/css/main.css">
+  
+</head>
+<app-header></app-header>
+
+<div class="row" style="margin-top: 99px">
+  <div class="col-sm-8">
+    <h5
+      style="
+        color: #00416d;
+        margin-top: 10px;
+        font-size: 40px;
+
+        margin-left: 27px;
+        font-weight: normal;
+      "
+    >
+      Application Discovery
+    </h5>
+  </div>
+
+
+</div>
+
+<!-- //starts -->
+
+<div class="row row px-5">
+  <div class="col px-2">
+    <div class="card" style="text-align: center">
+      <div
+        class="card-block">
+        Number of Application
+      </div>
+      <span
+        ><h2>
+          {{ caappmasterdata }}
+        </h2></span
+      >
+    </div>
+  </div>
+
+  <div class="col px-2">
+    <div class="card" style="text-align: center">
+      <div
+        class="card-block">
+        Number of Vendor App
+      </div>
+      <span
+        ><h2>
+          {{ vendorcount }}
+        </h2></span
+      >
+    </div>
+  </div>
+
+  <div class="col px-2">
+    <div class="card" style="text-align: center">
+      <div
+        class="card-block">
+        Number of LOB
+      </div>
+      <span
+        ><h2 >
+          {{ lobcount }}
+        </h2></span
+      >
+    </div>
+  </div>
+
+  <div class="col px-2">
+    <div class="card" style="text-align: center">
+      <div
+        class="card-block"
+     
+      >
+        Uploaded Date
+      </div>
+      <span
+        ><h2>
+     
+
+          {{ updateddate }}
+        </h2></span
+      >
+    </div>
+  </div>
+</div>
+
+<!-- //ends -->
+
+<div class="row px-5" style="margin-top: -16px">
+  <div class="col-sm-6" style="margin-left: -7px">
+    <div class="card" style="margin-bottom: 30px;     height: 383px; width: 1280px">
+      <p
+        style="
+          padding-left: 11px;
+      
+
+          font-style: normal;
+          font-weight: normal;
+          font-size: 24px;
+          line-height: 55px;
+          color:rgba(34, 40, 49, 0.9);
+        "
+      >
+    Application By LOB
+      </p>
+      <div  class="row " style="margin: -14px auto; margin-bottom: 20px">
+        <div class="mt-2" id="LobView" style="width: 1300px; height: 300px;">
+           
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- new -->
+ 
+
+  <!-- //ends -->
+
+ 
+  <div class="row px-4" style="margin-top: -13px">
+    
+    <div class="col-md-6">
+      <!-- DIRECT CHAT -->
+      <div class="card direct-chat direct-chat-warning" style="width:  630px;
+      margin-left: 10px;">
+        <div class="card-header1">
+          <h3 class="card-title  ml-2 mt-2" >
+            Application By Data Criticality
+          </h3>
+        </div>
+        <!-- /.card-header -->
+        <div id="chartdatacriticality" style="
+        height: 412px;"></div>
+        <!-- <div id="chartdivck" style="width: 399px; height: 218px;"> -->
+        <!--/.direct-chat -->
+      </div>
+    </div>
+
+    <!-- //pdf bar graph on IP  -->
+    <div class="col-md-6">
+      <div
+        class="card direct-chat direct-chat-warning"
+        style="width: 630px; margin-left: -3px;"
+      >
+        <div class="card-header1">
+          <h3 class="card-title  ml-2 mt-2" >Application By Application Criticality</h3>
+        </div>
+
+        <div id="chartApplicationcriticality" style="
+        height: 412px;"></div>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <!-- DIRECT CHAT -->
+      <div
+        class="card direct-chat direct-chat-warning"
+        style=" width: 630px; margin-left: 10px;"
+      >
+        <div class="card-header1" style=
+        
+
+     "   
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 32px;
+    
+        
+        display: flex;
+        align-items: center; color:rgba(34, 40, 49, 0.9);">
+          <h3 class="card-title ml-2 mt-2" >Application By Environment</h3>
+        </div>
+        <!-- /.card-header -->
+        <div id="chartENV" style="
+        height: 412px;"></div>
+        <!-- <div id="chartdivck" style="width: 399px; height: 218px;"> -->
+        <!--/.direct-chat -->
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+<app-footer ></app-footer> 

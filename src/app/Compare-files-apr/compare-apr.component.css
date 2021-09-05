@@ -1,0 +1,129 @@
+#home{
+  background-color:  white;
+}
+/* #home-section .dark-overlay {
+    position: unset;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: fit-content;
+    background-color:  rgb(228, 228, 228);
+  } */
+  /* #home-section .home-inner {
+    padding-top: 50px;
+  } */
+  .custab {
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin: 10% 0;
+    box-shadow: 3px 3px 2px #ccc;
+    transition: 0.5s;
+    margin-left: -3%;
+}
+.to{
+    font-size: 26px;
+}
+.label {
+  all: initial;
+  all: unset;
+}
+.table .table-striped .custab thead th{
+display: block;
+
+}
+table {
+    box-shadow: 3px 3px 2px #ccc;
+    border: 1px solid #ccc;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 19px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+  .radio-item {
+    display: inline-block;
+    position: relative;
+    padding: 0 6px;
+    margin: 10px 0 0;
+  }
+  
+  .radio-item input[type='radio'] {
+    display: none;
+  }
+  
+  .radio-item label {
+    color: black;
+    font-weight: 500;
+    font-size: 15px;
+  }
+  
+  .radio-item label:before {
+    content: " ";
+    display: inline-block;
+    position: relative;
+    top: 5px;
+    margin: 0 5px 0 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 11px;
+    border: 2px solid red;
+    color: red;
+    background-color: transparent;
+  }
+  
+  .radio-item input[type=radio]:checked + label:after {
+    border-radius: 11px;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 9px;
+    left: 10px;
+    content: " ";
+    display: block;
+    background: red;
+  }
+  .dark-overlay1 {
+   
+   margin-top:  35px;
+    margin-left: 89px;
+    width: 1141px;
+    min-height: 300px;
+    
+    border-width: 0.10px;
+    border-style: solid;
+    border-color: purple;
+    border-radius: 30px;
+
+  }
+  .button {
+    background-color:purple; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+   
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  .square_btn{
+    display: flex;
+    padding: 7px 33px;
+	border-radius: 25px;
+    text-decoration: none;
+    margin-top: -3%;
+    margin-left: 71%;
+    width: 102px;
+    color: #FFF;
+   background-color: purple;
+    transition: .4s;
+}

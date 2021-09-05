@@ -1,0 +1,3243 @@
+/* screen - 002-cmrmainscreen-v10 */
+
+.border-class-1 {
+
+}
+.border-class-2 {
+  border: 1px solid var(--shark);
+}
+.helvetica-normal-beige-32px {
+  color: var(--beige);
+  font-family: "Helvetica", Helvetica, Arial, serif;
+  font-size: 32px;
+}
+.helvetica-regular-normal-black-10px {
+  color: var(--black);
+  font-family: 'Helvetica-Regular', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+}
+.helvetica-regular-normal-goldenrod-10px {
+  color: var(--goldenrod);
+  font-family: 'Helvetica-Regular', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+}
+.helvetica-regular-normal-regal-blue-32px {
+  color: var(--regal-blue);
+  font-family: 'Helvetica-Regular', Helvetica, Arial, serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+}
+.helvetica-regular-normal-shark-10px {
+  color: var(--shark);
+  font-family: 'Helvetica-Regular', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+}
+.helvetica-regular-normal-shark-14px {
+  color: var(--shark);
+  font-family: 'Helvetica-Regular', Helvetica, Arial, serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+.helvetica-regular-normal-shark-18px {
+  color: var(--shark);
+  font-family: 'Helvetica-Regular', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+}
+.helvetica-regular-normal-shark-20px {
+  color: var(--shark);
+  font-family: 'Helvetica-Regular', Helvetica, Arial, serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+}
+.helvetica-regular-normal-shark-24px {
+  color: var(--shark);
+  font-family: 'Helvetica-Regular', Helvetica, Arial, serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+}
+.helvetica-regular-normal-shark-24px-2 {
+  color: var(--shark-2);
+  font-family: 'Helvetica-Regular', Helvetica, Arial, serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+}
+.x002-cmrmainscreen-v10 {
+  background-color: var(--desert-storm);
+  height: 2336px;
+  overflow: hidden;
+  position: relative;
+  width: 1440px;
+}
+.x002-cmrmainscreen-v10 .application-tw80GF {
+  background-color: transparent;
+  height: auto;
+  left: 45px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 114px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .application1-tw80GF {
+  background-color: transparent;
+  height: auto;
+  left: 45px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 344px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .application10-tw80GF {
+  background-color: transparent;
+  height: auto;
+  left: 712px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 566px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .application11-tw80GF {
+  background-color: transparent;
+  height: auto;
+  left: 268px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 344px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .application2-tw80GF {
+  background-color: transparent;
+  height: auto;
+  left: 45px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 574px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .application3-tw80GF {
+  background-color: transparent;
+  height: auto;
+  left: 268px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 114px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .application4-tw80GF {
+  background-color: transparent;
+  height: auto;
+  left: 268px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 574px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .application5-tw80GF {
+  background-color: transparent;
+  height: auto;
+  left: 491px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 114px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .application6-tw80GF {
+  background-color: transparent;
+  height: auto;
+  left: 491px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 344px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .application7-tw80GF {
+  background-color: transparent;
+  height: auto;
+  left: 491px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 574px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .application8-tw80GF {
+  background-color: transparent;
+  height: auto;
+  left: 714px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 114px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .application9-tw80GF {
+  background-color: transparent;
+  height: auto;
+  left: 714px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 344px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .apr3-YOE4Sl {
+  background-color: transparent;
+  color: var(--shark);
+  font-family: 'Helvetica-Regular', Helvetica, Arial, serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  height: 30px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 30px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .apr4-2mNSPx {
+  background-color: transparent;
+  color: var(--shark);
+  font-family: 'Helvetica-Regular', Helvetica, Arial, serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  height: 30px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 30px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .apr5-yEgLm7 {
+  background-color: transparent;
+  color: var(--shark);
+  font-family: 'Helvetica-Regular', Helvetica, Arial, serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  height: 30px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 30px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .arrow-1-0WwqgO {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 39px;
+  left: 259px;
+  position: absolute;
+  top: 262px;
+  width: 8px;
+}
+.x002-cmrmainscreen-v10 .arrow-1-1Ex5hu {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 39px;
+  left: 705px;
+  position: absolute;
+  top: 262px;
+  width: 8px;
+}
+.x002-cmrmainscreen-v10 .arrow-1-1k6yAe {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 39px;
+  left: 259px;
+  position: absolute;
+  top: 32px;
+  width: 8px;
+}
+.x002-cmrmainscreen-v10 .arrow-1-EzgrOr {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 39px;
+  left: 482px;
+  position: absolute;
+  top: 492px;
+  width: 8px;
+}
+.x002-cmrmainscreen-v10 .arrow-1-GOzWIC {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 39px;
+  left: 482px;
+  position: absolute;
+  top: 262px;
+  width: 8px;
+}
+.x002-cmrmainscreen-v10 .arrow-1-IKOfnR {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 39px;
+  left: 36px;
+  position: absolute;
+  top: 262px;
+  width: 8px;
+}
+.x002-cmrmainscreen-v10 .arrow-1-ObrFnU {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 39px;
+  left: 36px;
+  position: absolute;
+  top: 492px;
+  width: 8px;
+}
+.x002-cmrmainscreen-v10 .arrow-1-g7JUhd {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 39px;
+  left: 703px;
+  position: absolute;
+  top: 484px;
+  width: 8px;
+}
+.x002-cmrmainscreen-v10 .arrow-1-js7J3E {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 39px;
+  left: 482px;
+  position: absolute;
+  top: 32px;
+  width: 8px;
+}
+.x002-cmrmainscreen-v10 .arrow-1-kddVxl {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 39px;
+  left: 259px;
+  position: absolute;
+  top: 492px;
+  width: 8px;
+}
+.x002-cmrmainscreen-v10 .arrow-1-nUK1Ng {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 39px;
+  left: 705px;
+  position: absolute;
+  top: 32px;
+  width: 8px;
+}
+.x002-cmrmainscreen-v10 .arrow-1-tw80GF {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 39px;
+  left: 36px;
+  position: absolute;
+  top: 32px;
+  width: 8px;
+}
+.x002-cmrmainscreen-v10 .arrow-2-0WwqgO {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 39px;
+  left: 259px;
+  position: absolute;
+  top: 332px;
+  width: 8px;
+}
+.x002-cmrmainscreen-v10 .arrow-2-1Ex5hu {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 39px;
+  left: 705px;
+  position: absolute;
+  top: 332px;
+  width: 8px;
+}
+.x002-cmrmainscreen-v10 .arrow-2-1k6yAe {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 39px;
+  left: 259px;
+  position: absolute;
+  top: 102px;
+  width: 8px;
+}
+.x002-cmrmainscreen-v10 .arrow-2-EzgrOr {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 39px;
+  left: 482px;
+  position: absolute;
+  top: 562px;
+  width: 8px;
+}
+.x002-cmrmainscreen-v10 .arrow-2-GOzWIC {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 39px;
+  left: 482px;
+  position: absolute;
+  top: 332px;
+  width: 8px;
+}
+.x002-cmrmainscreen-v10 .arrow-2-IKOfnR {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 39px;
+  left: 36px;
+  position: absolute;
+  top: 332px;
+  width: 8px;
+}
+.x002-cmrmainscreen-v10 .arrow-2-ObrFnU {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 39px;
+  left: 36px;
+  position: absolute;
+  top: 562px;
+  width: 8px;
+}
+.x002-cmrmainscreen-v10 .arrow-2-g7JUhd {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 39px;
+  left: 703px;
+  position: absolute;
+  top: 554px;
+  width: 8px;
+}
+.x002-cmrmainscreen-v10 .arrow-2-js7J3E {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 39px;
+  left: 482px;
+  position: absolute;
+  top: 102px;
+  width: 8px;
+}
+.x002-cmrmainscreen-v10 .arrow-2-kddVxl {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 39px;
+  left: 259px;
+  position: absolute;
+  top: 562px;
+  width: 8px;
+}
+.x002-cmrmainscreen-v10 .arrow-2-nUK1Ng {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 39px;
+  left: 705px;
+  position: absolute;
+  top: 102px;
+  width: 8px;
+}
+.x002-cmrmainscreen-v10 .arrow-2-tw80GF {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 39px;
+  left: 36px;
+  position: absolute;
+  top: 102px;
+  width: 8px;
+}
+.x002-cmrmainscreen-v10 .button-B0DNWx {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 68px;
+  left: 1217px;
+  position: absolute;
+  top: 0px;
+  width: 187px;
+}
+.x002-cmrmainscreen-v10 .button-XtRxae {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 70px;
+  left: 979px;
+  position: absolute;
+  top: -1px;
+  width: 116px;
+}
+.x002-cmrmainscreen-v10 .button-rHIDO1 {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 70px;
+  left: 1101px;
+  position: absolute;
+  top: -1px;
+  width: 109px;
+}
+.x002-cmrmainscreen-v10 .cloud-migr-ion-report-rHIDO1 {
+  background-color: transparent;
+  color: var(--regal-blue);
+  font-family: 'Helvetica-Regular', Helvetica, Arial, serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  height: 56px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 56px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .cloud-migr-on-report1-C61RwL {
+  background-color: transparent;
+  color: var(--regal-blue);
+  font-family: 'Helvetica-Bold', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  height: 26px;
+  left: 118px;
+  letter-spacing: 0.00px;
+  line-height: 26px;
+  position: absolute;
+  text-align: center;
+  top: 105px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .critical-rHIDO1 {
+  background-color: transparent;
+  height: 20px;
+  left: 282px;
+  letter-spacing: 0.00px;
+  line-height: 20px;
+  position: absolute;
+  text-align: left;
+  top: 1343px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .critical1-rHIDO1 {
+  background-color: transparent;
+  height: 20px;
+  left: 754px;
+  letter-spacing: 0.00px;
+  line-height: 20px;
+  position: absolute;
+  text-align: left;
+  top: 868px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .critical2-rHIDO1 {
+  background-color: transparent;
+  height: 20px;
+  left: 1226px;
+  letter-spacing: 0.00px;
+  line-height: 20px;
+  position: absolute;
+  text-align: left;
+  top: 868px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .critical3-rHIDO1 {
+  background-color: transparent;
+  height: 20px;
+  left: 282px;
+  letter-spacing: 0.00px;
+  line-height: 20px;
+  position: absolute;
+  text-align: left;
+  top: 868px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .csb1-ZeJsYx {
+  background-color: transparent;
+  color: var(--regal-blue);
+  font-family: 'Helvetica-Bold', Helvetica, Arial, serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  height: 30px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 30px;
+  position: absolute;
+  text-align: center;
+  top: 0px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .data-base-tw80GF {
+  background-color: transparent;
+  height: auto;
+  left: 45px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 44px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .data-base1-tw80GF {
+  background-color: transparent;
+  height: auto;
+  left: 45px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 274px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .data-base10-tw80GF {
+  background-color: transparent;
+  height: auto;
+  left: 712px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 496px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .data-base11-tw80GF {
+  background-color: transparent;
+  height: auto;
+  left: 268px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 274px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .data-base2-tw80GF {
+  background-color: transparent;
+  height: auto;
+  left: 45px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 504px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .data-base3-tw80GF {
+  background-color: transparent;
+  height: auto;
+  left: 268px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 44px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .data-base4-tw80GF {
+  background-color: transparent;
+  height: auto;
+  left: 268px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 504px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .data-base5-tw80GF {
+  background-color: transparent;
+  height: auto;
+  left: 491px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 44px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .data-base6-tw80GF {
+  background-color: transparent;
+  height: auto;
+  left: 491px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 274px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .data-base7-tw80GF {
+  background-color: transparent;
+  height: auto;
+  left: 491px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 504px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .data-base8-tw80GF {
+  background-color: transparent;
+  height: auto;
+  left: 714px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 44px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .data-base9-tw80GF {
+  background-color: transparent;
+  height: auto;
+  left: 714px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 274px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .data-submission-rHIDO1 {
+  background-color: transparent;
+  height: 28px;
+  left: 960px;
+  letter-spacing: 0.00px;
+  line-height: 28px;
+  position: absolute;
+  text-align: left;
+  top: 154px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .data-version-rHIDO1 {
+  background-color: transparent;
+  color: var(--shark);
+  font-family: 'Helvetica-Bold', Helvetica, Arial, serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  height: 32px;
+  left: 960px;
+  letter-spacing: 0.00px;
+  line-height: 32px;
+  position: absolute;
+  text-align: left;
+  top: 106px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .dependency-graph-rHIDO1 {
+  background-color: transparent;
+  height: 32px;
+  left: 16px;
+  letter-spacing: 0.00px;
+  line-height: 32px;
+  position: absolute;
+  text-align: left;
+  top: 1471px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .dependency-rHIDO1 {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 343px;
+  left: 72px;
+  overflow: hidden;
+  position: absolute;
+  top: 1545px;
+  width: 832px;
+}
+.x002-cmrmainscreen-v10 .dtb-vtTZDV {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 29px;
+  left: 104px;
+  position: absolute;
+  top: 36px;
+  width: 60px;
+}
+.x002-cmrmainscreen-v10 .ellipse-11-B0DNWx {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 155px;
+  left: 84px;
+  position: absolute;
+  top: 689px;
+  width: 204px;
+}
+.x002-cmrmainscreen-v10 .ellipse-11-XtRxae {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 155px;
+  left: 1077px;
+  position: absolute;
+  top: 689px;
+  width: 135px;
+}
+.x002-cmrmainscreen-v10 .ellipse-11-rHIDO1 {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 156px;
+  left: 551px;
+  position: absolute;
+  top: 647px;
+  width: 155px;
+}
+.x002-cmrmainscreen-v10 .ellipse-12-B0DNWx {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 193px;
+  left: 79px;
+  position: absolute;
+  top: 554px;
+  width: 290px;
+}
+.x002-cmrmainscreen-v10 .ellipse-12-XtRxae {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 264px;
+  left: 1023px;
+  position: absolute;
+  top: 554px;
+  width: 290px;
+}
+.x002-cmrmainscreen-v10 .ellipse-12-rHIDO1 {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 155px;
+  left: 557px;
+  position: absolute;
+  top: 554px;
+  width: 284px;
+}
+.x002-cmrmainscreen-v10 .ellipse-13-B0DNWx {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 125px;
+  left: 224px;
+  position: absolute;
+  top: 695px;
+  width: 135px;
+}
+.x002-cmrmainscreen-v10 .ellipse-13-XtRxae {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 131px;
+  left: 1168px;
+  position: absolute;
+  top: 695px;
+  width: 135px;
+}
+.x002-cmrmainscreen-v10 .ellipse-13-rHIDO1 {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 136px;
+  left: 598px;
+  position: absolute;
+  top: 694px;
+  width: 233px;
+}
+.x002-cmrmainscreen-v10 .ellipse-14-XtRxae {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 287px;
+  left: 1024px;
+  position: absolute;
+  top: 1549px;
+  width: 287px;
+}
+.x002-cmrmainscreen-v10 .ellipse-14-rHIDO1 {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 203px;
+  left: 103px;
+  position: absolute;
+  top: 1107px;
+  width: 270px;
+}
+.x002-cmrmainscreen-v10 .ellipse-15-XtRxae {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 51px;
+  left: 1168px;
+  position: absolute;
+  top: 1549px;
+  width: 84px;
+}
+.x002-cmrmainscreen-v10 .ellipse-15-rHIDO1 {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 134px;
+  left: 111px;
+  position: absolute;
+  top: 1055px;
+  width: 137px;
+}
+.x002-cmrmainscreen-v10 .ellipse-16-rHIDO1 {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 155px;
+  left: 154px;
+  position: absolute;
+  top: 1034px;
+  width: 229px;
+}
+.x002-cmrmainscreen-v10 .ellipse-19-rHIDO1 {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 160px;
+  left: 669px;
+  position: absolute;
+  top: 128px;
+  width: 160px;
+}
+.x002-cmrmainscreen-v10 .ellipse-20-rHIDO1 {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 160px;
+  left: 669px;
+  position: absolute;
+  top: 128px;
+  width: 160px;
+}
+.x002-cmrmainscreen-v10 .eol-rHIDO1 {
+  background-color: transparent;
+  color: var(--shark-2);
+  font-family: 'Helvetica-Regular', Helvetica, Arial, serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  height: 20px;
+  left: 818px;
+  letter-spacing: 0.00px;
+  line-height: 20px;
+  position: absolute;
+  text-align: center;
+  top: 1335px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .evaluated--plications-rHIDO1 {
+  background-color: transparent;
+  height: 28px;
+  left: 16px;
+  letter-spacing: 0.00px;
+  line-height: 28px;
+  position: absolute;
+  text-align: left;
+  top: 232px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .evaluation-rHIDO1 {
+  background-color: transparent;
+  color: var(--shark);
+  font-family: 'Helvetica-Bold', Helvetica, Arial, serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  height: 32px;
+  left: 16px;
+  letter-spacing: 0.00px;
+  line-height: 32px;
+  position: absolute;
+  text-align: left;
+  top: 106px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .frame-35-C61RwL {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 1997px;
+  left: 24px;
+  overflow: hidden;
+  position: absolute;
+  top: 174px;
+  width: 1392px;
+}
+.x002-cmrmainscreen-v10 .frame-7-0WwqgO {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  border-radius: 30px;
+  height: 32px;
+  left: 223px;
+  position: absolute;
+  top: 301px;
+  width: 81px;
+}
+.x002-cmrmainscreen-v10 .frame-7-1Ex5hu {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  border-radius: 30px;
+  height: 32px;
+  left: 669px;
+  position: absolute;
+  top: 301px;
+  width: 81px;
+}
+.x002-cmrmainscreen-v10 .frame-7-1k6yAe {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  border-radius: 30px;
+  height: 32px;
+  left: 223px;
+  position: absolute;
+  top: 71px;
+  width: 81px;
+}
+.x002-cmrmainscreen-v10 .frame-7-EzgrOr {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  border-radius: 30px;
+  height: 32px;
+  left: 446px;
+  position: absolute;
+  top: 531px;
+  width: 81px;
+}
+.x002-cmrmainscreen-v10 .frame-7-GOzWIC {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  border-radius: 30px;
+  height: 32px;
+  left: 446px;
+  position: absolute;
+  top: 301px;
+  width: 81px;
+}
+.x002-cmrmainscreen-v10 .frame-7-IKOfnR {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  border-radius: 30px;
+  height: 32px;
+  left: 0px;
+  position: absolute;
+  top: 301px;
+  width: 81px;
+}
+.x002-cmrmainscreen-v10 .frame-7-ObrFnU {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  border-radius: 30px;
+  height: 32px;
+  left: 0px;
+  position: absolute;
+  top: 531px;
+  width: 81px;
+}
+.x002-cmrmainscreen-v10 .frame-7-g7JUhd {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  border-radius: 30px;
+  height: 32px;
+  left: 667px;
+  position: absolute;
+  top: 523px;
+  width: 81px;
+}
+.x002-cmrmainscreen-v10 .frame-7-js7J3E {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  border-radius: 30px;
+  height: 32px;
+  left: 446px;
+  position: absolute;
+  top: 71px;
+  width: 81px;
+}
+.x002-cmrmainscreen-v10 .frame-7-kddVxl {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  border-radius: 30px;
+  height: 32px;
+  left: 223px;
+  position: absolute;
+  top: 531px;
+  width: 81px;
+}
+.x002-cmrmainscreen-v10 .frame-7-nUK1Ng {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  border-radius: 30px;
+  height: 32px;
+  left: 669px;
+  position: absolute;
+  top: 71px;
+  width: 81px;
+}
+.x002-cmrmainscreen-v10 .frame-7-tw80GF {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  border-radius: 30px;
+  height: 32px;
+  left: 0px;
+  position: absolute;
+  top: 71px;
+  width: 81px;
+}
+.x002-cmrmainscreen-v10 .icon-2Pw2gj {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 44px;
+  left: 1372px;
+  overflow: hidden;
+  position: absolute;
+  top: 27px;
+  width: 44px;
+}
+.x002-cmrmainscreen-v10 .icon-vtTZDV {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 44px;
+  left: 1264px;
+  overflow: hidden;
+  position: absolute;
+  top: 26px;
+  width: 44px;
+}
+.x002-cmrmainscreen-v10 .identified--processed-rHIDO1 {
+  background-color: transparent;
+  height: 28px;
+  left: 16px;
+  letter-spacing: 0.00px;
+  line-height: 28px;
+  position: absolute;
+  text-align: left;
+  top: 168px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .last-evalu-ion-update-rHIDO1 {
+  background-color: transparent;
+  height: 28px;
+  left: 960px;
+  letter-spacing: 0.00px;
+  line-height: 28px;
+  position: absolute;
+  text-align: left;
+  top: 206px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .line-1-ZeJsYx {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 3px;
+  left: 0px;
+  position: absolute;
+  top: 33px;
+  width: 47px;
+}
+.x002-cmrmainscreen-v10 .line-13-XtRxae {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 1px;
+  left: 504px;
+  position: absolute;
+  top: 1328px;
+  width: 400px;
+}
+.x002-cmrmainscreen-v10 .line-13-rHIDO1 {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 1px;
+  left: 976px;
+  position: absolute;
+  top: 1328px;
+  width: 400px;
+}
+.x002-cmrmainscreen-v10 .low-level-rHIDO1 {
+  background-color: transparent;
+  height: 20px;
+  left: 47px;
+  letter-spacing: 0.00px;
+  line-height: 20px;
+  position: absolute;
+  text-align: left;
+  top: 1343px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .low-level1-rHIDO1 {
+  background-color: transparent;
+  height: 20px;
+  left: 519px;
+  letter-spacing: 0.00px;
+  line-height: 20px;
+  position: absolute;
+  text-align: left;
+  top: 868px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .low-level2-rHIDO1 {
+  background-color: transparent;
+  height: 20px;
+  left: 991px;
+  letter-spacing: 0.00px;
+  line-height: 20px;
+  position: absolute;
+  text-align: left;
+  top: 868px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .low-level3-rHIDO1 {
+  background-color: transparent;
+  height: 20px;
+  left: 47px;
+  letter-spacing: 0.00px;
+  line-height: 20px;
+  position: absolute;
+  text-align: left;
+  top: 868px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .m-sphere-AvYomX {
+  background-color: transparent;
+  height: auto;
+  left: 20px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 8px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .m-sphere1-ivxfqP {
+  background-color: transparent;
+  height: auto;
+  left: 20px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 8px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .m-sphere10-DVDSZT {
+  background-color: transparent;
+  height: auto;
+  left: 20px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 8px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .m-sphere11-JK1xJh {
+  background-color: transparent;
+  height: auto;
+  left: 20px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 8px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .m-sphere2-uVg24o {
+  background-color: transparent;
+  height: auto;
+  left: 20px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 8px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .m-sphere3-xiyG43 {
+  background-color: transparent;
+  height: auto;
+  left: 20px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 8px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .m-sphere4-tZ6VEN {
+  background-color: transparent;
+  height: auto;
+  left: 20px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 8px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .m-sphere5-uYsgFJ {
+  background-color: transparent;
+  height: auto;
+  left: 20px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 8px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .m-sphere6-vfON3u {
+  background-color: transparent;
+  height: auto;
+  left: 20px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 8px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .m-sphere7-pSsI70 {
+  background-color: transparent;
+  height: auto;
+  left: 20px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 8px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .m-sphere8-uZDsmz {
+  background-color: transparent;
+  height: auto;
+  left: 20px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 8px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .m-sphere9-bO2Wky {
+  background-color: transparent;
+  height: auto;
+  left: 20px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 8px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .main-menu-C61RwL {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: var(--desert-storm);
+  height: 88px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 1440px;
+}
+.x002-cmrmainscreen-v10 .menu-2Pw2gj {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 30px;
+  left: 480px;
+  position: absolute;
+  top: 32px;
+  width: 48px;
+}
+.x002-cmrmainscreen-v10 .menu-h0swhS {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 30px;
+  left: 598px;
+  position: absolute;
+  top: 32px;
+  width: 49px;
+}
+.x002-cmrmainscreen-v10 .menu-uyWxRz {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 30px;
+  left: 716px;
+  position: absolute;
+  top: 32px;
+  width: 65px;
+}
+.x002-cmrmainscreen-v10 .menu-vtTZDV {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 30px;
+  left: 292px;
+  position: absolute;
+  top: 32px;
+  width: 110px;
+}
+.x002-cmrmainscreen-v10 .mid-level-rHIDO1 {
+  background-color: transparent;
+  height: 20px;
+  left: 166px;
+  letter-spacing: 0.00px;
+  line-height: 20px;
+  position: absolute;
+  text-align: left;
+  top: 1343px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .mid-level1-rHIDO1 {
+  background-color: transparent;
+  height: 20px;
+  left: 638px;
+  letter-spacing: 0.00px;
+  line-height: 20px;
+  position: absolute;
+  text-align: left;
+  top: 868px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .mid-level2-rHIDO1 {
+  background-color: transparent;
+  height: 20px;
+  left: 1110px;
+  letter-spacing: 0.00px;
+  line-height: 20px;
+  position: absolute;
+  text-align: left;
+  top: 868px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .mid-level3-rHIDO1 {
+  background-color: transparent;
+  height: 20px;
+  left: 166px;
+  letter-spacing: 0.00px;
+  line-height: 20px;
+  position: absolute;
+  text-align: left;
+  top: 868px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .outline-9vhZAO {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  border-radius: 4px;
+  height: 423px;
+  left: 0px;
+  position: absolute;
+  top: 483px;
+  width: 448px;
+}
+.x002-cmrmainscreen-v10 .outline-B0DNWx {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  border-radius: 4px;
+  height: 423px;
+  left: 944px;
+  position: absolute;
+  top: 483px;
+  width: 448px;
+}
+.x002-cmrmainscreen-v10 .outline-XtRxae {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  border-radius: 4px;
+  height: 423px;
+  left: 472px;
+  position: absolute;
+  top: 483px;
+  width: 448px;
+}
+.x002-cmrmainscreen-v10 .outline-rHIDO1 {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  border-radius: 4px;
+  height: 471px;
+  left: 0px;
+  position: absolute;
+  top: 1457px;
+  width: 920px;
+}
+.x002-cmrmainscreen-v10 .padding-C61RwL {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 38px;
+  left: 55px;
+  position: absolute;
+  top: 90px;
+  width: 87px;
+}
+.x002-cmrmainscreen-v10 .platformos-rHIDO1 {
+  background-color: transparent;
+  color: var(--shark-2);
+  font-family: 'Helvetica-Regular', Helvetica, Arial, serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  height: 20px;
+  left: 664px;
+  letter-spacing: 0.00px;
+  line-height: 20px;
+  position: absolute;
+  text-align: center;
+  top: 1335px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .pointer1-ZeJsYx {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 12px;
+  left: 16px;
+  position: absolute;
+  top: 40px;
+  width: 15px;
+}
+.x002-cmrmainscreen-v10 .processed-rHIDO1 {
+  background-color: transparent;
+  height: 20px;
+  left: 1110px;
+  letter-spacing: 0.00px;
+  line-height: 20px;
+  position: absolute;
+  text-align: left;
+  top: 1882px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .re-architecting2-rHIDO1 {
+  background-color: transparent;
+  height: 32px;
+  left: 16px;
+  letter-spacing: 0.00px;
+  line-height: 32px;
+  position: absolute;
+  text-align: left;
+  top: 960px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .rectangle-14-rHIDO1 {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: var(--regal-blue-2);
+  border-radius: 4px;
+  height: 377px;
+  left: 16px;
+  opacity: 0.2;
+  position: absolute;
+  top: 1527px;
+  width: 888px;
+}
+.x002-cmrmainscreen-v10 .rectangle-15-0WwqgO {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: var(--shark);
+  border-radius: 16px;
+  height: 32px;
+  left: 247px;
+  position: absolute;
+  top: 230px;
+  width: 32px;
+}
+.x002-cmrmainscreen-v10 .rectangle-15-1Ex5hu {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: var(--shark);
+  border-radius: 16px;
+  height: 32px;
+  left: 693px;
+  position: absolute;
+  top: 230px;
+  width: 32px;
+}
+.x002-cmrmainscreen-v10 .rectangle-15-1k6yAe {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: var(--shark);
+  border-radius: 16px;
+  height: 32px;
+  left: 247px;
+  position: absolute;
+  top: 0px;
+  width: 32px;
+}
+.x002-cmrmainscreen-v10 .rectangle-15-EzgrOr {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: var(--shark);
+  border-radius: 16px;
+  height: 32px;
+  left: 470px;
+  position: absolute;
+  top: 460px;
+  width: 32px;
+}
+.x002-cmrmainscreen-v10 .rectangle-15-GOzWIC {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: var(--shark);
+  border-radius: 16px;
+  height: 32px;
+  left: 470px;
+  position: absolute;
+  top: 230px;
+  width: 32px;
+}
+.x002-cmrmainscreen-v10 .rectangle-15-IKOfnR {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: var(--shark);
+  border-radius: 16px;
+  height: 32px;
+  left: 24px;
+  position: absolute;
+  top: 230px;
+  width: 32px;
+}
+.x002-cmrmainscreen-v10 .rectangle-15-ObrFnU {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: var(--shark);
+  border-radius: 16px;
+  height: 32px;
+  left: 24px;
+  position: absolute;
+  top: 460px;
+  width: 32px;
+}
+.x002-cmrmainscreen-v10 .rectangle-15-g7JUhd {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: var(--shark);
+  border-radius: 16px;
+  height: 32px;
+  left: 691px;
+  position: absolute;
+  top: 452px;
+  width: 32px;
+}
+.x002-cmrmainscreen-v10 .rectangle-15-js7J3E {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: var(--shark);
+  border-radius: 16px;
+  height: 32px;
+  left: 470px;
+  position: absolute;
+  top: 0px;
+  width: 32px;
+}
+.x002-cmrmainscreen-v10 .rectangle-15-kddVxl {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: var(--shark);
+  border-radius: 16px;
+  height: 32px;
+  left: 247px;
+  position: absolute;
+  top: 460px;
+  width: 32px;
+}
+.x002-cmrmainscreen-v10 .rectangle-15-nUK1Ng {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: var(--shark);
+  border-radius: 16px;
+  height: 32px;
+  left: 693px;
+  position: absolute;
+  top: 0px;
+  width: 32px;
+}
+.x002-cmrmainscreen-v10 .rectangle-15-tw80GF {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: var(--shark);
+  border-radius: 16px;
+  height: 32px;
+  left: 24px;
+  position: absolute;
+  top: 0px;
+  width: 32px;
+}
+.x002-cmrmainscreen-v10 .rectangle-16-0WwqgO {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: var(--shark);
+  border-radius: 16px;
+  height: 32px;
+  left: 247px;
+  position: absolute;
+  top: 372px;
+  width: 32px;
+}
+.x002-cmrmainscreen-v10 .rectangle-16-1Ex5hu {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: var(--shark);
+  border-radius: 16px;
+  height: 32px;
+  left: 693px;
+  position: absolute;
+  top: 372px;
+  width: 32px;
+}
+.x002-cmrmainscreen-v10 .rectangle-16-1k6yAe {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: var(--shark);
+  border-radius: 16px;
+  height: 32px;
+  left: 247px;
+  position: absolute;
+  top: 142px;
+  width: 32px;
+}
+.x002-cmrmainscreen-v10 .rectangle-16-EzgrOr {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: var(--shark);
+  border-radius: 16px;
+  height: 32px;
+  left: 470px;
+  position: absolute;
+  top: 602px;
+  width: 32px;
+}
+.x002-cmrmainscreen-v10 .rectangle-16-GOzWIC {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: var(--shark);
+  border-radius: 16px;
+  height: 32px;
+  left: 470px;
+  position: absolute;
+  top: 372px;
+  width: 32px;
+}
+.x002-cmrmainscreen-v10 .rectangle-16-IKOfnR {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: var(--shark);
+  border-radius: 16px;
+  height: 32px;
+  left: 24px;
+  position: absolute;
+  top: 372px;
+  width: 32px;
+}
+.x002-cmrmainscreen-v10 .rectangle-16-ObrFnU {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: var(--shark);
+  border-radius: 16px;
+  height: 32px;
+  left: 24px;
+  position: absolute;
+  top: 602px;
+  width: 32px;
+}
+.x002-cmrmainscreen-v10 .rectangle-16-g7JUhd {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: var(--shark);
+  border-radius: 16px;
+  height: 32px;
+  left: 691px;
+  position: absolute;
+  top: 594px;
+  width: 32px;
+}
+.x002-cmrmainscreen-v10 .rectangle-16-js7J3E {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: var(--shark);
+  border-radius: 16px;
+  height: 32px;
+  left: 470px;
+  position: absolute;
+  top: 142px;
+  width: 32px;
+}
+.x002-cmrmainscreen-v10 .rectangle-16-kddVxl {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: var(--shark);
+  border-radius: 16px;
+  height: 32px;
+  left: 247px;
+  position: absolute;
+  top: 602px;
+  width: 32px;
+}
+.x002-cmrmainscreen-v10 .rectangle-16-nUK1Ng {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: var(--shark);
+  border-radius: 16px;
+  height: 32px;
+  left: 693px;
+  position: absolute;
+  top: 142px;
+  width: 32px;
+}
+.x002-cmrmainscreen-v10 .rectangle-16-tw80GF {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: var(--shark);
+  border-radius: 16px;
+  height: 32px;
+  left: 24px;
+  position: absolute;
+  top: 142px;
+  width: 32px;
+}
+.x002-cmrmainscreen-v10 .rectangle-17-tw80GF {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: var(--shark);
+  border-radius: 8px;
+  height: 71px;
+  left: 818px;
+  opacity: 0.7;
+  position: absolute;
+  top: 0px;
+  width: 6px;
+}
+.x002-cmrmainscreen-v10 .rectangle-18-XtRxae {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  border-radius: 4px;
+  height: 471px;
+  left: 472px;
+  position: absolute;
+  top: 946px;
+  width: 448px;
+}
+.x002-cmrmainscreen-v10 .rectangle-18-rHIDO1 {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  border-radius: 4px;
+  height: 471px;
+  left: 944px;
+  position: absolute;
+  top: 946px;
+  width: 448px;
+}
+.x002-cmrmainscreen-v10 .rectangle-20-3rZlFj {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: var(--regal-blue-2);
+  height: 24px;
+  left: 739px;
+  position: absolute;
+  top: 866px;
+  width: 8px;
+}
+.x002-cmrmainscreen-v10 .rectangle-20-7H20NY {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: var(--regal-blue-2);
+  height: 24px;
+  left: 1211px;
+  position: absolute;
+  top: 866px;
+  width: 8px;
+}
+.x002-cmrmainscreen-v10 .rectangle-20-9vhZAO {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: var(--regal-blue-2);
+  height: 24px;
+  left: 1095px;
+  position: absolute;
+  top: 1880px;
+  width: 8px;
+}
+.x002-cmrmainscreen-v10 .rectangle-20-B0DNWx {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: var(--regal-blue);
+  height: 24px;
+  left: 32px;
+  position: absolute;
+  top: 1341px;
+  width: 8px;
+}
+.x002-cmrmainscreen-v10 .rectangle-20-ENA9al {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: var(--regal-blue);
+  height: 24px;
+  left: 976px;
+  position: absolute;
+  top: 1880px;
+  width: 8px;
+}
+.x002-cmrmainscreen-v10 .rectangle-20-GgrSAn {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: var(--regal-blue);
+  height: 24px;
+  left: 32px;
+  position: absolute;
+  top: 866px;
+  width: 8px;
+}
+.x002-cmrmainscreen-v10 .rectangle-20-VPrgtG {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: var(--regal-blue);
+  height: 24px;
+  left: 976px;
+  position: absolute;
+  top: 866px;
+  width: 8px;
+}
+.x002-cmrmainscreen-v10 .rectangle-20-XtRxae {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: var(--shark);
+  height: 24px;
+  left: 151px;
+  position: absolute;
+  top: 1341px;
+  width: 8px;
+}
+.x002-cmrmainscreen-v10 .rectangle-20-a57X2y {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: var(--shark);
+  height: 24px;
+  left: 151px;
+  position: absolute;
+  top: 866px;
+  width: 8px;
+}
+.x002-cmrmainscreen-v10 .rectangle-20-eYQPnQ {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: var(--shark);
+  height: 24px;
+  left: 1095px;
+  position: absolute;
+  top: 866px;
+  width: 8px;
+}
+.x002-cmrmainscreen-v10 .rectangle-20-pepQjp {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: var(--shark);
+  height: 24px;
+  left: 623px;
+  position: absolute;
+  top: 866px;
+  width: 8px;
+}
+.x002-cmrmainscreen-v10 .rectangle-20-rHIDO1 {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: var(--regal-blue-2);
+  height: 24px;
+  left: 267px;
+  position: absolute;
+  top: 1341px;
+  width: 8px;
+}
+.x002-cmrmainscreen-v10 .rectangle-20-u8bxBj {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: var(--regal-blue-2);
+  height: 24px;
+  left: 267px;
+  position: absolute;
+  top: 866px;
+  width: 8px;
+}
+.x002-cmrmainscreen-v10 .rectangle-20-uFvv74 {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: var(--regal-blue);
+  height: 24px;
+  left: 504px;
+  position: absolute;
+  top: 866px;
+  width: 8px;
+}
+.x002-cmrmainscreen-v10 .rectangle-22-XtRxae {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: var(--desert-storm);
+  border-radius: 4px;
+  height: 209px;
+  left: 944px;
+  position: absolute;
+  top: 98px;
+  width: 448px;
+}
+.x002-cmrmainscreen-v10 .rectangle-22-rHIDO1 {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: var(--desert-storm);
+  border-radius: 4px;
+  height: 209px;
+  left: 0px;
+  position: absolute;
+  top: 98px;
+  width: 920px;
+}
+.x002-cmrmainscreen-v10 .rectangle-8-XtRxae {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  border-radius: 4px;
+  height: 471px;
+  left: 944px;
+  position: absolute;
+  top: 1457px;
+  width: 448px;
+}
+.x002-cmrmainscreen-v10 .rectangle-8-rHIDO1 {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  border-radius: 4px;
+  height: 471px;
+  left: 0px;
+  position: absolute;
+  top: 946px;
+  width: 448px;
+}
+.x002-cmrmainscreen-v10 .rectangle-9-3rZlFj {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 38px;
+  left: 800px;
+  position: absolute;
+  top: 1292px;
+  width: 66px;
+}
+.x002-cmrmainscreen-v10 .rectangle-9-9vhZAO {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 100px;
+  left: 540px;
+  position: absolute;
+  top: 1229px;
+  width: 66px;
+}
+.x002-cmrmainscreen-v10 .rectangle-9-B0DNWx {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 94px;
+  left: 1272px;
+  position: absolute;
+  top: 1235px;
+  width: 66px;
+}
+.x002-cmrmainscreen-v10 .rectangle-9-ENA9al {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 15px;
+  left: 670px;
+  position: absolute;
+  top: 1314px;
+  width: 66px;
+}
+.x002-cmrmainscreen-v10 .rectangle-9-XtRxae {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 177px;
+  left: 1142px;
+  position: absolute;
+  top: 1152px;
+  width: 66px;
+}
+.x002-cmrmainscreen-v10 .rectangle-9-rHIDO1 {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 304px;
+  left: 1012px;
+  position: absolute;
+  top: 1025px;
+  width: 66px;
+}
+.x002-cmrmainscreen-v10 .rehosting2-JuRo5u {
+  background-color: transparent;
+  height: 20px;
+  left: 8px;
+  letter-spacing: 0.00px;
+  line-height: 20px;
+  position: absolute;
+  text-align: left;
+  top: 8px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .rehosting3-q47Q0s {
+  background-color: transparent;
+  height: 20px;
+  left: 8px;
+  letter-spacing: 0.00px;
+  line-height: 20px;
+  position: absolute;
+  text-align: left;
+  top: 8px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .rehosting4-a1z45v {
+  background-color: transparent;
+  height: 20px;
+  left: 8px;
+  letter-spacing: 0.00px;
+  line-height: 20px;
+  position: absolute;
+  text-align: left;
+  top: 8px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .rehosting5-lsKWjv {
+  background-color: transparent;
+  height: 20px;
+  left: 8px;
+  letter-spacing: 0.00px;
+  line-height: 20px;
+  position: absolute;
+  text-align: left;
+  top: 8px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .rehosting6-GF1B0b {
+  background-color: transparent;
+  height: 20px;
+  left: 8px;
+  letter-spacing: 0.00px;
+  line-height: 20px;
+  position: absolute;
+  text-align: left;
+  top: 8px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .rehosting7-n0F43H {
+  background-color: transparent;
+  height: 20px;
+  left: 8px;
+  letter-spacing: 0.00px;
+  line-height: 20px;
+  position: absolute;
+  text-align: left;
+  top: 8px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .rehosting8-rHIDO1 {
+  background-color: transparent;
+  height: 32px;
+  left: 16px;
+  letter-spacing: 0.00px;
+  line-height: 32px;
+  position: absolute;
+  text-align: left;
+  top: 497px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .replatforming2-rHIDO1 {
+  background-color: transparent;
+  height: 32px;
+  left: 488px;
+  letter-spacing: 0.00px;
+  line-height: 32px;
+  position: absolute;
+  text-align: left;
+  top: 497px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .reprt-generation-rHIDO1 {
+  background-color: transparent;
+  height: 28px;
+  left: 960px;
+  letter-spacing: 0.00px;
+  line-height: 28px;
+  position: absolute;
+  text-align: left;
+  top: 258px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .repurchasing2-rHIDO1 {
+  background-color: transparent;
+  height: 32px;
+  left: 960px;
+  letter-spacing: 0.00px;
+  line-height: 32px;
+  position: absolute;
+  text-align: left;
+  top: 497px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .retain2-rHIDO1 {
+  background-color: transparent;
+  height: 32px;
+  left: 960px;
+  letter-spacing: 0.00px;
+  line-height: 32px;
+  position: absolute;
+  text-align: left;
+  top: 960px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .retire2-rHIDO1 {
+  background-color: transparent;
+  height: 32px;
+  left: 488px;
+  letter-spacing: 0.00px;
+  line-height: 32px;
+  position: absolute;
+  text-align: left;
+  top: 960px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .secondary-menu01-C61RwL {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 68px;
+  left: 0px;
+  position: absolute;
+  top: 90px;
+  width: 1440px;
+}
+.x002-cmrmainscreen-v10 .span1-uoqTEm {
+  color: rgba(34,40,49,0.8);
+  font-family: 'Helvetica-Regular', Helvetica, Arial, serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.00px;
+}
+.x002-cmrmainscreen-v10 .span2-uoqTEm {
+  color: rgba(34,40,49,0.8);
+  font-family: 'Helvetica-Regular', Helvetica, Arial, serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.00px;
+}
+.x002-cmrmainscreen-v10 .uncapatable-rHIDO1 {
+  background-color: transparent;
+  color: var(--shark-2);
+  font-family: 'Helvetica-Regular', Helvetica, Arial, serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  height: 20px;
+  left: 533px;
+  letter-spacing: 0.00px;
+  line-height: 20px;
+  position: absolute;
+  text-align: center;
+  top: 1335px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .undefined-rHIDO1 {
+  background-color: transparent;
+  height: 32px;
+  left: 960px;
+  letter-spacing: 0.00px;
+  line-height: 32px;
+  position: absolute;
+  text-align: left;
+  top: 1471px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .undefined1-rHIDO1 {
+  background-color: transparent;
+  height: 20px;
+  left: 991px;
+  letter-spacing: 0.00px;
+  line-height: 20px;
+  position: absolute;
+  text-align: left;
+  top: 1882px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .union-JbfUAQ {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 34px;
+  left: 7px;
+  position: absolute;
+  top: 5px;
+  width: 30px;
+}
+.x002-cmrmainscreen-v10 .union-vtTZDV {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 49px;
+  left: 23px;
+  position: absolute;
+  top: 24px;
+  width: 72px;
+}
+.x002-cmrmainscreen-v10 .vector-CyCxN3 {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: transparent;
+  height: 34px;
+  left: 8px;
+  position: absolute;
+  top: 5px;
+  width: 28px;
+}
+.x002-cmrmainscreen-v10 .x-improve-performance-rHIDO1 {
+  background-color: transparent;
+  height: 20px;
+  left: 168px;
+  letter-spacing: 0.00px;
+  line-height: 20px;
+  position: absolute;
+  text-align: center;
+  top: 1381px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .x-retaining-time-frame-rHIDO1 {
+  background-color: transparent;
+  height: 20px;
+  left: 1114px;
+  letter-spacing: 0.00px;
+  line-height: 20px;
+  position: absolute;
+  text-align: center;
+  top: 1381px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .x-retire-reason-rHIDO1 {
+  background-color: transparent;
+  height: 20px;
+  left: 661px;
+  letter-spacing: 0.00px;
+  line-height: 20px;
+  position: absolute;
+  text-align: center;
+  top: 1381px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .x0-12-months-rHIDO1 {
+  background-color: transparent;
+  color: var(--shark-2);
+  font-family: 'Helvetica-Regular', Helvetica, Arial, serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  height: 20px;
+  left: 1005px;
+  letter-spacing: 0.00px;
+  line-height: 20px;
+  position: absolute;
+  text-align: center;
+  top: 1335px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .x1-3-years-rHIDO1 {
+  background-color: transparent;
+  color: var(--shark-2);
+  font-family: 'Helvetica-Regular', Helvetica, Arial, serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  height: 20px;
+  left: 1144px;
+  letter-spacing: 0.00px;
+  line-height: 20px;
+  position: absolute;
+  text-align: center;
+  top: 1335px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .x10-rHIDO1 {
+  background-color: transparent;
+  color: var(--shark);
+  font-family: 'Helvetica-Regular', Helvetica, Arial, serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  height: 40px;
+  left: 1212px;
+  letter-spacing: 0.00px;
+  line-height: 40px;
+  position: absolute;
+  text-align: center;
+  top: 721px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .x100-rHIDO1 {
+  background-color: transparent;
+  color: var(--beige);
+  font-family: 'Helvetica-Regular', Helvetica, Arial, serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  height: 40px;
+  left: 672px;
+  letter-spacing: 0.00px;
+  line-height: 40px;
+  position: absolute;
+  text-align: center;
+  top: 611px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .x1000-rHIDO1 {
+  background-color: transparent;
+  color: var(--shark-2);
+  font-family: 'Helvetica-Regular', Helvetica, Arial, serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  height: 40px;
+  left: 472px;
+  letter-spacing: 0.00px;
+  line-height: 40px;
+  position: absolute;
+  text-align: left;
+  top: 226px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .x101000-rHIDO1 {
+  background-color: transparent;
+  color: var(--shark);
+  font-family: "Helvetica", Helvetica, Arial, serif;
+  font-size: 48px;
+  height: 40px;
+  left: 1111px;
+  line-height: 40px;
+  position: absolute;
+  text-align: center;
+  top: 1673px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .x104-rHIDO1 {
+  background-color: transparent;
+  height: 26px;
+  left: 1029px;
+  letter-spacing: 0.00px;
+  line-height: 26px;
+  position: absolute;
+  text-align: center;
+  top: 999px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .x1200-rHIDO1 {
+  background-color: transparent;
+  color: var(--shark-2);
+  font-family: 'Helvetica-Regular', Helvetica, Arial, serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  height: 40px;
+  left: 472px;
+  letter-spacing: 0.00px;
+  line-height: 40px;
+  position: absolute;
+  text-align: left;
+  top: 162px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .x13-rHIDO1 {
+  background-color: transparent;
+  height: 26px;
+  left: 822px;
+  letter-spacing: 0.00px;
+  line-height: 26px;
+  position: absolute;
+  text-align: center;
+  top: 1266px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .x192-rHIDO1 {
+  background-color: transparent;
+  color: var(--beige);
+  font-family: 'Helvetica-Regular', Helvetica, Arial, serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  height: 40px;
+  left: 184px;
+  letter-spacing: 0.00px;
+  line-height: 40px;
+  position: absolute;
+  text-align: center;
+  top: 622px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .x20201023-rHIDO1 {
+  background-color: transparent;
+  color: var(--shark);
+  font-family: 'Helvetica-Bold', Helvetica, Arial, serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  height: 28px;
+  left: 1213px;
+  letter-spacing: 0.00px;
+  line-height: 28px;
+  position: absolute;
+  text-align: left;
+  top: 154px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .x202010231-rHIDO1 {
+  background-color: transparent;
+  color: var(--shark);
+  font-family: 'Helvetica-Bold', Helvetica, Arial, serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  height: 28px;
+  left: 1213px;
+  letter-spacing: 0.00px;
+  line-height: 28px;
+  position: absolute;
+  text-align: left;
+  top: 206px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .x202010232-rHIDO1 {
+  background-color: transparent;
+  color: var(--shark);
+  font-family: 'Helvetica-Bold', Helvetica, Arial, serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  height: 28px;
+  left: 1213px;
+  letter-spacing: 0.00px;
+  line-height: 28px;
+  position: absolute;
+  text-align: left;
+  top: 258px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .x24-tw80GF {
+  background-color: transparent;
+  height: auto;
+  left: 32px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 8px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .x241-tw80GF {
+  background-color: transparent;
+  height: auto;
+  left: 32px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 238px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .x2410-tw80GF {
+  background-color: transparent;
+  height: auto;
+  left: 699px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 460px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .x2411-tw80GF {
+  background-color: transparent;
+  height: auto;
+  left: 255px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 238px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .x242-tw80GF {
+  background-color: transparent;
+  height: auto;
+  left: 32px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 468px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .x243-tw80GF {
+  background-color: transparent;
+  height: auto;
+  left: 255px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 8px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .x244-tw80GF {
+  background-color: transparent;
+  height: auto;
+  left: 255px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 468px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .x245-tw80GF {
+  background-color: transparent;
+  height: auto;
+  left: 478px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 8px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .x246-tw80GF {
+  background-color: transparent;
+  height: auto;
+  left: 478px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 238px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .x247-tw80GF {
+  background-color: transparent;
+  height: auto;
+  left: 478px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 468px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .x248-tw80GF {
+  background-color: transparent;
+  height: auto;
+  left: 701px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 8px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .x249-tw80GF {
+  background-color: transparent;
+  height: auto;
+  left: 701px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 238px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .x3-years-rHIDO1 {
+  background-color: transparent;
+  color: var(--shark-2);
+  font-family: 'Helvetica-Regular', Helvetica, Arial, serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  height: 20px;
+  left: 1277px;
+  letter-spacing: 0.00px;
+  line-height: 20px;
+  position: absolute;
+  text-align: center;
+  top: 1335px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .x30-rHIDO1 {
+  background-color: transparent;
+  height: 26px;
+  left: 1294px;
+  letter-spacing: 0.00px;
+  line-height: 26px;
+  position: absolute;
+  text-align: center;
+  top: 1209px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .x350-center-JuRo5u {
+  background-color: transparent;
+  height: 40px;
+  left: 79px;
+  letter-spacing: 0.00px;
+  line-height: 40px;
+  position: absolute;
+  text-align: center;
+  top: 40px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .x350-center1-q47Q0s {
+  background-color: transparent;
+  height: 40px;
+  left: 79px;
+  letter-spacing: 0.00px;
+  line-height: 40px;
+  position: absolute;
+  text-align: center;
+  top: 40px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .x350-center2-a1z45v {
+  background-color: transparent;
+  height: 40px;
+  left: 88px;
+  letter-spacing: 0.00px;
+  line-height: 40px;
+  position: absolute;
+  text-align: center;
+  top: 40px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .x350-center3-lsKWjv {
+  background-color: transparent;
+  height: 40px;
+  left: 79px;
+  letter-spacing: 0.00px;
+  line-height: 40px;
+  position: absolute;
+  text-align: center;
+  top: 40px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .x350-center4-GF1B0b {
+  background-color: transparent;
+  height: 40px;
+  left: 88px;
+  letter-spacing: 0.00px;
+  line-height: 40px;
+  position: absolute;
+  text-align: center;
+  top: 40px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .x350-center5-n0F43H {
+  background-color: transparent;
+  height: 40px;
+  left: 79px;
+  letter-spacing: 0.00px;
+  line-height: 40px;
+  position: absolute;
+  text-align: center;
+  top: 40px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .x36-rHIDO1 {
+  background-color: transparent;
+  height: 26px;
+  left: 562px;
+  letter-spacing: 0.00px;
+  line-height: 26px;
+  position: absolute;
+  text-align: center;
+  top: 1203px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .x45-rHIDO1 {
+  background-color: transparent;
+  color: var(--beige);
+  font-family: 'Helvetica-Regular', Helvetica, Arial, serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  height: 40px;
+  left: 1133px;
+  letter-spacing: 0.00px;
+  line-height: 40px;
+  position: absolute;
+  text-align: center;
+  top: 620px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .x45-tw80GF {
+  background-color: transparent;
+  height: auto;
+  left: 32px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 150px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .x451-tw80GF {
+  background-color: transparent;
+  height: auto;
+  left: 32px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 380px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .x4510-tw80GF {
+  background-color: transparent;
+  height: auto;
+  left: 699px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 602px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .x4511-tw80GF {
+  background-color: transparent;
+  height: auto;
+  left: 255px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 380px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .x452-tw80GF {
+  background-color: transparent;
+  height: auto;
+  left: 32px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 610px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .x453-tw80GF {
+  background-color: transparent;
+  height: auto;
+  left: 255px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 150px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .x454-tw80GF {
+  background-color: transparent;
+  height: auto;
+  left: 255px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 610px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .x455-tw80GF {
+  background-color: transparent;
+  height: auto;
+  left: 478px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 150px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .x456-tw80GF {
+  background-color: transparent;
+  height: auto;
+  left: 478px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 380px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .x457-tw80GF {
+  background-color: transparent;
+  height: auto;
+  left: 478px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 610px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .x458-tw80GF {
+  background-color: transparent;
+  height: auto;
+  left: 701px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 150px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .x459-tw80GF {
+  background-color: transparent;
+  height: auto;
+  left: 701px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 380px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .x49-rHIDO1 {
+  background-color: transparent;
+  color: var(--beige);
+  font-family: 'Helvetica-Regular', Helvetica, Arial, serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  height: 32px;
+  left: 259px;
+  letter-spacing: 0.00px;
+  line-height: 32px;
+  position: absolute;
+  text-align: center;
+  top: 1104px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .x5-rHIDO1 {
+  background-color: transparent;
+  height: 26px;
+  left: 698px;
+  letter-spacing: 0.00px;
+  line-height: 26px;
+  position: absolute;
+  text-align: center;
+  top: 1288px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .x50-rHIDO1 {
+  background-color: transparent;
+  height: 26px;
+  left: 1165px;
+  letter-spacing: 0.00px;
+  line-height: 26px;
+  position: absolute;
+  text-align: center;
+  top: 1126px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .x501-rHIDO1 {
+  background-color: transparent;
+  color: var(--beige);
+  font-family: 'Helvetica-Regular', Helvetica, Arial, serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  height: 40px;
+  left: 602px;
+  letter-spacing: 0.00px;
+  line-height: 40px;
+  position: absolute;
+  text-align: center;
+  top: 690px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .x51-rHIDO1 {
+  background-color: transparent;
+  color: var(--beige);
+  font-family: 'Helvetica-Regular', Helvetica, Arial, serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  height: 40px;
+  left: 1149px;
+  letter-spacing: 0.00px;
+  line-height: 40px;
+  position: absolute;
+  text-align: center;
+  top: 743px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .x6-rs-numbers-3rZlFj {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: var(--desert-storm);
+  border-radius: 4px;
+  height: 96px;
+  left: 1180px;
+  position: absolute;
+  top: 347px;
+  width: 212px;
+}
+.x002-cmrmainscreen-v10 .x6-rs-numbers-9vhZAO {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: var(--desert-storm);
+  border-radius: 4px;
+  height: 96px;
+  left: 708px;
+  position: absolute;
+  top: 347px;
+  width: 212px;
+}
+.x002-cmrmainscreen-v10 .x6-rs-numbers-B0DNWx {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: var(--desert-storm);
+  border-radius: 4px;
+  height: 96px;
+  left: 472px;
+  position: absolute;
+  top: 347px;
+  width: 212px;
+}
+.x002-cmrmainscreen-v10 .x6-rs-numbers-ENA9al {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: var(--desert-storm);
+  border-radius: 4px;
+  height: 96px;
+  left: 944px;
+  position: absolute;
+  top: 347px;
+  width: 212px;
+}
+.x002-cmrmainscreen-v10 .x6-rs-numbers-XtRxae {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: var(--desert-storm);
+  border-radius: 4px;
+  height: 96px;
+  left: 236px;
+  position: absolute;
+  top: 347px;
+  width: 212px;
+}
+.x002-cmrmainscreen-v10 .x6-rs-numbers-rHIDO1 {
+  backdrop-filter: blur(px) brightness(100%);;
+  background-color: var(--desert-storm);
+  border-radius: 4px;
+  height: 96px;
+  left: 0px;
+  position: absolute;
+  top: 347px;
+  width: 212px;
+}
+.x002-cmrmainscreen-v10 .x64-rHIDO1 {
+  background-color: transparent;
+  color: var(--shark);
+  font-family: 'Helvetica-Regular', Helvetica, Arial, serif;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 400;
+  height: 30px;
+  left: 280px;
+  letter-spacing: 0.00px;
+  line-height: 30px;
+  position: absolute;
+  text-align: center;
+  top: 721px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .x70-rHIDO1 {
+  background-color: transparent;
+  color: var(--shark);
+  font-family: 'Helvetica-Regular', Helvetica, Arial, serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  height: 40px;
+  left: 703px;
+  letter-spacing: 0.00px;
+  line-height: 40px;
+  position: absolute;
+  text-align: center;
+  top: 739px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .x74-rHIDO1 {
+  background-color: transparent;
+  color: var(--shark);
+  font-family: 'Helvetica-Regular', Helvetica, Arial, serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  height: 32px;
+  left: 215px;
+  letter-spacing: 0.00px;
+  line-height: 32px;
+  position: absolute;
+  text-align: center;
+  top: 1220px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .x80-rHIDO1 {
+  background-color: transparent;
+  height: 40px;
+  left: 716px;
+  letter-spacing: 0.00px;
+  line-height: 40px;
+  position: absolute;
+  text-align: left;
+  top: 188px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .x9-rHIDO1 {
+  background-color: transparent;
+  color: var(--beige);
+  font-family: 'Helvetica-Regular', Helvetica, Arial, serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  height: 32px;
+  left: 165px;
+  letter-spacing: 0.00px;
+  line-height: 32px;
+  position: absolute;
+  text-align: center;
+  top: 1094px;
+  white-space: nowrap;
+  width: auto;
+}
+.x002-cmrmainscreen-v10 .x94-rHIDO1 {
+  background-color: transparent;
+  color: var(--beige);
+  font-family: 'Helvetica-Regular', Helvetica, Arial, serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  height: 32px;
+  left: 173px;
+  letter-spacing: 0.00px;
+  line-height: 32px;
+  position: absolute;
+  text-align: center;
+  top: 745px;
+  white-space: nowrap;
+  width: auto;
+}
+:root {
+  --beige: rgba(245,241,218,1.0);
+  --black: rgba(0,0,0,1.0);
+  --desert-storm: rgba(248,248,248,1.0);
+  --goldenrod: rgba(255,211,105,1.0);
+  --regal-blue: rgba(0,65,109,1.0);
+  --regal-blue-2: rgba(0,65,109,0.3);
+  --shark: rgba(34,40,49,0.8);
+  --shark-2: rgba(34,40,49,1.0);
+  --shark-3: rgba(34,40,49,0.3);
+  --shark-4: rgba(34,40,49,0.5);
+}

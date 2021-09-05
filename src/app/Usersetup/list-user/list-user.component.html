@@ -1,0 +1,146 @@
+
+
+
+  
+  <app-header-admin></app-header-admin>
+
+  <div class="container-fluid mt-5 mx-4">
+      <div class="article_title" style="margin-top: 50px;margin-left: -400px;">
+          <h1 id="top" class="ml-5" style="color: black">
+            <strong>Manage Users</strong>
+           </h1>
+          </div>
+    <div class="row mt-3">
+      <div class="mt-3">
+          
+          <button
+         (click)="emailnotify()"
+          type="button"
+          class="btn btn-outline-primary"
+          style="
+            margin-left: 1196px;
+            margin-top: -77px;
+          "
+        >
+        Notify User
+        </button>
+          
+        <button
+        (click)="addUser()"
+          type="button"
+          class="btn btn-primary"
+          style=" 
+            margin-left: 1073px;
+            margin-top: -116px;
+          "
+        >
+          Add User
+        </button>
+  
+        <div class="card" style="width: 96%; margin-top: -32px">
+            <div class="card-body" style="margin-bottom: -20px">
+              <div id="table" class="table-responsive" style="overflow-x: auto">
+                  <table  id ="table" class="table "
+                  style="background-color: white;">
+                  <thead style="color: black;">
+                      <tr>
+                          <th>Select</th>
+                        <th>LOB Name</th>
+                          <th>First Name</th>
+                          <th>Last Name</th>
+                          <th>Email ID</th>
+                          <th>Role Type</th>
+                          <th>Update</th>
+                          <th>Delete</th>
+
+
+                      </tr>
+                  </thead>
+
+                  <tbody>
+                      <tbody style="color: black;">
+                          <tr *ngFor="let user of userList| paginate: { 
+                          itemsPerPage: 5,
+                          currentPage: page
+                          }" >
+                              <td><mat-checkbox   [checked]=" " (change)="checkboxChanged(user,$event.checked)"></mat-checkbox> </td>
+                              <td>{{user.lob_Name}}</td>
+                              <td>{{user.first_Name}}</td>
+                              <td>{{user.last_Name}}</td>
+                              <td>{{user.email_Id}}</td>
+                              <td>{{user.user_role_type}}</td>
+                              
+
+                              <td>  <button mat-icon-button color="accent"   (click)="updateUser(user)"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                                <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+                              </svg></button></td>
+                                <td> <button mat-icon-button color="warn"   (click)="deleteUser(user.usr_Id)"><mat-icon class="mat-18">delete</mat-icon></button></td>
+
+
+
+
+
+                            </tr>
+                  </tbody>
+                </table>
+              </div>
+  
+              <div style="text-align: center">
+                <pagination-controls
+                  (pageChange)="page = $event"
+                ></pagination-controls>
+              </div>
+            </div>
+            <!-- <button (click)="submitCaAppMaster()">Push</button> -->
+          </div>
+        
+            
+          
+
+
+
+
+        </div>
+        </div>
+        <div >
+          
+        </div>
+        
+        </div >
+       
+        <div class="row" style="border-top:1px solid rgba(0, 65, 109);line-height: 50px; ">
+          <span class="mx-auto">
+            <p style="text-align: center">Copyright DTB - 2021</p></span>
+        
+          </div>
+        
+                 
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

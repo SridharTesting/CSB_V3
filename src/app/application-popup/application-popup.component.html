@@ -1,0 +1,57 @@
+
+
+
+
+   <div class="mt-1" id="label"><h1 style="text-align: center;
+    /* SemiBold / 22 */
+    
+
+    /* SemiBold/24 */
+
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 32px;
+/* identical to box height, or 133% */
+
+font-feature-settings: 'tnum' on, 'lnum' on;
+
+/* Main / 02 */
+
+color: #00416D;"
+  class="mt-1">Select Application to Begin</h1></div>
+  <form  >
+    <div class="mt-4"style="margin-left: 58px;width: 80%;" *ngIf="roleId!=3">
+     <h4>Select Line of Business</h4>
+        <mat-select class="form-control" 
+          (selectionChange)="loblistchanged($event)"placeholder="Select LOB"style="color: #00416D;" >
+         
+          <mat-option *ngFor="let lob of loblist" [value]="lob.lobId">
+            {{lob.lobName}}
+             </mat-option>
+        </mat-select>
+      </div>
+      <div class="mt-4"style="margin-left: 58px;width: 80%;" *ngIf="roleId==3">
+        <h4>Select Line of Business</h4>
+           {{lobname}}
+         </div>
+
+  <div  class="mt-3" style="margin-left: 58px;width: 80%;">
+    <h4>Select Application</h4>
+    <mat-select class="form-control" 
+    (selectionChange)="Appchanged($event)"placeholder="Select Application" style="color: #00416D;">
+  
+    <mat-option *ngFor="let app of applist" [value]="app.app_Id">
+      {{app.app_Name}}
+       </mat-option>
+  </mat-select>
+<div class="mt-5">
+  <button  class="btn btn-outline-primary pull-left" (click)="cancel()">Cancel</button>
+              <button  class="btn btn-primary pull-right " (click)="start()">Start</button>
+            </div>
+            
+  </div>
+  
+  </form>
+
+  

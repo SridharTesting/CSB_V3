@@ -1,0 +1,191 @@
+
+
+<div class="test">
+    
+     
+      
+      <mat-drawer-container>
+       
+        <mat-drawer-content class="content">
+          <div [hidden]="card">
+          <mat-card>
+          
+          <div [hidden]="appbtn" style="margin-top:1%;margin-bottom:0%;margin-left: 25%;">
+            <img src="assets/Images/download.png" width="100" height="100" style="margin-left:-21%;">
+          </div>
+            <button type="button" class="btn btn-primary " (click)="onClickOpenForm()" (click)="removeButton()" 
+            style="		  width: 150px;
+            height: 50px;
+            background-color: rgb(70, 6, 129);
+            margin-bottom: -4%;
+            margin-left: 2%;
+            margin-left: 6%;">  
+              
+              <span style="font-size: 15px;">Upload App Data</span></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            
+
+
+            <div [hidden]="appbtn" style="margin-top:1%;margin-bottom:0%;margin-left: 25%;">
+            <img src="assets/Images/map.png" width="100" height="100" style="    	
+	
+	margin-left: 42%;
+    margin-top: -32%;"><br><br>
+           
+              
+            <button type="button" class="btn btn-primary btn-lg " (click)="onClickOpenForm1()" (click)="removeButton()" 
+            style="width: 200px;
+            height: 50px;
+            background-color: rgb(70, 6, 129);
+            margin-left: 38%;
+            margin-top: -18%;">
+            <span style="font-size: 15px;"> LOB to APP Mapping</span></button>
+          </div>
+    
+          <div [hidden]="appbtn" style="margin-top:1%;margin-bottom:0%;margin-left: 25%;">
+            <img src="assets/Images/survey.png" width="100" height="100" style="margin-left: -24%;
+            ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button type="button" class="btn btn-primary " (click)="onClickOpenForm2()" (click)="removeButton()" style="width: 150px;
+            height: 50px;
+            background-color: rgb(70, 6, 129);
+            margin-top: 25%;
+            margin-left: -24%;">
+              <span style="font-size: 15px;">Create Survey</span></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </div>
+          <div [hidden]="appbtn" style="margin-top:1%;margin-bottom:0%;margin-left: 25%;">
+            <img src="assets/Images/setup.png" width="100" height="100" style="       margin-left: 46%;
+               margin-top: -42%;"><br>
+           
+              <button type="button" class="btn btn-primary btn-lg " (click)="onClickOpenForm()" (click)="removeButton()" style="width: 200px;height:50px;background-color: rgb(70, 6, 129);   margin-left: 41%;
+              margin-top: -23%;
+          ">
+                <span style="font-size: 15px;">App to Process Mapping</span></button>
+          </div>
+        
+    
+          <div [hidden]="!openform" >
+           
+    
+              <div class="form-group" style="margin-top:15%;margin-bottom:0%;margin-left: 40%;">
+                <label for="file">Application Upload</label>
+                <input type="file"
+                       id="file"
+                       (change)="handleFileInput($event.target.files)">
+            </div>
+            <div style="margin-top:5%;margin-bottom:0%;margin-left: 40%;">
+            <button type="submit" class="btn btn-primary " style="background-color: rgb(70, 6, 129)">Upload</button> 
+            <button type="button" class="btn btn-primary margin-left" (click)="goBack()" style="background-color: rgb(70, 6, 129)">Back</button>
+          </div>
+    
+          </div>
+    
+         
+      
+        <div [hidden]="!openform2" >
+          
+          <mat-radio-button>Online Survey</mat-radio-button>&nbsp;
+          <mat-radio-button (click)="offlineform()">Offline Survey</mat-radio-button><br>
+          <br><br>
+       
+        
+        <div [hidden]="!surveyform" >
+         
+            <label for="file">Offline Survey</label>
+            <input type="file"
+                   id="file"
+                   (change)="handleFileInput($event.target.files)">
+       
+        <div class="form-group">
+          <label for="orgname">Organization</label>
+          <select class="form-control" id="org">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="lobname">LOB Name</label>
+          <select class="form-control" id="lob">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </div>
+    
+        <button type="submit" class="btn btn-primary" style="background-color: rgb(70, 6, 129);">Upload</button> 
+    
+        </div>
+        <br>
+        <button type="button" class="btn btn-primary " (click)="goBack()" style="background-color: rgb(70, 6, 129);" >Back</button>
+    
+      </div>
+    
+    
+    </mat-card>
+    
+    </div>
+    
+    <div [hidden]="!openform1" >
+           
+    
+      <div class="form-group">
+        <label for="orgname">Organization</label>
+        <select class="form-control" id="org">
+          <option>Org1</option>
+          <option>Org2</option>
+          <option>Org3</option>
+          <option>Org4</option>
+          <option>Org5</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="orgname">LOB</label>
+        <select class="form-control" id="org">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
+    
+    <br><br>
+      
+        <kendo-grid [height]="410" [data]="gridData">
+          <kendo-grid-column field="app" title="Applications" width="200" [headerStyle]="{'background-color': '#666','color': '#fff','line-height': '1em'}"
+          [style]="{'background-color': '#888','color': '#fff'}"
+          [footerStyle]="{'background-color': '#888','color': '#fff'}">
+            
+          </kendo-grid-column>
+          <kendo-grid-column field="desc" title="Description" width="200" [headerStyle]="{'background-color': '#666','color': '#fff','line-height': '1em'}"
+          [style]="{'background-color': '#888','color': '#fff'}"
+          [footerStyle]="{'background-color': '#888','color': '#fff'}">
+          </kendo-grid-column>
+         
+      
+         
+          <kendo-grid-column  title="CheckBox" width="120" [headerStyle]="{'background-color': '#666','color': '#fff','line-height': '1em'}"
+          [style]="{'background-color': '#888','color': '#fff'}"
+          [footerStyle]="{'background-color': '#888','color': '#fff'}">
+              <ng-template kendoGridCellTemplate let-dataItem>
+                <input type="checkbox" id="vehicle1" name="check" value="Bike">
+              </ng-template>
+          </kendo-grid-column>
+          
+        </kendo-grid>
+        
+        <br>
+    
+    
+    <button type="submit" class="btn btn-primary  margin-left " style="background-color: rgb(70, 6, 129)">Upload</button> 
+    <button type="button" class="btn btn-primary margin-left" style="background-color: rgb(70, 6, 129)">Save</button>
+    <button type="button" class="btn btn-primary margin-left" (click)="goBack()" style="background-color: rgb(70, 6, 129)">Back</button>
+    
+    
+    </div>
+        </mat-drawer-content>
+      </mat-drawer-container>
+    </div>

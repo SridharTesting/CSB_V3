@@ -1,0 +1,46 @@
+.example-radio-group {
+    display: flex;
+    flex-direction: row;
+    margin-left: 70px;
+  }
+  
+  .example-radio-button {
+    margin: 35px;
+  }
+  .card{
+      width:50%;
+      margin-left:355px;
+  }
+  .btn {
+    background-color:#460681;
+    border: none;
+    color: white;
+    padding: 6px 27px;
+    cursor: pointer;
+    font-size: 20px;
+    margin-left: 800px;
+    margin-top: -37px;
+  }
+  
+  /* Darker background on mouse-over */
+  .btn:hover {
+    background-color: RoyalBlue;
+  }
+  *,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 2rem 1.5rem;
+  font: 1rem/1.5 "PT Sans", Arial, sans-serif;
+  color: #5a5a5a;
+}
+.mat-raio-label
+{
+  font-size: 18px;
+}

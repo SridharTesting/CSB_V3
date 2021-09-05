@@ -1,0 +1,45 @@
+
+
+<div class="container">
+    <form  [formGroup]="registerForm" (ngSubmit)="saveBusProc1()">
+                
+                  
+    
+      <div class="md-form">
+          <label for="orgname">Organization<span style="color: #ff0000">*</span></label>
+          <select class="form-control" formControlName="org" id="org">
+            <option *ngFor="let busproc1 of businessprocess1List |dropdownBusProc1"  [ngValue]="busproc1.orgId">
+              {{busproc1.orgName}}
+                
+               </option>
+          </select>
+        </div>
+        
+        
+        <div class="md-form">
+          <label for="busprolevel1name">Process Name<span style="color: #ff0000">*</span></label>
+          <input type="text" class="form-control" id="busprolevel1name"  formControlName="busprolevel1name" placeholder="busprolevel1name"/>
+          <div *ngIf="submitted &amp;&amp; registerForm.controls.busprolevel1name.errors" class="text-danger">
+            <div *ngIf="registerForm.controls.busprolevel1name.errors.required">Please enter valid Name</div>
+          </div>
+        </div>
+        
+    
+      
+          <div class="md-form">
+            <label for="busprolevel1desc">Process Description<span style="color: #ff0000">*</span></label>
+            <input type="text" class="form-control" id="busprolevel1desc" formControlName="busprolevel1desc"
+      
+            [ngClass]="{ 'is-invalid': submitted &amp;&amp; registerForm.controls.busprolevel1desc.errors }" required />
+            <div *ngIf="submitted &amp;&amp; registerForm.controls.busprolevel1desc.errors" class="text-danger">
+              <div *ngIf="registerForm.controls.busprolevel1desc.errors.required">Please enter a valid data </div>
+            </div>
+          </div>
+    
+          
+       
+      
+    
+          <button type="submit" class="btn btn-primary" >Submit</button>
+          </form>
+        </div>

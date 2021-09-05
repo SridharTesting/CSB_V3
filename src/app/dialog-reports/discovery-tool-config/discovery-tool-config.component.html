@@ -1,0 +1,38 @@
+
+
+
+
+
+  <form class="example-container" #addDiscoveryForm="ngForm"  [formGroup]="group">
+    <div class="formContainer">
+    <div class="mt-4"style="margin-left: 58px;width: 80%;">
+     <h4>Select Discovery Tool</h4>
+     <mat-form-field appearance="outline">
+      <mat-label>Discovery Tool</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let tool of tools" [value]="tool.value">
+          {{tool.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+      </div>
+  <div  class="mt-3" style="margin-left: 58px;width: 80%;">
+    <h4>Enter Host  Name</h4>
+    <mat-form-field appearance="outline" class="formField">
+      <mat-label>Host Name</mat-label>
+      <input matInput placeholder="name" formControlName="cNameControl">
+     
+      <mat-error *ngIf="cNameControl?.hasError('required')">
+          Category Name is <strong>required</strong>
+      </mat-error>
+  </mat-form-field>
+<div class="mt-5">
+
+    <button mat-raised-button class="submitBtn" >Submit</button>
+            </div>
+            
+  </div>
+</div>
+  </form>
+
+  

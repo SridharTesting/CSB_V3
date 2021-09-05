@@ -1,0 +1,78 @@
+
+<div>
+    <div>
+        <label style="font-family: Open Sans;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 32px;
+        /* identical to box height, or 133% */
+        
+        display: flex;
+        align-items: center;
+        font-feature-settings: 'tnum' on, 'lnum' on;
+        
+        /* P/01 */
+        
+        color: #00416D;
+        ">New Move Groups</label>
+    </div>
+<div>
+<label style="font-family: Open Sans;
+font-style: normal;
+font-weight: 600;
+font-size: 22px;
+line-height: 36px;
+/* identical to box height, or 164% */
+
+display: flex;
+align-items: center;
+font-feature-settings: 'tnum' on, 'lnum' on;
+
+/* New/Black/80 */
+
+color: rgba(2, 8, 20, 0.8);">Move Group Name</label>
+</div>
+<input type="text" placeholder="Move Group 1">
+<div>
+    <label style="font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 36px;
+    /* identical to box height, or 164% */
+    
+    display: flex;
+    align-items: center;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    
+    /* New/Black/80 */
+    
+    color: rgba(2, 8, 20, 0.8);">Select Application</label>
+</div>
+
+<div>
+<input   placeholder="Find Application" class="searchbox pl-3" type="text" [(ngModel)]="search" (ngModelChange)="SearchFilter()"/>
+</div>
+<br>
+<div>
+<table  id ="table" class="table">
+
+        <!-- <thead>
+                <tr>
+                  <th style="border-bottom: 1px solid rgba(65, 128, 245, 0.6); " class="column">Select</th>
+                  <th  style="border-bottom: 1px solid rgba(65, 128, 245, 0.6); " class="column" >Applications</th>
+          </tr>
+          </thead> -->
+    <tbody style="color: black;">
+            <tr *ngFor="let a of chartvalue">
+            <td><mat-checkbox   [checked]=" "></mat-checkbox> </td>
+             <td>{{a.appname}}</td>
+    <tbody>
+</table>
+</div>
+<div class="mt-4 mx-auto">
+        <button  class="btn btn-default mr-4"  mat-dialog-close=false >Cancel</button>
+        <button type="submit" class="btn btn-primary pull right" >Create Group</button>
+       </div>
+    </div>

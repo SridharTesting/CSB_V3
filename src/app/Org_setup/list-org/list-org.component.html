@@ -1,0 +1,111 @@
+
+
+
+
+
+
+<div class="article_title">
+  <h1 id="top" style="color: #00008B;font-weight: 500;">
+    Organization Setup
+  </h1>
+</div>
+<mat-divider id="divider"></mat-divider>
+ 
+
+
+
+    
+   <mat-drawer-container>
+    <mat-drawer-content class="content" > 
+      <div *ngIf="this.orgList.length>0">
+          
+          <div class="container">
+
+     
+
+      
+      
+            
+                <div class="row col-md-6 col-md-offset-2 custyle">
+                <table class="table table-striped custab">
+                <thead>
+                    <tr>
+                        <th>Organization Name</th>
+                        <th>Organization Type</th>
+                        <th>Organization Address</th>
+                        
+                        <th>Contact Name</th>
+                        <th>Contact Number</th>
+                        
+                        <th>Update</th>
+                        <th>Delete</th>
+                        
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let org of orgList| paginate: { id: 'listing_pagination',
+                    itemsPerPage: 5,
+                    currentPage: page,
+                    totalItems: totalRecords }">
+                        
+                        <td>{{org.orgName}}</td>
+                        <td>{{org.orgType}}</td>
+                        <td>{{org.orgAdd}}</td>
+                       
+                        <td>{{org.orgCntName}}</td>
+                        <td>{{org.orgCntNum}}</td>
+                      
+                       
+                        
+                    
+                       
+                         <td> <button mat-icon-button color="accent" 
+   (click)="editOrg(org.orgId)">
+     <mat-icon class="mat-18">system_update</mat-icon>
+    </button></td> 
+                         <td> <button mat-icon-button color="warn"  (click)="deleteOrg(org.orgId)">
+
+                            <mat-icon class="mat-18">delete</mat-icon>
+                           </button>
+                           
+                       </td>
+
+                      
+                        
+                      
+                        
+  
+                        
+                      </tr>
+                </tbody>
+                </table>
+
+          
+
+               <button type="button" class="btn btn-primary btn-xs  btn-block" style=" margin-left: -128%;
+               float: right;
+               margin-right: 76%;
+               margin-top: -19%;
+               padding-right: 155px;
+      " (click)="addNewOrg()">Add new Organization</button>
+                <div class="pagination" style="padding-left: 263px;">
+                  <pagination-controls  id="listing_pagination" maxSize="5" directionLinks="true" (pageChange)="page = $event"></pagination-controls>
+                </div>
+                <router-outlet></router-outlet>
+                </div>
+         </div>
+          
+        
+          </div>
+
+          <div *ngIf="this.orgList.length===0">
+            <button type="button" class="btn btn-primary btn-xs  btn-block"
+              
+
+            (click)="addNewOrg()">Add new Organization</button>
+            <router-outlet></router-outlet>
+        </div>
+         
+</mat-drawer-content>
+</mat-drawer-container>

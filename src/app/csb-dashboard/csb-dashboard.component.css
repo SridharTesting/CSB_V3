@@ -1,0 +1,178 @@
+.progress{
+
+  width: 134px;
+  border-radius: 13.25rem;
+  height: 17px;
+}
+.row-2{
+  width: 1288px;
+     border: 2px solid #00416d; margin-bottom: 20px;
+     opacity: 0.9;
+  }
+
+
+.card-block{
+ 
+padding: 15px;
+color:rgba(34, 40, 49, 0.9);
+font-weight: 500;
+font-size: 14px;
+line-height: 23px;
+
+
+}
+.row-3{
+  width: 1287px;
+   border: 2px solid #00416d; margin-bottom: 20px;
+   opacity: 0.9;
+}
+.pt-4, .py-4 {
+  padding-top: 5.5rem!important;
+}
+.flex-container{
+  display: flex;
+  align-items: stretch;
+}
+
+.pheader{
+padding-left: 11px;
+
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 55px;
+color:rgba(34, 40, 49, 0.9);
+}
+
+.stackeddivalign{
+margin: 0 auto; margin-bottom: 20px
+}
+
+
+.card-title{
+
+font-family: Open Sans;
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 32px;
+
+display: flex;
+align-items: center;
+
+
+color:rgba(34, 40, 49, 0.9);
+}
+
+
+
+div.inline { float:left; }
+table.hide1 .col1 { display: none; }
+table.hide2 .col2 { display: none; }
+::ng-deep .mat-select-arrow{
+  margin-top: -23px;
+}
+
+
+/* 
+
+td.mat-cell {
+  padding: 16px 0 16px 0;
+  border-bottom: 2px solid #ffa600;
+  border-top: 2px solid #ffa600;
+ }
+ 
+ td.mat-cell:first-child {
+   border-left: 2px solid #ffa600;
+ }
+ 
+ td.mat-cell:last-child {
+   border-right: 2px solid #ffa600;
+ } */
+ .column
+          {
+           
+            text-align: left;
+          }
+          .tablecolour
+          {
+            background-color: white;
+          }
+
+           th {
+            border-bottom-color: rgba(65, 128, 245, 0.6);
+
+            text-align: center;
+            padding: 19px;
+          }
+
+          tr{
+                       
+            border-bottom: 1px solid rgba(65, 128, 245, 0.6);
+          }
+          td{
+                       
+            border-bottom: 1px solid rgba(65, 128, 245, 0.6);
+          }
+        .column{
+          border-bottom: 1px solid rgba(65, 128, 245, 0.6); 
+          font-family: Open Sans;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 23px;
+    
+        
+        
+          
+          color: rgba(34, 40, 49, 0.9);
+          
+          
+        }
+        .mat-cell{
+          font-family: Open Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 23px;
+
+
+
+text-align: left;
+
+
+ 
+color: rgba(34, 40, 49, 0.9);
+
+        }
+        
+          ::ng-deep .ok-bar .mat-progress-bar-fill::after {
+            background-color: #019D8D;
+        }
+        
+        ::ng-deep .ok-bar .mat-progress-bar-buffer {
+            background: #E4E8EB;
+        }
+
+        ::ng-deep .warn-bar .mat-progress-bar-fill::after {
+          background-color: #E59617
+          ;
+      }
+
+      ::ng-deep .warn-bar .mat-progress-bar-buffer {
+        background: #E4E8EB;
+    }
+
+        .table{
+
+          margin-bottom: 0rem;
+        }
+
+        mat-select{
+          cursor:pointer;
+        }
+     
+.card1{
+
+  width: 175px;
+}

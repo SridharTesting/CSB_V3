@@ -1,0 +1,131 @@
+<p>upload-files-apr works!</p>
+<app-header></app-header>
+
+<div class="container-fluid "style="background-color:#F9F9F9;">
+    <div class="container"  >
+        <div class="row" style="border-top: 1px solid #00416D;"></div>
+        <div class="row"> 
+               <div class="title mt-5 mx-auto" style="margin-top: 30px;"><h4> <span><img src="assets/Images/i.png"></span> Complete Discover and Survey to view reports</h4></div>
+            </div>
+
+            
+            <div class="row" >
+                <div class="card"  style="margin:0 auto; width: 80%;padding: 20px; margin-bottom: 30px;">
+                    <div class="row">
+                       <span style="padding-left: 20px; margin-bottom: 20px;"><h5 >Application and Infrastructure Discovery</h5></span>
+                      <div class="row ml-4">
+                          <span style="width: 92%;color: #00416D;">
+                            To be able to see the reports please complete all required surveys. Some reports are auto-generated & displayed almost instantly but some reports may need evaluation and will be updated momentarily.
+                        </span>
+                        <span style="width: 96%; ">
+                        There are 2 file that need to be filled and uploaded. The two files area are:
+                    </span>
+                    <div class="row ml-3" style="width: 90%;  padding:10px;">
+                    <ol class="list-unstyled">
+                            <ol style="color: #0062A3; text-decoration: underline;">
+                                <li><a href="assets/Application_new_template.xlsx">Application Discovery Data</a></li>
+                                <li><a href="assets/Infrastructure_new_template.xlsx">Infrastructure Discovery Data</a></li>
+                           
+                            </ol>
+                    </ol>
+                       </div>
+                       <div class="row" style="width: 97%;  font-size: .9em; padding:10px;">
+                     
+                            <div class="col-sm-5">
+                              <span class="mr-3">NOTE:- Do not change the file name.</span>
+                            </div>
+                            <div class="col-sm-7" style="text-align: right;"> 
+                                <!--<button type="button" class="btn btn-outline-secondary">Downlaod Template</button>
+                                <button type="button" class="btn btn-primary" style="margin-left: 20px;  "(click)="toupload()">Upload</button>-->
+                                <div class="row"
+           
+                                (dragover)="onDragOver($event)"
+                                (drop)="onDrop($event)"
+                                (dragleave)="onDragLeave($event)"
+                                [class.active]="isActive"
+                            >
+                           
+                               
+                           
+                
+                
+                            <div class="uploadfilecontainer">
+                                    <span style="margin-top: -18px;
+                                position: relative;
+                                top: 78px;
+                                text-align: center;
+                                ">
+                                    <h6 style="margin-top: -5%;">Drag and drop or <br>browse your file</h6>
+                                  
+                                </span>
+                              
+                
+                        <!--<div class="row" style="margin: 0 auto; width: 54%;  margin-top: 30px; margin-bottom: 30px;">-->
+                                <input type="file" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" name="files" class="browse-file" (change)="onSelectedFile($event)" multiple/>
+                                
+                             
+                            
+                    </div>
+                </div>
+                             
+                            </div>
+                        
+                      </div>
+
+                       </div>
+                      
+                    </div>
+                  </div>
+                  
+        </div>
+        <div class="row" >
+            <div class="card"  style="margin:0 auto; width: 80%;padding: 20px; margin-bottom: 30px;">
+                <div class="row">
+                    <span style="padding-left: 20px; margin-bottom: 20px;">
+                        <h5 >Organizational Readiness Survey <span style="color: #00416D; font-weight: normal; font-size: 17px;">(Optional)</span></h5>
+                       
+                    </span>
+                   <div class="row">
+                       <span style="width: 92%; margin: 0 auto; ">
+                        See how ready is your organization to move to the cloud. This survey will help in understanding where your organization stands and helps us prepare you accordingly and correctly.
+                     </span>
+                  <div class="row" style="width: 97%; margin: 0 auto; font-size: .9em; padding:10px;">
+                  
+                         <div class="col-sm-8"></div>
+                         <div class="col-sm-4" style="text-align: right;"> 
+                             <button type="button" class="btn btn-outline-secondary" (click)="toorgquestioner()">Readiness Survey</button>
+                         </div>
+                     
+                   </div>
+
+                    </div>
+                   
+                 </div>
+              </div>
+     </div>
+     <div class="row" >
+        <div class="card"  style="margin:0 auto; width: 80%;padding: 20px; margin-bottom: 30px;">
+            <div class="row">
+                <span style="padding-left: 20px; margin-bottom: 20px;"><h5 >Survey</h5></span>
+               <div class="row">
+                   <span style="width: 92%; margin: 0 auto; ">
+                    Now that we have your infrastructure mapped out. You can proceed to complete the application level questions. You could also answer the organization level questions to make sure we have as much data as possible to make the migration process smooth and easy for your organization.
+                 </span>
+                   
+                <div class="row" style="width: 97%; margin: 0 auto; font-size: .9em; padding:10px;">
+              
+                     <div class="col-sm-5">
+                     
+                     </div>
+                     <div class="col-sm-7" style="text-align: right; margin-top: 10px;"> 
+                         <button type="button" class="btn btn-outline-secondary" (click)="toapplicationquestioner()">Application Survey</button>
+                     </div>
+                 
+               </div>
+
+                </div>
+               
+             </div>
+        </div>
+        </div>
+

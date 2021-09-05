@@ -1,0 +1,59 @@
+
+
+
+
+
+<button class="btn btn-secondary pull-right mb-5" mat-button [mat-dialog-close]="false">
+    Cancel
+  </button>
+
+
+
+
+
+
+<div class="content-container" mt-4 mb-4 pb-5>
+
+
+<span style="
+padding-left: 11px;
+
+
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 55px;
+color:rgba(34, 40, 49, 0.9);
+">{{piechartname}} > {{title}}</span>
+<div class="card-body p-0">
+  <table class="table table-responsive-md " >
+    <thead>
+      <tr  style="text-align: left">
+        <th class="column"  style="border-bottom: 1px solid rgba(65, 128, 245, 0.6); " >#</th>
+        <th class="column"  style="border-bottom: 1px solid rgba(65, 128, 245, 0.6); ">
+            Host Name</th>
+        <th class="column"  style="border-bottom: 1px solid rgba(65, 128, 245, 0.6); ">IP Address</th>
+        <th class="column"  style="border-bottom: 1px solid rgba(65, 128, 245, 0.6); ">Environment</th>
+        <th class="column"  style="border-bottom: 1px solid rgba(65, 128, 245, 0.6); " *ngIf="physicalvsvirtual">Data Center</th>
+        <th class="column"  style="border-bottom: 1px solid rgba(65, 128, 245, 0.6); " *ngIf="datacenter">Server Type</th>
+      </tr>
+    </thead>
+    <tbody style="text-align: left;">
+      <tr *ngFor="let g of chartvalue; let i=index ">
+        <td  class="mat-cell" style="text-align: left">{{ i+1 }}</td>
+        <td class="mat-cell" style="text-align: left">{{ g.Host_Name }}</td>
+        <td  class="mat-cell" style="text-align: left">{{ g.IP_Address }}</td>
+        <td   class="mat-cell" style="text-align: left">{{ g.Environment }}</td>
+        <td   class="mat-cell" style="text-align: left" *ngIf="physicalvsvirtual">{{ g.Data_Center }}</td>
+        <td   class="mat-cell" style="text-align: left" *ngIf="datacenter">{{ g.Server_Type }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="pt-5 pb-5 ">
+<button class="btn btn-secondary pull-right mb-5 " mat-button [mat-dialog-close]="false">
+    Cancel
+  </button>
+</div>
+</div>

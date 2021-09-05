@@ -1,0 +1,61 @@
+mat-select{
+    text-align: center;
+    border:1px solid #3997d6;
+    height: 36px;
+    border-radius: 2px;
+    width: 65%;
+  }
+
+  mat-option {
+    text-overflow: unset;
+   min-width: fit-content;
+  }
+::ng-deep.mat-select-trigger{
+  margin-top: 6px;
+}
+
+.btn{
+  text-transform: none;
+  height: 44px;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.column
+          {
+           
+            text-align: left;
+          }
+          .tablecolour
+          {
+            background-color: white;
+          }
+
+           th {
+            border-bottom-color: rgba(65, 128, 245, 0.6);
+            border-bottom: 1px solid rgba(65, 128, 245, 0.6); 
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 23px;
+ 
+          }
+
+          tr{
+                       
+            border-bottom: 1px solid rgba(65, 128, 245, 0.6);
+          }
+          td{
+                       
+            border-bottom: 1px solid rgba(65, 128, 245, 0.6);
+          }
+          th{
+            border-bottom: 1px solid rgba(65, 128, 245, 0.6);
+          }
+
+
+  

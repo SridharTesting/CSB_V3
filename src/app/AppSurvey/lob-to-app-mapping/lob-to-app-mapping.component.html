@@ -1,0 +1,117 @@
+
+ 
+<div class="article_title">
+  <h1 id="top">
+   App to LOB Mapping
+  </h1>
+</div>
+<mat-divider id="divider"></mat-divider>
+ <mat-drawer-container>
+  <mat-drawer-content class="content" >
+
+<form #appForm="ngForm" novalidate (ngSubmit)="onSubmit()">
+ 
+
+  
+      <!--<div class="form-group">
+        <label class="control-label dash-control-label col-xs-3">Organization:</label>
+        <select  required #org [class.is-invalid]="org.invalid && org.touched"  class="custom-select" name="org" [(ngModel)]="appsMappedToLObs.org"  (change)="onChangeOrg($event.target.value)">
+          <option value="">Select Organization</option>
+          <option *ngFor="let org of orgs" [value]="org.orgId">{{org.orgName}}</option>
+        </select>
+       
+      
+      </div>-->
+
+<div class="dropdown">
+      <mat-form-field appearance="outline" fxFlex="100">
+        <mat-label>Organization</mat-label>
+      
+        <mat-select  required   name="org" [(ngModel)]="appsMappedToLObs.org" #lob   (selectionChange)="onChangeOrg($event.value)">
+          <mat-option *ngFor="let org of orgs"  [value]="org.orgId"
+          >
+          {{org.orgName}}
+      </mat-option>
+  </mat-select>
+ </mat-form-field><br/>
+
+      <mat-form-field appearance="outline" fxFlex="100">
+        <mat-label>LOB</mat-label>
+        <mat-select  required [(ngModel)]="appsMappedToLObs.lobId" #lob name="lob"  (selectionChange)="onChangeLOB($event.value)">
+          <mat-option *ngFor="let lob of lobs"  [value]="lob.lobId"
+          >
+          {{lob.lobName}}
+      </mat-option>
+  </mat-select>
+ </mat-form-field>
+ 
+</div>
+
+
+
+      <!--<div class="form-group">
+        <label class="control-label dash-control-label col-xs-3">LOB:</label>
+        <select  required  [disabled]="appsMappedToLObs.org==''" #lob [class.is-invalid]="lobHasError && lob.touched" class="custom-select" name="lob" [(ngModel)]="appsMappedToLObs.lobId" (change)="onChangeLOB($event.target.value)">
+          <option value="default" >Select LOB</option>
+          <option *ngFor="let lob of lobs" [value]="lob.lobId">{{lob.lobName}}</option>
+        </select>
+       
+      </div>-->
+  
+<div *ngIf="lobApps">
+ 
+          
+    <div class="container">
+      
+          <div class="row col-md-6 col-md-offset-2 custyle">
+          <table class="table table-striped custab">
+          <thead>
+              <tr>
+          
+          <th>Application Name</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+     
+   
+    <tr *ngFor="let app of apps| paginate: { id: 'listing_pagination',
+    itemsPerPage: 5,
+    currentPage: page,
+    totalItems: totalRecords }" >
+        
+        <td>{{app.appName}}</td>
+        <td>{{app.appDesc}}</td>
+        
+      <td> <input type="checkbox" value="{{app.appChecked}}" name="{{app.lobId}}"   [checked]="(app.appChecked==1 ? 'checked' : '')" (change)="checkBox($event.target)" /></td>
+
+        
+      </tr>
+        
+      
+       
+         </tbody>
+         </table>
+        </div>
+         </div>
+
+         <div class="buttons">
+         <button class="btn btn-primary btn-xs btn-block" style=" width: 10%;
+         margin-left: 90%;
+      
+         margin-top: 0.5%;
+     " type="submit" >submit</button>
+      <button class="btn btn-primary btn-xs btn-block" style="    width: 10%;
+      margin-left: -21%;    width: 10%;
+    margin-left: 78%;
+    margin-top: -2.8%;" type="submit"   (click)=onBack()>Back</button>
+         </div>
+   
+      <div class="pagination" style="margin-top:-2%;display:flex;margin-left:23%">
+        <pagination-controls  id="listing_pagination" maxSize="5" directionLinks="true" (pageChange)="page = $event"></pagination-controls>
+      </div>
+    
+         </div>
+        
+         
+</form>

@@ -1,0 +1,277 @@
+
+.sidenav-container {
+    height: 100%;
+  }
+  
+  .sidenav {
+    width: 30%;
+  }
+  
+  .sidenav .mat-toolbar {
+    background: inherit;
+  }
+  
+  
+  
+  .mat-toolbar.mat-primary {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+  .toolbar-container{
+    position: fixed;
+    z-index:10;
+  }
+  .form-control{  
+     display: block;
+  width: 90%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  }
+  .example-container {
+    position: absolute;
+    top: 60px;
+    bottom: 60px;
+    left: 0;
+    right: 0;
+  }
+  .test{
+    width: 902px;
+    overflow-y: scroll;
+    
+    height: 514px;
+   
+}
+
+.pagination{
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 87%;
+  left: 38%;
+}
+  .example-sidenav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    background: transparent
+  }
+  
+  .example-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  
+  .glyphicon.glyphicon-log-out{
+   
+      position: fixed;
+      top: 22px;
+      display: inline-block;
+      font-family: 'Glyphicons Halflings';
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      right: 2%;
+      -moz-osx-font-smoothing: grayscale;
+      color:white;
+  
+  
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: -22%;
+    right: 0;
+    
+
+  }
+  
+  
+  .sibebar-content {
+    width: 30vw;
+  }
+  .mat-drawer-content .content{
+    overflow-y: auto;
+  }
+  .content {
+    padding: 2%;
+    background-color: rgb(240, 240, 240);
+    padding-bottom: 50%;
+    margin-left: 461px;
+   
+  }
+  
+
+
+  
+  mat-drawer-container { flex: 1 1 auto; }
+  .label {
+    display: inline;
+    padding: .2em .6em .3em;
+    font-size: 75%;
+    font-weight: bold;
+    line-height: 1;
+    color: black;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+  }
+  .my-custom-class{
+    color:#ffff
+  
+  }
+  .appitems.label[_ngcontent-rwy-c86] {
+    line-height: 48px;
+    font-weight: 400;
+    color:black;
+  }
+  
+  .mat-toolbar-row{
+    background-color: rgb(70, 6, 129);
+  }
+
+  .my-custom-class{
+    margin-left:35%
+  }
+  h1{
+    color: white;
+    font-weight: bold;
+    /* right: 53%; */
+    position: fixed;
+    right: 46%;
+  
+  }
+  .glyphicon-user{
+    width: 87px;
+    float: left;
+    position: fixed;
+    left: 79%;
+    top:3%;
+    color:white;
+  
+  }
+  #icon{
+    width: 87px;
+    float: left;
+    position: fixed;
+    left: 0%;
+  
+  }
+  .example-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  #button{
+   
+     
+    float: right;
+    position: absolute;
+    top: 91%;
+    left: 122%;
+  
+  }
+  
+  #listing_pagination{
+    float:left;
+  }
+    
+    .btn-primary:hover{
+      color: #fff;
+      background-color: #00b3db;
+      border-color: #285e8e;
+    }
+    p{
+      color:red;
+    }
+    .navbar-light{
+      top:10px;
+      background-color: rgb(70, 6, 129);
+      
+    }
+    h2{
+      color:white;
+    }
+    
+
+
+    .custab{
+      border: 1px solid #ccc;
+      padding: 5px;
+      margin: 10% 0;
+      box-shadow: 3px 3px 2px #ccc;
+      transition: 0.5s;
+      }
+  .custab:hover{
+      box-shadow: 3px 3px 0px transparent;
+      transition: 0.5s;
+      }
+  
+     
+  
+  #custom-search-input {
+    margin:0;
+    margin-top: 24px;
+    padding: 2px;
+  }
+  .col-md-12 {
+    width: 62%;
+  }
+  #custom-search-input .search-query {
+    padding-right: 3px;
+    padding-right: 4px \9;
+    padding-left: 3px;
+    padding-left: 4px \9;
+    /* IE7-8 doesn't have border-radius, so don't indent the padding */
+  
+    margin-bottom: 0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 43px;
+  }
+  
+  #custom-search-input button {
+    border: 0;
+    background: none;
+    /** belows styles are working good */
+    padding: 2px 5px;
+    margin-top: 2px;
+    position: relative;
+    left: -28px;
+    /* IE7-8 doesn't have border-radius, so don't indent the padding */
+    margin-bottom: 0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    color:green;
+  }
+  
+  .search-query:focus + button {
+    z-index: 3;  
+  }
+  .input-group {
+    position: relative;
+    display: table;
+    border-collapse: separate;
+    padding-right: 0px;
+    padding-left: 183px;
+  }

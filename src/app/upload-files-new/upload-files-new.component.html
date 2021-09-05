@@ -1,0 +1,213 @@
+
+    <app-header-apr></app-header-apr>
+
+<div class="container-fluid  mt-5 ">
+   
+    
+            
+            <div class="row  mt-5" >
+                <div class="card mt-5"  style="margin:0 auto; width: 80%;padding: 20px; margin-bottom: 30px;     height: 294px;">
+                    <div class="row">
+                       <span style="padding-left: 20px; margin-bottom: 20px;"><h5 >Complete Infrastructure Discovery</h5></span>
+                      <div class="row ml-4">
+                          <span style="width: 66%;color: #00416D;">
+                            To be able to see the reports please complete all required surveys. Some reports are auto-generated & displayed almost instantly but some reports may need evaluation and will be updated momentarily.
+                        </span>
+                    
+                    <div class="row ml-0 mt-3" >
+                 
+                          
+                               <a style="font-family: Open Sans;
+                            
+                               font-weight: 300;
+                               font-size: 20px;
+
+                               color: #0C59E9;" href="Infrastructure_new_template.xlsx">Download Blank Template</a>
+                               <a style="font-family: Open Sans;
+                            
+                               font-weight: 300;
+                               font-size: 20px;
+
+                               color:  #537606;" class="px-5" (click)="downloadLatestFile(2)">Download Recent Data Excel</a>
+                           
+                        
+
+                       </div>
+                       <div class="row" style="width: 97%;  font-size: .9em; padding:10px;">
+                     
+                         
+                            <div class="col-sm-7" style="text-align: right;"> 
+                             
+                                <div class="row"
+           
+                                (dragover)="onDragOver($event)"
+                                (drop)="onDrop($event,2)"
+                                (dragleave)="onDragLeave($event)"
+                                [class.active]="isActive"
+                            >
+                            <div class="uploadfilecontainer" style="background: rgba(0, 65, 109, 0.1);">
+                                <div class="uploadArea">
+                                    <div>
+                                    <input type="file" name="files" class="browse-file" (change)="onSelectedFile($event,2)" multiple/>
+                                </div>
+                            </div>
+                            <div class="ddtext">
+                                <h4 style="text-align: center;">Drag and drop or <br>browse your file</h4>
+                            </div>
+                
+                    </div>
+                </div>
+                             
+                            </div>
+                        
+                      </div>
+
+                       </div>
+                      
+                    </div>
+                  </div>
+                  
+        </div>
+
+           
+        <div class="row" >
+            <div class="card "  style="margin:0 auto; width: 80%;padding: 20px; margin-bottom: 30px;     height: 294px;">
+                <div class="row">
+                   <span style="padding-left: 20px; margin-bottom: 20px;"><h5 >Complete Application Discovery</h5></span>
+                  <div class="row ml-4">
+                      <span style="width: 66%;color: #00416D;">
+                        See how ready is your organization to move to the cloud. This survey will help in understanding where your organization stands and helps us prepare you accordingly and correctly.
+                    </span>
+                
+                <div class="row ml-0 mt-3" >
+             
+                      
+                           <a style="font-family: Open Sans;
+                        
+                           font-weight: 300;
+                           font-size: 20px;
+
+                           color: #0C59E9;"  href="assets/Application_new_template.xlsx">Download Blank Template</a>
+                           <a style="font-family: Open Sans;
+                        
+                           font-weight: 300;
+                           font-size: 20px;
+
+                           color:  #537606;" class="px-5" (click)="downloadLatestFile(1)">Download Recent Data Excel</a>
+                       
+
+
+                   </div>
+                   <div class="row" style="width: 97%;  font-size: .9em; padding:10px;">
+                 
+                     
+                        <div class="col-sm-7" style="text-align: right;"> 
+                         
+                            <div class="row"
+       
+                            (dragover)="onDragOver($event)"
+                            (drop)="onDrop($event,1)"
+                            (dragleave)="onDragLeave($event)"
+                            [class.active]="isActive"
+                        >
+                       
+                        <div class="uploadfilecontainer" style="background: rgba(0, 65, 109, 0.1);">
+                            <div class="uploadArea">
+                                <div>
+                                <input type="file" name="files" class="browse-file" (change)="onSelectedFile($event,1)" multiple/>
+                            </div>
+                        </div>
+                        <div class="ddtext">
+                            <h4 style="text-align: center;">Drag and drop or <br>browse your file</h4>
+                        </div>
+            
+                </div>
+            </div>
+                         
+                        </div>
+                    
+                  </div>
+
+                   </div>
+                  
+                </div>
+              </div>
+              
+    </div>
+       
+    <div class="row" >
+        <div class="card "  style="margin:0 auto; width: 80%;padding: 20px; margin-bottom: 30px;     height: 294px;">
+            <div class="row">
+               <span style="padding-left: 20px; margin-bottom: 20px;"><h5 >Process Related</h5></span>
+              <div class="row ml-4">
+                  <span style="width: 66%;color: #00416D;">
+                    See how ready is your organization to move to the cloud. This survey will help in understanding where your organization stands and helps us prepare you accordingly and correctly.
+                </span>
+            
+            <div class="row ml-0 mt-3" >
+         
+                  
+                       <a style="font-family: Open Sans;
+                    
+                       font-weight: 300;
+                       font-size: 20px;
+
+                       color: #0C59E9;" href="assets/Application_new_template.xlsx">Download Blank Template</a>
+                       <a style="font-family: Open Sans;
+                    
+                       font-weight: 300;
+                       font-size: 20px;
+
+                       color:  #537606;" class="px-5" (click)="downloadLatestFile(3)">Download Recent Data Excel</a>
+                   
+                
+
+               </div>
+               <div class="row" style="width: 97%;  font-size: .9em; padding:10px;">
+             
+                 
+                    <div class="col-sm-7" style="text-align: right;"> 
+                       
+                        <div class="row"
+   
+                        (dragover)="onDragOver($event)"
+                        (drop)="onDrop($event,3)"
+                        (dragleave)="onDragLeave($event)"
+                        [class.active]="isActive"
+                    >
+                   
+                       
+                   
+        
+        
+                    <div class="uploadfilecontainer" style="background: rgba(0, 65, 109, 0.1);">
+                        <div class="uploadArea">
+                            <div>
+                            <input type="file" name="files" class="browse-file" (change)="onSelectedFile($event,3)" multiple/>
+                        </div>
+                    </div>
+                    <div class="ddtext">
+                        <h4 style="text-align: center;">Drag and drop or <br>browse your file</h4>
+                    </div>
+        
+            </div>
+        </div>
+                     
+                    </div>
+                
+              </div>
+
+               </div>
+              
+            </div>
+          </div>
+          
+</div>
+    
+
+       
+    
+        
+   
+
+</div>

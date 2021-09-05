@@ -1,0 +1,51 @@
+<div class="container" [formGroup]="firstformgroup" *ngIf="viewtype=='application'">
+
+    <h2 mat-dialog-title>Add Application</h2>
+    <mat-divider></mat-divider>
+    <input type="text" formControlName="appId" placeholder="Enter AppId">
+    <input type="text"  formControlName="appName" placeholder="Enter App Name">
+    <div class="mt-4"style="margin-left: -3px;
+    width: 103%;">
+        <h4>Select Line of Business</h4>
+           <mat-select class="form-control" 
+             (selectionChange)="loblistchanged($event)"
+             placeholder="Select LOB"
+             style="color: #00416D;" >
+             <mat-option *ngFor="let lob of loblist" [value]="lob.lobId">
+               {{lob.lobName}}
+                </mat-option>
+           </mat-select>
+         </div>
+    
+    
+    <mat-dialog-actions class="mt-4 mx-5 pl-5">
+        <button  class="btn btn-primary mr-4" (click)="createDialog()" >Create</button>
+        <button  class="btn btn-default" mat-dialog-close="false">Cancel</button>
+    </mat-dialog-actions>
+    </div>
+
+    <div class="container" *ngIf="viewtype == 'infrastructure'" [formGroup]="infraformgroup">
+      <h2 mat-dialog-title>Add Infrastructure</h2>
+    
+      <input type="text"  formControlName="hostName" placeholder="Enter Host Name">
+      <input type="text"  formControlName="ipAddress" placeholder="Enter IP Address">
+      <div class="mt-4"style="margin-left: -3px;
+      width: 103%;">
+          <h4>Select Application</h4>
+             <mat-select class="form-control" 
+               (selectionChange)="Appchanged($event)"
+               placeholder="Select Application"
+               style="color: #00416D;" >
+              
+               <mat-option *ngFor="let infra of caAppMasterData" [value]="infra.appMasterId">
+                 {{infra.appName}}
+                </mat-option>
+             </mat-select>
+             <mat-dialog-actions class="mt-4 mx-5 pl-5">
+
+              <button  class="btn btn-primary mr-4"(click)="createInfra()" >Create</button>
+              <button  class="btn btn-default" mat-dialog-close="false">Cancel</button>
+      
+          </mat-dialog-actions>
+           </div>
+    </div>

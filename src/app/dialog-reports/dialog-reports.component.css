@@ -1,0 +1,14 @@
+.mat-tab-link-container {
+    display: flex;
+    flex-grow: 1;
+    overflow: hidden;
+    z-index: 1;
+    background-color: white !important;
+}
+
+.mat-tab-nav-bar .mat-tab-header .mat-primary{
+    background-color: white !important;
+    height: 0% !important;
+}
+
+.nav-item.active { background: green; }

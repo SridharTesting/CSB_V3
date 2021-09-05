@@ -1,0 +1,79 @@
+
+
+<div class="article_title">
+  <h1 id="top">
+   LOB Setup
+  </h1>
+</div>
+<mat-divider id="divider"></mat-divider>
+  
+  <mat-drawer-container>
+    <mat-drawer-content class="content" > 
+        
+      <div *ngIf="this.lobList.length>0">
+          <div class="container">
+            
+                <div class="row col-md-6 col-md-offset-2 custyle">
+                <table class="table table-striped custab">
+                <thead>
+                    <tr>
+                        
+                        <th>Organization Name</th>
+                        <th>LOB Name</th>
+                        <th>LOB Manager</th>
+                        <th>Update</th>
+                        <th>Delete</th>
+
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let lob of lobList| paginate: { id: 'listing_pagination',
+                    itemsPerPage: 5,
+                    currentPage: page,
+                    totalItems: totalRecords }" >
+                        
+                        <td>{{lob.orgName}}</td>
+                        <td>{{lob.lobName}}</td>
+                        <td>{{lob.lobManager}}</td>
+                   
+                          <td> <button mat-icon-button color="accent" (click)="editLOB(lob.lobId)"><mat-icon class="mat-18">system_update</mat-icon></button></td>
+                          <td> <button mat-icon-button color="warn" (click)="deleteLOB(lob.lobId)"><mat-icon class="mat-18">delete</mat-icon></button></td>
+                      
+                      
+                      <td></td>
+                        
+                      
+                        
+  
+                        
+                      </tr>
+                </tbody>
+                </table>
+                <button type="button" class="btn btn-primary btn-xs btn-block"  style=" margin-left: -10%;
+                margin-top: -8%;float:right;margin-right: 15%;" 
+              
+
+     (click)="goToADDLOB()">Add new LOB</button>
+                <div class="pagination">
+                  <pagination-controls  id="listing_pagination" maxSize="5" directionLinks="true" (pageChange)="page = $event"></pagination-controls>
+                </div>
+                <router-outlet></router-outlet>
+                </div>
+            </div>
+          
+    
+        <div *ngIf="this.lobList.length===0">
+          <button type="button" class="btn btn-primary btn-xs  btn-block"
+            
+
+          (click)="goToADDLOB()">Add new LOB</button>
+          <router-outlet></router-outlet>
+      </div>  
+    </div>
+        
+         
+         
+</mat-drawer-content>
+
+</mat-drawer-container>

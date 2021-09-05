@@ -1,0 +1,214 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<div class="article_title" >
+    <h1 id="top" style="color: #00008B;font-weight: 500;">
+      Cloud Migration Assesment
+    </h1>
+  </div>
+  <mat-divider id="divider"></mat-divider>
+  <br>
+
+  <mat-divider id="divider"></mat-divider>
+<div class="sidebar">
+    <a class="active" href="#home" style="font-size:20px;"><img width="20" height="20" src="https://www.flaticon.com/premium-icon/icons/svg/3405/3405524.svg"  class="loaded"> Discovery </a>
+    <a href="#news"  style="font-size:20px;"><i class="fa fa-fw fa-book"></i>Assessments</a>
+    <a href="#contact" style="font-size:20px;"><i class="fa fa-object-group">&nbsp;</i>Reports</a>
+
+
+  </div><!--
+  <div class="container">
+
+    <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="#home" style="font-size:22px;font-weight:500;">Discovery tool configuration</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#menu1" style="font-size:22px;font-weight:500;">Discovery Upload</a>
+      </li>
+    </ul>
+
+
+    <div class="tab-content">
+      <div id="home" class="container tab-pane active"><br>
+        <p style="font-size:20px;">Contents which is to included later</p>
+        <br>
+        <div class="col-xs-4">
+            <label for="ex2" style="font-size:21px;color:#00008B;">Select Discovery tool :</label>
+            <input class="form-control" id="ex2" type="text">
+          </div>
+          <div class="col-xs-4">
+            <label for="ex3" style="font-size:21px;color:#00008B;">Host name :</label>
+            <input class="form-control" id="ex3" type="text">
+          </div>
+          <br>
+          <div class="submit" style="padding-bottom: 27px;">
+<a href="#" class="btn btn-primary btn-lg active" style="margin-left: -290px;margin-top: 103px;font-weight: 500;"role="button" aria-pressed="true">Submit</a>
+<a href="#" class="btn btn-secondary btn-lg active"  style="margin-top: 103px;font-weight: 500;"role="button" aria-pressed="true">Download</a>
+</div>
+    </div>
+    <br>
+    <br>
+    <br>
+      <div id="menu1" class="container tab-pane fade"><br>
+        <p>Contents which is to included later</p>
+      </div>
+
+    </div>
+  </div>-->
+
+
+<div class="card" style="background-color: white;">
+    <div class="serve" (click)="onClickOpenForm1()" (click)="removeButton()">
+        <p>
+        <img src="assets/Images/server.png" style="height: 97px;
+        margin-left:44px;
+        margin-top: 21px;"><h1 style="margin-left: 145px;;
+    margin-top: -59px; cursor: pointer;font-size: 30px;font-weight: 500;color: #00008B;">Server</h1></p>
+    </div>
+    <div class="database" (click)="onClickOpenForm2()" (click)="removeButton()">
+        <p>
+            <img src="assets/Images/DB.png" style="height: 97px;
+            margin-left: 446px;
+            margin-top: -100px;
+            "><h1 style="margin-left: 548px;
+    margin-top: -68px; cursor: pointer;font-size: 30px;font-weight: 500;color: #00008B;">Database</h1>
+        </p>
+    </div>
+    <div class="application" (click)="onClickOpenForm3()" (click)="removeButton()">
+        <p>
+            <img src="assets/Images/Appli.png" style=" height: 107px;
+               margin-left: 800px;
+    margin-top: -126px;"><h1 style="    margin-left:890px;
+    padding-top: -28px;
+    margin-top: -86px; cursor: pointer;font-size: 30px;font-weight: 500;color: #00008B;">Application</h1>
+        </p>
+    </div>
+    <mat-divider style="width:auto;margin-left:0px;" id="divider"></mat-divider>
+
+<div [hidden]="!openform">
+    <form [formGroup]="registerForm">
+        <div form-group>
+          <p class="heading">Importing spreadsheets of the data you have already collected
+               is the easiest way to get started. To be complaint with SLK’s Digital Tool
+               box, we have provided standard template to upload server details for processing
+                infrastructure data as part of discovery phase. Digital Tool Box uses the
+                 following fields to map a server to other resources: Host Name, IP Addresses,
+                 OS Version, Environment, Server type, CPU and more
+                </p>
+
+            <br>
+
+
+            <p class="heading1">Use this <a style="color:blue;"> link</a> to download Server data template</p>
+            <br>
+
+
+        <p class="heading2">Upload Server Data:</p>
+    <input type="file" size="70" style="margin-left: 6%;
+    width: 30%;
+    margin-top: 25px;background-color: lightgrey;">
+
+    <div class="mt-3">
+      <button style="    margin-left: 429px;
+      margin-top: -78px;
+      height: 28px;" type="submit" class="btn btn-primary">Submit</button>
+    </div>
+    <script>
+        // Add the following code if you want the name of the file appear on select
+        $(".custom-file-input").on("change", function() {
+          var fileName = $(this).val().split("\\").pop();
+          $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+        });
+        </script>
+        <br>
+        <br>
+        <br>
+
+
+        </div>
+      </form>
+
+
+  </div>
+  <div [hidden]="!openform1">
+
+    <form [formGroup]="registerForm1">
+        <div form-group>
+            <p class="heading">Importing spreadsheets of the data you have already collected is the easiest way to get started.
+                To be complaint with SLK’s Digital Tool box, we have provided standard template to upload database  details for
+                 processing infrastructure data as part of discovery phase. Digital Tool Box uses the following
+                  fields to map a server to other resources: DB Names, Host Name, OS Version </p>
+
+            <br>
+
+
+            <p class="heading1">Use this <a style="color:blue;">link</a>  to download Database template</p>
+
+            <br>
+
+
+        <p class="heading2">Upload Server Data:</p>
+    <input type="file" size="70" style="margin-left: 6%;
+    width: 30%;
+    margin-top: 25px;background-color: lightgrey;">
+
+    <div class="mt-3">
+      <button style="    margin-left: 429px;
+      margin-top: -78px;
+      height: 28px;" type="submit" class="btn btn-primary">Submit</button>
+    </div>
+    <script>
+        // Add the following code if you want the name of the file appear on select
+        $(".custom-file-input").on("change", function() {
+          var fileName = $(this).val().split("\\").pop();
+          $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+        });
+        </script>
+        <br>
+        <br>
+        <br>
+
+
+        </div>
+      </form>
+
+
+  </div>
+  <div [hidden]="!openform2">
+  <form [formGroup]="registerForm2">
+    <div form-group>
+        <p class="heading">Importing spreadsheets of the data you have already collected is the easiest way to get started. To be complaint with SLK’s Digital Tool box, we have provided standard template to upload Application  details for processing infrastructure data as part of discovery phase. Digital Tool Box uses the following fields to map a server to other resources: Application Name, Application Type, Criticality and more. </p>
+
+        <br>
+
+
+        <p class="heading1">Use this <a style="color:blue;">link</a>  to download Application template</p>
+        <br>
+
+
+        <p class="heading2">Upload Server Data:</p>
+    <input type="file" size="70" style="margin-left: 6%;
+    width: 30%;
+    margin-top: 25px;background-color: lightgrey;">
+
+    <div class="mt-3">
+      <button style="    margin-left: 429px;
+      margin-top: -78px;
+      height: 28px;" type="submit" class="btn btn-primary">Submit</button>
+    </div>
+    <script>
+        // Add the following code if you want the name of the file appear on select
+        $(".custom-file-input").on("change", function() {
+          var fileName = $(this).val().split("\\").pop();
+          $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+        });
+        </script>
+        <br>
+        <br>
+        <br>
+
+    </div>
+  </form>
+
+
+</div>

@@ -1,0 +1,24 @@
+.label{
+    position: absolute;
+    width: 385px;
+    height: 40px;
+    left: 24px;
+    top: 119px;
+    
+    /* SemiBold/32 */
+    
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 40px;
+    /* identical to box height, or 125% */
+    
+    display: flex;
+    align-items: center;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    
+    /* Primary/01 */
+    
+    color: #00253D;
+}

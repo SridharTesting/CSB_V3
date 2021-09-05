@@ -1,0 +1,19 @@
+.container{
+  border-radius: 25px;
+  background: white;
+  padding: 20px;
+  width: 622px;
+
+  height: 400px;
+  margin-top: 12%;
+}
+#label{
+  color:purple;
+  margin-top: -12%;
+  margin-left: -2%;
+  white-space: nowrap;
+  font-weight: bold;
+  font-size: large;
+}
+
+

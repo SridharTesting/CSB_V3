@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="mt-5" id="label">
+      <h1 style="text-align: center">Download Template/File</h1>
+    </div>
+  
+    <div class="row mt-5">
+      <div class="col-6">
+        <mat-card>
+          <mat-card-content>
+            <p>Click here to download the blank Template</p>
+            <mat-card-actions align="center">
+              <a
+              href="{{template}}"
+              class="square_btn text-center"
+                (click)="templateDownloadApplication()"
+              >
+               <p style="color: white;text-align: center;"> Download Template</p>
+            </a>
+            </mat-card-actions>
+          </mat-card-content>
+        </mat-card>
+      </div>
+  
+      <div class="col-6">
+        <mat-card>
+  
+          <mat-card-content>
+            <p>Click here to download previously Uploaded File</p>
+            <mat-card-actions align="center">
+              <a
+                class="square_btn text-center"
+                (click)="FileDownload()"
+  
+              >
+               <p style="color: white;"> Download File</p>
+              </a>
+            </mat-card-actions>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  
+    <div class="text-center mt-5">
+      <button mat-raised-button (click)="close()">Close</button>
+    </div>
+  </div>
+  

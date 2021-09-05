@@ -1,0 +1,292 @@
+<app-header></app-header>
+<div class="contanier-fluid ml-3 mt-5 pt-5" >
+    <div class="row row-2 ml-4">
+    <div class="row" style="margin-top: 14px">
+        <div class="col-sm-12">
+          <h5
+            style="
+              color: #00416d;
+              margin-top: 10px;
+              font-size: 40px;
+  
+              margin-left: 27px;
+              font-weight: normal;
+            "
+          >
+           Welcome, {{name | titlecase}}
+          </h5>
+        <p class="mt-3" style="
+        color: #00416d;
+     
+        font-size: 25px;
+
+        margin-left: 27px;
+        font-weight: normal;
+      ">
+            Your Application Survey Status
+        </p>
+        </div>
+      </div>
+      <div class="row row px-5" style="width: 100%; margin-left: 0%">
+        <div class="col">
+          <div class="card card1 pr-2" style="text-align: center">
+            <div class="card-block">LOB Manager</div>
+  
+            <span
+              ><h2
+                style="
+                  left: 39.7%;
+                  right: 39.39%;
+                  top: 41.98%;
+                  bottom: 9.88%;
+                  font-style: normal;
+                  font-weight: 500;
+                  font-size: 32px;
+                  line-height: 20px;
+                  color: #00416d;
+                "
+              >
+            
+              {{userdashboard[0].lob_manager}}
+              </h2></span
+            >
+          </div>
+        </div>
+        <div class="col">
+          <div class="card card1" style="text-align: center">
+            <div class="card-block">Completed Survey</div>
+            <span
+              ><h2
+                style="
+                  left: 39.7%;
+                  right: 39.39%;
+                  top: 41.98%;
+                  bottom: 9.88%;
+                  font-style: normal;
+                  font-weight: 500;
+                  font-size: 32px;
+                  line-height: 20px;
+                  color: #00416d;
+                "
+              >
+              {{userdashboard[0].completed_survey}}
+              </h2></span
+            >
+          </div>
+        </div>
+       
+        <div class="col">
+            <div class="card card1" style="text-align: center">
+              <div class="card-block">No. of Application</div>
+              <span
+                ><h2
+                  style="
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 32px;
+                    line-height: 21px;
+                    color: #00416d;
+                  "
+                >
+                {{userdashboard[0].total}}
+                </h2></span
+              >
+            </div>
+          </div>
+    
+          <div class="col">
+            <div class="card card1" style="text-align: center">
+              <div class="card-block">No. of Vendor Apps</div>
+              <span
+                ><h2
+                  style="
+                    left: 39.7%;
+                    right: 39.39%;
+                    top: 41.98%;
+                    bottom: 9.88%;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 32px;
+                    line-height: 20px;
+                    color: #00416d;
+                  "
+                >
+                {{userdashboard[0].vendor_count}}
+                </h2></span
+              >
+            </div>
+          </div>
+       
+  
+          <div class="card-body p-0" *ngIf="lobwithapplications">
+            <table class="table table-responsive-md text-center">
+              <thead>
+                <tr>
+                  <th class="column">Line of Business</th>
+                  <th class="column">No. of Applications</th>
+                  <th class="column" style="width: 433px">Survey Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="mat-celll" >
+                  <td class="mat-cell" style="text-align: left">{{ lobwithapplications.lobname }}</td>
+                  <td class="mat-cell">
+                    <span class="danger">{{ lobwithapplications.total }}</span>
+                  </td>
+                  <td class="mat-cell" style="width: 40vw">
+                    <div class="ml-2">
+             
+    
+                      <mat-progress-bar
+                        class="progress"
+                        mode="determinate"
+                        style="width: 210px; height: 15px"
+                        [value]="(lobwithapplications.active / lobwithapplications.total) * 100"
+                      ></mat-progress-bar>
+    
+                      <div
+                        class="danger"
+                        style="margin-top: -39px; margin-left: 219px"
+                      >
+                        {{ lobwithapplications.active }}/{{ lobwithapplications.total }}
+    
+                        <span class="pl-4" *ngIf="lobwithapplications.active != lobwithapplications.total"
+                          >Please take Survey</span
+                        >
+                        <span
+                          class="pl-3"
+                          *ngIf="lobwithapplications.active == lobwithapplications.total"
+                          style="color: green"
+                          >Survey Complete</span
+                        >
+                      </div>
+                      <div style="margin-top: -20px; margin-left: 218px">
+                        <mat-select
+                          *ngIf="lobwithapplications.active != lobwithapplications.total"
+                          style="width: 237px; color: #00416d"
+                          (selectionChange)="
+                            appnamechanged($event.value, lobwithapplications.lobname)
+                          "
+                        >
+                          <mat-option
+                            *ngFor="let app of lobwithapplications.notactiveapplications"
+                            value="{{ app.appname }}"
+                          >
+                            {{ app.appname }}
+                          </mat-option>
+                        </mat-select>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        
+      
+      </div>
+      </div>
+
+      <div class="row px-4" >
+        <div class="col-md-4">
+        
+          <div class="card direct-chat direct-chat-warning" style="width: 406px">
+            <div
+              class="card-header1"
+              style="
+                font-family: Open Sans;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 24px;
+                line-height: 32px;
+    
+                display: flex;
+                align-items: center;
+                color: rgba(34, 40, 49, 0.9);
+              "
+            >
+              <h3 class="card-title ml-2 mt-2">6 R's Status</h3>
+            </div>
+          
+            <div
+              id="chartdivEnvironmentvsServer"
+              style="height: 217px; width: 382px; margin-left: 23px"
+            ></div>
+            
+          </div>
+        </div>
+     
+        <div class="col-md-4">
+    
+          <div class="card direct-chat direct-chat-warning" style="width: 411px">
+            <div class="card-header1 mb-2">
+              <h3 class="card-title ml-2 mt-2">6 R's Evaluation Progress</h3>
+            </div>
+    
+            <div class="ml-5 pl-5 mb-4">
+              <circle-progress
+                [percent]="rlanePercent"
+                [titleFontSize]="50"
+                [subtitle]="rlanesubtitle"
+                [subtitleFontSize]="20"
+                [space]="-10"
+                [radius]="80"
+                [outerStrokeWidth]="10"
+                [innerStrokeWidth]="10"
+                [outerStrokeColor]="'#00416D'"
+                [innerStrokeColor]="'#e7e8ea'"
+                [animation]="true"
+                [animationDuration]="1000"
+              >
+              </circle-progress>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3" >
+      
+          <div
+            class="card"
+            [style.display]="appSurvey ? 'block' : 'none'"
+            style="height: 274px; width: 408px"
+          >
+            <div>
+              <h3 class="card-title ml-3 mt-2">Total Survey Status</h3>
+            </div>
+    
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-9 ml-auto mr-5 pl-5">
+                  <div>
+                    <circle-progress
+                      [percent]="evaluatedapps"
+                      [titleFontSize]="50"
+                      [subtitle]="subTitle"
+                      [subtitleFontSize]="20"
+                      [space]="-10"
+                      [radius]="80"
+                      [outerStrokeWidth]="10"
+                      [innerStrokeWidth]="10"
+                      [outerStrokeColor]="'#00416D'"
+                      [innerStrokeColor]="'#e7e8ea'"
+                      [animation]="true"
+                      [animationDuration]="1000"
+                    >
+                    </circle-progress>
+                  </div>
+      
+      
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+
+          
+      </div>
+
+     
+
+</div>

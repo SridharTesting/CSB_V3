@@ -1,0 +1,129 @@
+
+
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+      <title>DTB-Login</title>
+      <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="/src/assets/css/main.css">
+    
+  </head>
+
+
+<app-header></app-header>
+
+      <div style="
+      margin-top: 99px;">
+<form form [formGroup]="commentSubmissionForm" >
+        <form [formGroup]="registerForm">
+            <div form-group >
+
+     
+              <div class="mt-4"style="margin-left: 87px;width: 80%;">
+                <label style="color: #286090;font-size: 14px;margin-left: -25px;">Select Line of business</label>
+                <br>
+                <mat-select class="form-control" (selectionChange)="loblistchanged($event)"
+                   placeholder="Select LOB"style="color: #00416D;width: 30%;margin-top: 2px;
+                   margin-left: -27px;">
+                 
+                  <mat-option *ngFor="let lob of loblist" [value]="lob.lobId">
+                    {{lob.lobName}}
+                     </mat-option>
+                </mat-select>
+              </div>
+
+                  <div class="card" style="    height: 86%;
+                  width: 91%;
+                  margin-top: 20px;
+                  margin-left: 60px;">
+                    <div class="card-body" >
+                      <div id="table" class="table-editable" style="overflow-x: auto;">
+
+                        <table class="table table-responsive-md " 
+                        mdbTable mdbTableScroll scrollY="true" maxHeight="500" >
+                          <thead>
+                            <tr>
+                        
+
+                              <th class="column" style="border-bottom-color: rgba(65, 128, 245, 0.6);">App ID</th>
+                              <th class="column" style="border-bottom-color: rgba(65, 128, 245, 0.6);">AppName</th>
+                                 <th class="column"style="border-bottom-color: rgba(65, 128, 245, 0.6);">Survey Status</th>
+                                 <!-- <th class="column">Migration status</th> -->
+                                 <th class="column"style="border-bottom-color: rgba(65, 128, 245, 0.6);">6 R's Stratergy</th>
+                                 <th class="column"style="border-bottom-color: rgba(65, 128, 245, 0.6);">Comments</th>
+                                  
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr class="headerbottom" *ngFor="let app of applist| paginate: { id: 'listing_pagination_app', 
+                            itemsPerPage: 15,
+                            currentPage: page,
+                            totalItems: totalRecords };let i = index" (click)="getClient(app,$event)" [attr.data-index]="i" [ngClass]="{'tablecolour' : i%2==1}">
+
+                             
+                              <td contenteditable="true">{{app.app_Id}}</td>
+                              <td contenteditable="true">{{app.app_Name}}</td>
+                              <td contenteditable="true">{{app.app_Suv_Status}}</td>
+                              <!-- <td class="pt-3-half" contenteditable="true">{{app.migration_Status}}</td> -->
+                              <td  > 
+                          <mat-select (selectionChange)="changestrategyValue('Stratergy',$event,app)" 
+                          class="form-control mt-1" 
+                            [(value)]="app.rlane_Strategy"  
+                                placeholder="Select R-lane" >   
+                              
+                            <!-- <mat-option  [(value)]="app.rlane_Strategy"
+                             (click)="rlanechanged($event,rlaneselected)" style="color: blue;">{{app.rlane_Strategy}}</mat-option>  -->
+                        <mat-option *ngFor="let rlane of app.rlanelist" 
+                         [value]="rlane.rlane_Strategy" 
+                         >  {{rlane.rlane_Strategy}}
+
+                        </mat-option>
+                            
+                              </mat-select></td>
+                              <td contenteditable="true" style="background-color: white;">
+                                <div>
+                                <textarea 
+                                (keyup)="changecommentsValue( 'comments', $event,app)" 
+                                [value]="app.comments" class="form-control1" placeholder="Enter text here" style="border: transparent;"
+                rows="1"  formControlName="commentTest"  ></textarea>
+                              </div>
+                              </td>
+                              
+
+
+                            </tr>
+                           
+
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <div>   
+
+                    </div>
+
+
+        </div>
+        <div class="mt-5">
+      
+          <button  class="btn btn-primary pull-right " (click)="save()" style="margin-right: 64px;
+          padding-left: 64px;
+          padding-right: 55px;
+          margin-top: -40px;">Submit</button>
+        </div>
+      </form>
+
+    </form>
+
+
+    </div>
+    
+    <app-footer ></app-footer> 

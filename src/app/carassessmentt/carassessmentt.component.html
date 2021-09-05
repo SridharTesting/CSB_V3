@@ -1,0 +1,747 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<div class="article_title" >
+  <h1 class="top">
+    Cloud Migration Assesment
+  </h1>
+</div>
+<mat-divider id="divider"></mat-divider>
+<br>
+
+
+<div class="card">
+<div class="test">
+  
+
+   
+  
+    <mat-drawer-container>
+    
+ 
+        <mat-drawer-content class=content >
+      
+        <div class="btn-group btn-group-justified" role="group" aria-label="...">          
+        </div>
+        <br>
+        
+     
+     
+     
+     
+
+          <div [hidden]="!openform">
+          
+          <form [formGroup]="registerForm">
+              <div form-group>
+                <p  class="head">Business:</p>
+                <br>
+                  <p class="heading">1) Has your company identified a specific business reason for moving to the cloud 
+                    <i class="fa fa-info-circle" aria-hidden="true" 
+                    title="Have you or your organization identified measureable outcomes or the benefits of using the
+                     cloud (for example – reliability, flexibility, security, cost savings and efficiency, etc.)?">
+                     </i> 
+                  </p>
+
+                    <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="b1" formControlName="ca1" value="b1">
+                        <label class="custom-control-label" for="b1"> No business reason has been identified to date</label>
+                    </div>
+                    
+                    <!-- Group of default radios - option 2 -->
+                    <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="b2" formControlName="ca1" value="b2">
+                        <label class="custom-control-label" for="b2">We are currently in the process of evaluating business opportunities</label>
+                    </div>
+                    
+                    <!-- Group of default radios - option 3 -->
+                    <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="b3" formControlName="ca1"value="b3">
+                        <label class="custom-control-label" for="b3">A business need has been identified and analysis has begun</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="b4" formControlName="ca1" value="b4">
+                        <label class="custom-control-label" for="b4">A draft analysis has been completed</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="b5"  formControlName="ca1" value="b5">
+                        <label class="custom-control-label" for="b5">A formal business need and analysis has been completed and approved</label>
+                    </div>
+                    <br>
+                    <mat-divider id="divider"></mat-divider>
+                    <br>
+
+                    <p class="heading">2) Has your company developed a business case for moving to the cloud, and 
+                      if so, is your business case based on multiple, credible and quality sources
+                      <i class="fa fa-info-circle" aria-hidden="true" 
+                      title="Has the organization created and shared a cloud adoption strategy or plan with key stakeholders
+                       (eg. Finance, Legal, etc)?">
+                    </i>
+                    </p>
+
+                   <div class="custom-control custom-radio">
+                       <input type="radio" class="custom-control-input" id="b6" formControlName="ca2" value="q21">
+                       <label class="custom-control-label" for="b6"> Minimal data sources and no consensus</label>
+                   </div>
+                   
+                   <!-- Group of default radios - option 2 -->
+                   <div class="custom-control custom-radio">
+                       <input type="radio" class="custom-control-input" id="b7" formControlName="ca2" value="q22">
+                       <label class="custom-control-label" for="b7">Minimal data sources, but limited consensus among the team</label>
+                   </div>
+                   
+                   <!-- Group of default radios - option 3 -->
+                   <div class="custom-control custom-radio">
+                       <input type="radio" class="custom-control-input" id="b8" formControlName="ca2" value="q23">
+                       <label class="custom-control-label" for="b8">A few data sources, but limited consensus among the team</label>
+                   </div>
+                   <div class="custom-control custom-radio">
+                       <input type="radio" class="custom-control-input" id="b9" formControlName="ca2" value="q24">
+                       <label class="custom-control-label" for="b9">A few data sources, and some consensus among the team</label>
+                   </div>
+                   <div class="custom-control custom-radio">
+                       <input type="radio" class="custom-control-input" id="b10" formControlName="ca2" value="q25">
+                       <label class="custom-control-label" for="b10">Comprehensive and diverse data sources, and full team consensus</label>
+                   </div>
+                </div>
+                <br>
+                    <mat-divider id="divider"></mat-divider>
+                    <br>
+
+
+                    <p class="heading">3) Is there a compelling event and timeframe driving the change?
+                      <i class="fa fa-info-circle" aria-hidden="true"  
+                      title="Is there committed funding for internal, partner and AWS resources to work on cloud adoption activities?">
+                    </i>
+                    </p>
+
+                  <div class="custom-control custom-radio">
+                      <input type="radio" class="custom-control-input" id="b11" formControlName="ca3" value="b11">
+                      <label class="custom-control-label" for="b11"> Yes </label>
+                  </div>
+                  
+                  <!-- Group of default radios - option 2 -->
+                  <div class="custom-control custom-radio">
+                      <input type="radio" class="custom-control-input" id="b12" formControlName="ca3" value="b12">
+                      <label class="custom-control-label" for="b12">No</label>
+                  </div>
+                  <br>
+                  <br>
+                    <mat-divider id="divider"></mat-divider>
+                    <br>
+                    <p class="heading">4) Have you had previous experience with Cloud Migration?
+                      <i class="fa fa-info-circle" aria-hidden="true" 
+                       title="End of data centre lease  renival or license renival">
+                    </i>
+                    </p>
+
+                  <div class="custom-control custom-radio">
+                      <input type="radio" class="custom-control-input" id="b13" formControlName="ca4" value="b13">
+                      <label class="custom-control-label" for="b13"> Yes </label>
+                  </div>
+                  
+                  <!-- Group of default radios - option 2 -->
+                  <div class="custom-control custom-radio">
+                      <input type="radio" class="custom-control-input" id="b14" formControlName="ca4" value="b14">
+                      <label class="custom-control-label" for="b14">No</label>
+                  </div>
+                  <br>
+                    <mat-divider id="divider"></mat-divider>
+                    
+                
+              
+              <hr>
+              <hr>
+              <br><br><br><br>
+
+  
+              <div class="btn-group" role="group">
+                <button style="background-color:#00008B;    padding-bottom: 42px;margin-left: 1279%;" type="button" class="btn btn-primary" 
+                 (click)="onClickOpenForm2()" (click)="removeButton()"><span style="color:white;font-size: 23px;">Next</span>
+                </button>
+              </div>
+
+            </form>
+           
+
+          
+        </div>
+      
+
+
+
+
+        <div [hidden]="!openform1">
+          
+          <form [formGroup]="registerForm1">
+              <div form-group>
+                <p class="head" style="color: #00008B;">People:</p>
+                <br>
+                  <p class="heading">1) Has your organization assigned a manager or executive to be responsible 
+                    for your cloud adoption efforts (single threaded leader). This person overseas a dedicated cloud team 
+                    (Cloud Center of Excellence) with assigned roles, timelines and resources for adopting cloud services?
+                    <i class="fa fa-info-circle" aria-hidden="true" 
+                    title="Has your team assigned a single threaded, senior leader,(direct report to CIO or SVP?) to oversee
+                     the cloud migration program?">
+                  </i>
+                      </p>
+
+                    <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="b1" formControlName="ca1" value="b1">
+                        <label class="custom-control-label" for="b1"> We have not established a single threaded leader,
+                           nor created a Cloud Center of Excellence</label>
+                    </div>
+                    
+                    <!-- Group of default radios - option 2 -->
+                    <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="b2" formControlName="ca1" value="b2">
+                        <label class="custom-control-label" for="b2">We are currently in the process of establishing a
+                           single threaded leader, but no Cloud Center of Excellence has been implemented</label>
+                    </div>
+                    
+                    <!-- Group of default radios - option 3 -->
+                    <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="b3" formControlName="ca1"value="b3">
+                        <label class="custom-control-label" for="b3">We have assigned a single threaded Leader, 
+                          but no Cloud Center of Excellence has been implemented</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="b4" formControlName="ca1" value="b4">
+                        <label class="custom-control-label" for="b4">We have a single threaded leader and assigned 
+                          some components of the Cloud Center of Excellence</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="b5"  formControlName="ca1" value="b5">
+                        <label class="custom-control-label" for="b5">We have a single threaded leader and all formal 
+                          components of the Cloud Center of Excellence are in place</label>
+                    </div>
+                    <br>
+                    <mat-divider id="divider"></mat-divider>
+                    <br>
+
+                    <p class="heading">2) Does the IT organization engage regularly with their stakeholders to address
+                       service and governance issues
+                       <i class="fa fa-info-circle" aria-hidden="true" 
+                       title="Do meetings or other communication mechanisms exist which focus on gathering feedback 
+                       and insight on IT service delivery? Do the meetings and communications include a variety of employees?">
+                    </i>
+                    </p>
+
+                   <div class="custom-control custom-radio">
+                       <input type="radio" class="custom-control-input" id="b6" formControlName="ca2" value="q21">
+                       <label class="custom-control-label" for="b6">Does not engage with stakeholders at all</label>
+                   </div>
+                   
+                   <!-- Group of default radios - option 2 -->
+                   <div class="custom-control custom-radio">
+                       <input type="radio" class="custom-control-input" id="b7" formControlName="ca2" value="q22">
+                       <label class="custom-control-label" for="b7">Rarely engages with stakeholders</label>
+                   </div>
+                   
+                   <!-- Group of default radios - option 3 -->
+                   <div class="custom-control custom-radio">
+                       <input type="radio" class="custom-control-input" id="b8" formControlName="ca2" value="q23">
+                       <label class="custom-control-label" for="b8">Occasionally engages with stakeholders</label>
+                   </div>
+                   <div class="custom-control custom-radio">
+                       <input type="radio" class="custom-control-input" id="b9" formControlName="ca2" value="q24">
+                       <label class="custom-control-label" for="b9">Frequently engages with stakeholders</label>
+                   </div>
+                   <div class="custom-control custom-radio">
+                       <input type="radio" class="custom-control-input" id="b10" formControlName="ca2" value="q25">
+                       <label class="custom-control-label" for="b10">Has regular and formal engagements with stakeholders</label>
+                   </div>
+                </div><br>
+                <mat-divider id="divider"></mat-divider>
+                <br>
+
+
+                    <p class="heading">3) Have you implemented an organizational change management and training 
+                      plan for cloud adoption 
+                      <i class="fa fa-info-circle" aria-hidden="true" 
+                      title="Has your team identified the cloud skills and competencies needed to enable the organization?
+                       Is there an AWS training plan for the organization?">
+                    </i>
+                    </p>
+
+                  <div class="custom-control custom-radio">
+                      <input type="radio" class="custom-control-input" id="b11" formControlName="ca3" value="b11">
+                      <label class="custom-control-label" for="b11"> Yes </label>
+                  </div>
+                  
+                  <!-- Group of default radios - option 2 -->
+                  <div class="custom-control custom-radio">
+                      <input type="radio" class="custom-control-input" id="b12" formControlName="ca3" value="b12">
+                      <label class="custom-control-label" for="b12">No</label>
+                  </div><br>
+                  <mat-divider id="divider"></mat-divider>
+                  <br>
+                    <p class="heading">4)Do you have any cloud migration experience or expertise inhouse?
+                      <i class="fa fa-info-circle" aria-hidden="true" 
+                       title="Of the existing employees do you have cloud experience resources">
+                    </i>
+                    </p>
+
+                  <div class="custom-control custom-radio">
+                      <input type="radio" class="custom-control-input" id="b13" formControlName="ca4" value="b13">
+                      <label class="custom-control-label" for="b13"> Yes </label>
+                  </div>
+                  
+                  <!-- Group of default radios - option 2 -->
+                  <div class="custom-control custom-radio">
+                      <input type="radio" class="custom-control-input" id="b14" formControlName="ca4" value="b14">
+                      <label class="custom-control-label" for="b14">No</label>
+                  </div><br>
+                  <mat-divider id="divider"></mat-divider>
+                  <br>
+              
+              <hr>
+              <hr>
+              <br><br><br><br>
+  
+              <div class="btn-group" role="group">
+                <button style="background-color:#00008B;  margin-left: 1279%;  padding-bottom: 42px;" type="button" 
+                class="btn btn-primary" (click)="onClickOpenForm3()" (click)="removeButton()">
+                <span style="color:white;font-size: 23px;">Next</span></button>
+              </div>
+              <div class="btn-group" role="group">
+                <button style="background-color:#00008B;    padding-bottom: 42px;" type="button" 
+                class="btn btn-primary"  (click)="onClickOpenForm1()" (click)="removeButton()">
+                <span style="color:white;font-size: 23px;">Back</span></button>
+              </div>
+            </form>
+        
+            
+        </div>
+
+
+
+        <div [hidden]="!openform2">
+          
+          <form [formGroup]="registerForm2">
+              <div form-group>
+                <p class="head" style="color: #00008B;">Process:</p>
+                <br>
+                  <p class="heading"> 1) Is there a system or mechanism to track inventory and manage 
+                    your portfolio of applications and infrastructure 
+                    (e.g. a configuration management database)
+                    <i class="fa fa-info-circle" aria-hidden="true"  
+                    title="Is there an up-to-date and reliable application inventory with accurate 
+                    metadata on the applications? Does your organization know where this information stored and how is it maintained?">
+                  </i>
+                      </p>
+
+                    <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="b1" formControlName="ca1" value="b1">
+                        <label class="custom-control-label" for="b1"> Yes</label>
+                    </div>
+                    
+                    <!-- Group of default radios - option 2 -->
+                    <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="b2" formControlName="ca1" value="b2">
+                        <label class="custom-control-label" for="b2">No</label>
+                    </div><br>
+                    <mat-divider id="divider"></mat-divider><br>
+                    
+
+                    <p class="heading">2)Does the organization have at least 12-months of project
+                       delivery experience with Agile Frameworks (e.g. SCRUM)
+                       <i class="fa fa-info-circle" aria-hidden="true" 
+                       title="Does your organization rely heavily on ITIL or use Waterfall methods for
+                        project delivery? Does your organization use or beginning to use Agile and/or Lean methodologies?">
+                    </i>
+                    </p>
+
+                   <div class="custom-control custom-radio">
+                       <input type="radio" class="custom-control-input" id="b6" formControlName="ca2" value="q21">
+                       <label class="custom-control-label" for="b6">Yes</label>
+                   </div>
+                   
+                   <!-- Group of default radios - option 2 -->
+                   <div class="custom-control custom-radio">
+                       <input type="radio" class="custom-control-input" id="b7" formControlName="ca2" value="q22">
+                       <label class="custom-control-label" for="b7">No</label>
+                   </div>
+                </div><br>
+                <mat-divider id="divider"></mat-divider>
+                <br>
+
+
+                    <p class="heading">3) Has the organization established a DevOps practice, 
+                      or does it plan to deliver and manage cloud based services? 
+                      <i class="fa fa-info-circle" aria-hidden="true" 
+                      title="Are those responsible for running the services involved in building the service?
+                       Are Continuous Integration (CI)/ Continuous Deployment (CD) or 
+                       Application Lifecycle Management (ALM) practices applied across the application portfolio? 
+                       Is there a DevOps capability? Automated deployment? Automated builds? ">
+                    </i>
+                    </p>
+
+                  <div class="custom-control custom-radio">
+                      <input type="radio" class="custom-control-input" id="b11" formControlName="ca3" value="b11">
+                      <label class="custom-control-label" for="b11"> No DevOps practice or plan has been considered to date</label>
+                  </div>
+                  
+                  <!-- Group of default radios - option 2 -->
+                  <div class="custom-control custom-radio">
+                      <input type="radio" class="custom-control-input" id="b12" formControlName="ca3" value="b12">
+                      <label class="custom-control-label" for="b12">We have just started building a DevOps plan to
+                         deliver managed cloud services</label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="b13" formControlName="ca3" value="b13">
+                    <label class="custom-control-label" for="b12">A draft DevOps practice and plan has been created</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" class="custom-control-input" id="b14" formControlName="ca3" value="b14">
+                  <label class="custom-control-label" for="b12">A formal DevOps plan has been approved, but not implemented</label>
+              </div>
+              <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="b15" formControlName="ca3" value="b15">
+                <label class="custom-control-label" for="b12">A formal DevOps practice and plan for managed cloud services is in place</label>
+            </div><br>
+            <mat-divider id="divider"></mat-divider>
+                  <br>
+                   
+              <hr>
+              <hr>
+              <br><br><br><br>
+  
+              <div class="btn-group" role="group">
+                <button style="background-color:#00008B;  margin-left: 1279%;  padding-bottom: 42px;" type="button" 
+                class="btn btn-primary" (click)="onClickOpenForm4()" (click)="removeButton()">
+                <span style="color:white;font-size: 23px;">Next</span></button>
+              </div>
+              <div class="btn-group" role="group">
+                <button style="background-color:#00008B;    padding-bottom: 42px;"
+                 type="button" class="btn btn-primary"  (click)="onClickOpenForm2()" 
+                 (click)="previousbutton1()"><span style="color:white;font-size: 23px;">Back</span></button>
+              </div>
+            </form>
+            
+        </div>
+          
+
+
+        <div [hidden]="!openform3">
+          
+          <form [formGroup]="registerForm3">
+              <div form-group>
+                <p class="head" style="color: #00008B;">Operations:</p>
+                <br>
+                  <p class="heading">1) Has your organization decided who will own 
+                    operations of cloud based applications and systems
+                     (e.g. operational models for deployments and updates)
+                     <i class="fa fa-info-circle" aria-hidden="true"   
+                    title="Has your organization identified, through a responsibility 
+                    matrix (or org chart), which teams own the operational aspects of the cloud 
+                    (e.g. adding accounts, adding staff credentials, changing technical configurations)? 
+                    Is your business leveraging a managed service provider who perform these tasks? 
+                    Does your organization have AWS trained staff to perform these tasks?">
+                  </i>
+                  </p>
+
+                    <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="b1" formControlName="ca1" value="b1">
+                        <label class="custom-control-label" for="b1">
+                          No operational ownership has been formally established to date</label>
+                    </div>
+                    
+                    <!-- Group of default radios - option 2 -->
+                    <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="b2" formControlName="ca1" value="b2">
+                        <label class="custom-control-label" for="b2">We have started building a
+                           responsibility matrix to define operations and owners</label>
+                    </div>
+                    
+                    <!-- Group of default radios - option 3 -->
+                    <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="b3" formControlName="ca1"value="b3">
+                        <label class="custom-control-label" for="b3">A draft responsibilities
+                           matrix with assigned owners has been created</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="b4" formControlName="ca1" value="b4">
+                        <label class="custom-control-label" for="b4">A formal responsibilities 
+                          matrix has been presented to leadership and approved</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="b5"  formControlName="ca1" value="b5">
+                        <label class="custom-control-label" for="b5">A formal responsibilities
+                           matrix has been approved and presented to all assigned stakeholders</label>
+                    </div><br>
+                    <mat-divider id="divider"></mat-divider>
+                    <br>
+
+                    <p class="heading">2) Has the future state operating model for cloud been defined
+                      <i class="fa fa-info-circle" aria-hidden="true" 
+                      title="Has your team envisioned and documented how operations will work
+                       in the future state of managing applications in the cloud. Has your 
+                       organization implemented any operational best practices modified to accommodate running on AWS?">
+                    </i>
+                    </p>
+
+                   <div class="custom-control custom-radio">
+                       <input type="radio" class="custom-control-input" id="b6" formControlName="ca2" value="q21">
+                       <label class="custom-control-label" for="b6"> Work in the future state
+                          of managed applications in the cloud has been created</label>
+                   </div>
+                   
+                   <!-- Group of default radios - option 2 -->
+                   <div class="custom-control custom-radio">
+                       <input type="radio" class="custom-control-input" id="b7" formControlName="ca2" value="q22">
+                       <label class="custom-control-label" for="b7">We are currently in the process of defining a plan</label>
+                   </div>
+                   
+                   <!-- Group of default radios - option 3 -->
+                   <div class="custom-control custom-radio">
+                       <input type="radio" class="custom-control-input" id="b8" formControlName="ca2" value="q23">
+                       <label class="custom-control-label" for="b8">A draft plan has been created</label>
+                   </div>
+                   <div class="custom-control custom-radio">
+                       <input type="radio" class="custom-control-input" id="b9" formControlName="ca2" value="q24">
+                       <label class="custom-control-label" for="b9">A formal plan has been presented to leadership And approved</label>
+                   </div>
+                   <div class="custom-control custom-radio">
+                       <input type="radio" class="custom-control-input" id="b10" formControlName="ca2" value="q25">
+                       <label class="custom-control-label" for="b10">A formal plan on how operations
+                          will work in the future state of managed applications in the cloud has implemented</label>
+                   </div>
+                </div><br>
+                <mat-divider id="divider"></mat-divider>
+                <br>
+
+
+                    <p class="heading">3) Has the organization communicated a plan to address
+                       business continuity or disaster recovery in the cloud
+                       <i class="fa fa-info-circle" aria-hidden="true"  
+                      title="Have you architected, planned or created a baseline  account structure 
+                      (how will you manage your cloud accounts) and control environments
+                      (networking, IAM, etc) that support your core business, security and compliance needs (e.g. AWS Landing Zone)">
+                    </i>
+                    </p>
+
+                  <div class="custom-control custom-radio">
+                      <input type="radio" class="custom-control-input" id="b11" formControlName="ca3" value="b11">
+                      <label class="custom-control-label" for="b11"> No AWS account structure or control
+                         environment has been implemented </label>
+                  </div>
+                  
+                  <!-- Group of default radios - option 2 -->
+                  <div class="custom-control custom-radio">
+                      <input type="radio" class="custom-control-input" id="b12" formControlName="ca3" value="b12">
+                      <label class="custom-control-label" for="b12">A rough AWS account structure
+                         has been established, but no environment implemented</label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="b12" formControlName="ca3" value="b13">
+                    <label class="custom-control-label" for="b12">A rough AWS account structure has 
+                      been established, but only a proof-of-concept has been implemented</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" class="custom-control-input" id="b12" formControlName="ca3" value="b14">
+                  <label class="custom-control-label" for="b12">A proof-of-concept is deployed
+                     and a full account structure is in place</label>
+              </div>
+              <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="b12" formControlName="ca3" value="b15">
+                <label class="custom-control-label" for="b12">A full account structure and production 
+                  environment with best practices has been deployed</label>
+            </div><br>
+            <mat-divider id="divider"></mat-divider>
+                  <br>
+                    <p class="heading">4)What are your Recovery Point Objective and Recovery Time Objective’s for the service?
+                      <i class="fa fa-info-circle" aria-hidden="true" 
+                       title="Has your organization’s continuity planning been adjusted for, or enhanced, to account for cloud capabilities?">
+                    </i>
+                    </p>
+
+                  <div class="custom-control custom-radio">
+                      <input type="radio" class="custom-control-input" id="b13" formControlName="ca4" value="b13">
+                      <label class="custom-control-label" for="b13"> Yes </label>
+                  </div>
+                  
+                  <!-- Group of default radios - option 2 -->
+                  <div class="custom-control custom-radio">
+                      <input type="radio" class="custom-control-input" id="b14" formControlName="ca4" value="b14">
+                      <label class="custom-control-label" for="b14">No</label>
+                  </div><br>
+                  <mat-divider id="divider"></mat-divider>
+                  <br>
+              
+              <hr>
+              <hr>
+              <br><br><br><br>
+  
+              <div class="btn-group" role="group">
+                <button style="background-color:#00008B;  margin-left: 1279%;  padding-bottom: 42px;" type="button"
+                 class="btn btn-primary" (click)="onClickOpenForm5()" (click)="removeButton()">
+                 <span style="color:white;font-size: 23px;">Next</span></button>
+              </div>
+              <div class="btn-group" role="group">
+                <button style="background-color:#00008B;    padding-bottom: 42px;" type="button"
+                 class="btn btn-primary"  (click)="onClickOpenForm3()" (click)=" previousbutton2()">
+                 <span style="color:white;font-size: 23px;">Back</span></button>
+              </div>
+            </form>
+            
+        </div>
+        
+
+
+        <div [hidden]="!openform4">
+          
+          <form [formGroup]="registerForm4">
+              <div form-group>
+                <p class="head" style="color: #00008B;">Security:</p>
+                
+                  <p class="heading">1) Does the organization have a strong understanding of operating securely in the cloud?
+                    <i class="fa fa-info-circle" aria-hidden="true"   
+                    title="Security responsibility on AWS is shared between AWS and customers.
+                     It is important to map out the shared responsibility model specific to your
+                      organization including the partner ecosystem. Has the Shared Responsibility Model (RACI or PDP/PEP) been documented?">
+                  </i>
+                      </p>
+
+                    <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="b1" formControlName="ca1" value="b1">
+                        <label class="custom-control-label" for="b1"> Minimal understanding and experience</label>
+                    </div>
+                    
+                    <!-- Group of default radios - option 2 -->
+                    <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="b2" formControlName="ca1" value="b2">
+                        <label class="custom-control-label" for="b2">Some understanding, but limited experience</label>
+                    </div>
+                    
+                    <!-- Group of default radios - option 3 -->
+                    <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="b3" formControlName="ca1"value="b3">
+                        <label class="custom-control-label" for="b3">Some experience and understanding</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="b4" formControlName="ca1" value="b4">
+                        <label class="custom-control-label" for="b4">Strong understanding and experience</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="b5"  formControlName="ca1" value="b5">
+                        <label class="custom-control-label" for="b5">Fully trained and experienced, with a shared responsibility model</label>
+                    </div><br>
+                    <mat-divider id="divider"></mat-divider>
+                    <br>
+
+                    <p class="heading">2) Is anyone in the organization certified by AWS and/or
+                       considered an expert or authority on cloud security
+                       <i class="fa fa-info-circle" aria-hidden="true" 
+                       title="Anyone certified by AWS and/or considered an expert">
+                    </i>
+                    </p>
+
+                   <div class="custom-control custom-radio">
+                       <input type="radio" class="custom-control-input" id="b6" formControlName="ca2" value="q21">
+                       <label class="custom-control-label" for="b6">No team members are 
+                         certified by AWS or have comparable experience</label>
+                   </div>
+                   
+                   <!-- Group of default radios - option 2 -->
+                   <div class="custom-control custom-radio">
+                       <input type="radio" class="custom-control-input" id="b7" formControlName="ca2" value="q22">
+                       <label class="custom-control-label" for="b7">No team members have
+                          certifications, but some members have experience with AWS</label>
+                   </div>
+                   
+                   <!-- Group of default radios - option 3 -->
+                   <div class="custom-control custom-radio">
+                       <input type="radio" class="custom-control-input" id="b8" formControlName="ca2" value="q23">
+                       <label class="custom-control-label" for="b8">The organization has
+                          a small set of AWS certified team members, and others with comparable experience</label>
+                   </div>
+                   <div class="custom-control custom-radio">
+                       <input type="radio" class="custom-control-input" id="b9" formControlName="ca2" value="q24">
+                       <label class="custom-control-label" for="b9">The organization has
+                          a meaningful number of AWS certified team members and others with comparable experience</label>
+                   </div>
+                   <div class="custom-control custom-radio">
+                       <input type="radio" class="custom-control-input" id="b10" formControlName="ca2" value="q25">
+                       <label class="custom-control-label" for="b10">The organization has
+                          critical mass with individuals certified by AWS and capable of training others to gain comparable experience</label>
+                   </div>
+                </div><br>
+                <mat-divider id="divider"></mat-divider>
+                <br>
+
+
+                    <p class="heading">3) Does the organization have a documented cloud security plan or methodology
+                      <i class="fa fa-info-circle" aria-hidden="true" 
+                      title="Organizations need to understand and articulate security best 
+                      practices on a range of subjects from AWS Account credentials to encryption and data types. 
+                      Organizations need to have a cloud security model in place which is well understood by the organization">
+                    </i>
+                    </p>
+
+                  <div class="custom-control custom-radio">
+                      <input type="radio" class="custom-control-input" id="b11" formControlName="ca3" value="b11">
+                      <label class="custom-control-label" for="b11"> Yes </label>
+                  </div>
+                  
+                  <!-- Group of default radios - option 2 -->
+                  <div class="custom-control custom-radio">
+                      <input type="radio" class="custom-control-input" id="b12" formControlName="ca3" value="b12">
+                      <label class="custom-control-label" for="b12">No</label>
+                  </div><br>
+                  <mat-divider id="divider"></mat-divider>
+                  <br>
+                    <p class="heading">4)Does the organization’s leadership for IT Security 
+                      approve of and participates in creating the cloud adoption strategy or planning sessions
+                      <i class="fa fa-info-circle" aria-hidden="true" 
+                       title="Support and leadership from IT Security is critical to effective
+                        cloud adoption and inclusion of IT Security needs to be considered as early as possible.">
+                    </i>
+                    </p>
+
+                  <div class="custom-control custom-radio">
+                      <input type="radio" class="custom-control-input" id="b13" formControlName="ca4" value="b13">
+                      <label class="custom-control-label" for="b13"> Minimal leadership participation </label>
+                  </div>
+                  
+                  <!-- Group of default radios - option 2 -->
+                  <div class="custom-control custom-radio">
+                      <input type="radio" class="custom-control-input" id="b14" formControlName="ca4" value="b14">
+                      <label class="custom-control-label" for="b14">Some leadership approval, but minimal involvement</label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="b15" formControlName="ca4" value="b15">
+                    <label class="custom-control-label" for="b14">Some leadership participation and approval</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" class="custom-control-input" id="b16" formControlName="ca4" value="b16">
+                  <label class="custom-control-label" for="b14">Strong leadership participation and approval</label>
+              </div>
+              <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="b17" formControlName="ca4" value="b17">
+                <label class="custom-control-label" for="b14">Leadership is fully vested, 
+                  involved and approves of the security strategy</label>
+            </div><br>
+            <mat-divider id="divider"></mat-divider>
+                  <br>
+              
+              <hr>
+              <hr>
+              <br><br><br><br>
+  
+
+              <div class="btn-group" role="group">
+                <button style="background-color:#8A2BE2;    padding-bottom: 42px;" type="button" 
+                class="btn btn-primary"  (click)="onClickOpenForm4()" (click)=" previousbutton3()">
+                <span style="color:white;font-size: 23px;">Back</span></button>
+              </div>
+            </form>
+            
+        </div>
+           
+          
+      </mat-drawer-content>
+    </mat-drawer-container>
+  </div>
+  
+  

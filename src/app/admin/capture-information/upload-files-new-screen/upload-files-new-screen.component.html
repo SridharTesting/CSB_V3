@@ -1,0 +1,129 @@
+
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+      
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <title>DTB-Login</title>
+        <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="/src/assets/css/main.css">
+      
+    </head>
+
+
+<app-header></app-header>
+
+
+<body style="background-color:white">
+    <div class="container-fluid">
+      <div class="container" style="background-color:#ffffff;height:100vh">
+<div class="main_title">
+    <h1 style="color: #00416d;">Upload Discovery Data</h1>
+</div> 
+
+              <div class="row" style="margin: 0 auto;"> 
+                     <div class="title" >
+                        <span><i class="fa fa-info-circle" aria-hidden="true"></i></span> Upload all the filled data files using the template.
+                        If you have not downloaded the template, use the below link to download and fill the discovery data.</div>
+
+                        <div class="row" class="list" >
+                            <ol class="list-unstyled">
+                                    <ol style="color: #0062A3; text-decoration: underline;">
+                                            <li><a href="assets/Infrastructure_new_template.xlsx">Infrastructure Discovery Data</a></li>
+                                        <li><a href="assets/Application_new_template.xlsx">Application Discovery Data</a></li>
+                                      
+                                       
+                                    </ol>
+                            </ol>
+                               </div>
+                               
+        	  </div>
+
+              <div class="row" class="filename" >
+                <span>NOTE:- Please do not change the file name of the downloaded template.</span>
+              </div>
+
+
+
+
+
+        <div class="row"
+           
+                (dragover)="onDragOver($event)"
+                (drop)="onDrop($event)"
+                (dragleave)="onDragLeave($event)"
+                [class.active]="isActive"
+            >
+           
+               
+           
+
+
+            <div class="uploadfilecontainer">
+<div class="uploadArea">
+        <!--<div class="row" style="margin: 0 auto; width: 54%;  margin-top: 30px; margin-bottom: 30px;">-->
+                <input type="file" name="files" class="browse-file" (change)="onSelectedFile($event)" multiple/>
+                
+               <i class="fa fa-cloud-upload fa-5x" aria-hidden="true" style="color:lightgray"></i><span class="drag" >
+               
+                    <h4>Drag and drop or browse your file</h4>
+                    <p style="font-size: 11px;">Drop/select all the 2 files at once or one after another.</p>
+                </span>
+           
+    </div>
+            <div class="mt-2" *ngIf="upload.progress > 0 && upload.progress != 100">
+                <div class="progress" style="height: 20px;margin-bottom:20px;">
+                  <div class="progress-bar progress-bar-striped bg-info" role="progressbar" [style.width]="upload.progress+'%'" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{upload.progress}}%</div>
+                </div>
+            </div>
+           
+           <!-- <div class="card mt-3 file-list" *ngIf="upload.files">
+                <div class="card-header">File List</div>
+                <ul class="list-group list-group-flush">
+                    <ng-container *ngFor="let item of upload.files">
+                        <li class="list-group-item">{{item}} - Status: <span>{{upload.message}}</span>
+                           
+                        </li>
+                    </ng-container>
+                   
+                </ul>
+            </div>-->
+       
+            <div *ngIf="upload.files">
+<div class="files-list" *ngFor="let item of upload.files;let index = index">
+    <span class="d-inline-block  float-left" style="    margin-left: -11%;
+    /* text-align: center; */
+    position: absolute;" > <i class="fa fa-file-excel-o" aria-hidden="true"></i></span> 
+    <span class="d-inline-block" style="margin-left: -9%; ">
+    <p style="font-family: 'Open Sans';font-weight: 100">{{item}}</p></span>
+<button  (click)="removeSelectedFile(index)" style="    display: flex;
+position: relative;
+left: 57%;
+top: -32%;
+color: red;
+border: none;
+/* background-color: grey; */
+padding: 0;
+border: none;
+background: none;"><i class="far fa-times-circle" ></i></button>
+</div>
+</div>
+            </div>
+        
+    </div>
+</div>
+</div>
+<div class="row" style="border-top:1px solid rgba(0, 65, 109);line-height: 50px; text-align: center; ">
+    <span >
+      <p style="text-align: center">Copyright DTB - 2021</p></span>
+  
+    </div>
+
+
+
+</body>

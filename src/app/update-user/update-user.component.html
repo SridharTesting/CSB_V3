@@ -1,0 +1,71 @@
+<div class="container" [formGroup]="registerForm"  >
+
+        <h2 mat-dialog-title>Update User</h2>
+        
+        
+        <input type="text" formControlName="firstname" placeholder="First Name"> 
+        <div *ngIf="submitted &amp;&amp; registerForm.controls.firstname.errors" class="text-danger">
+            <div *ngIf="registerForm.controls.firstname.errors.required">Please enter valid First Name</div>
+            </div>
+      
+        <input type="text"  formControlName="lastname" placeholder="Last Name">
+        <div *ngIf="submitted &amp;&amp; registerForm.controls.lastname.errors" class="text-danger">
+          <div *ngIf="registerForm.controls.lastname.errors.required">Please enter a valid Last Name </div>
+        </div>
+      
+        <!--Email-->
+         
+          <input type="email" formControlName="email" placeholder="Email Id"
+          [ngClass]="{ 'is-invalid': submitted &amp;&amp; registerForm.controls.email.errors }" required />
+          <div *ngIf="submitted &amp;&amp; registerForm.controls.email.errors" class="text-danger">
+            <div *ngIf="registerForm.controls.email.errors.required">Please enter a valid EmailId</div>
+            <div *ngIf="registerForm.controls.email.errors.pattern">Please enter a valid EmailId</div>
+          </div>
+      
+      
+      <!--LOB-->
+      <div class="form-group">
+        <label class="ddlabel">LOB</label>
+        <select class="form-control" formControlName="lobId" >
+          <option *ngFor="let user of userList "  [ngValue]="user.lobName">
+         {{user.lobName}}
+          </option>
+        </select>
+
+      </div>
+      
+      <div class="form-group">
+        <label class="ddlabel">Role Type</label>
+        <select class="form-control"  formControlName="UserRoleId" >
+          <option *ngFor="let user of roleList "  [ngValue]="user.UserRoleType">
+         {{user.UserRoleType}}
+       
+          </option>
+        </select>
+      </div>
+      
+      
+      
+
+
+          <div class="mt-4 mx-auto">
+              <button  class="btn btn-default "  mat-dialog-close=false >Cancel</button>
+              <button type="submit" class="btn btn-primary pull right" (click)="usersetup()" mat-dialog-close >Submit</button>
+             </div>
+          </div>
+        
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      

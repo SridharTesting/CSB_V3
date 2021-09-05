@@ -1,0 +1,30 @@
+<!-- Toolbar -->
+
+<app-header></app-header>
+
+ <mat-drawer-container >
+  <!-- <mat-drawer mode="side" opened class="sibebar-content" style="left:0%;top: 10%;position:fixed;background-color: rgb(240, 240, 240);">
+      <ng-material-multilevel-menu
+        *ngIf="displayList"
+        [configuration]='config'
+        [items]='appitems'
+        [expandCollapseStatus]="expandCollapseStatus"
+
+        (selectedItem)="selectedItem($event)"
+
+       (selectedLabel) ="selectedLabel($event)"
+       [ngClass]="myclass"
+      ></ng-material-multilevel-menu>
+  </mat-drawer> -->
+  <mat-drawer-content class="content">
+
+    <!-- <app-landing-page *ngIf="landingPage" ></app-landing-page> -->
+    <router-outlet ></router-outlet>
+
+
+  </mat-drawer-content>
+
+</mat-drawer-container>
+
+
+

@@ -1,0 +1,42 @@
+.flex-container{
+    display: flex;
+    align-items: stretch;
+}
+
+.card-header1{
+    font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 32px;
+    
+        
+        display: flex;
+        align-items: center; color: rgba(34, 40, 49, 0.8);
+}
+
+.card-title {
+    font-size: 21px;
+    font-weight: normal;
+    color:rgba(34, 40, 49, 0.9);
+
+}
+
+.card-block{
+    padding: 15px;
+    color:rgba(34, 40, 49, 0.8);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 23px;
+
+}
+
+h2{
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+line-height: 20px;
+    color: #00416d;
+
+}

@@ -1,0 +1,661 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+      integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="compare-apr.component.css" />
+    <title>Bootstrap Theme</title>
+  </head>
+  <app-menu-headers></app-menu-headers>
+  <body data-spy="scroll" data-target="#main-nav" id="home">
+    <header id="home-section">
+      <div class="dark-overlay">
+        <div style="margin-left: 11px">
+          <h1
+            class="display-4"
+            style="color: grey; margin-top: 19px; margin-left: 93px"
+          >
+            <strong>Application Baseline Data Comparison Analysis </strong>
+          </h1>
+          <i class="fa fa-university" aria-hidden="true" style=" margin-left: 1183px;
+             position: fixed;
+    margin-top: -59px;
+    font-size: 40px;
+    color: #2e75b6;
+;" *ngIf="loggedIn"></i>
+         <h1 style="color:#2e75b6;
+          position: fixed;
+          margin-top: -55px;
+          margin-left: 1230px;
+          font-size: 20px;
+          font-weight: bold;" > {{orgName}}</h1>
+          <div class="dark-overlay1">
+           
+            <h1
+              id="to"
+              style="color: grey; margin-top: 36px; margin-left: 90px"
+            >
+              Select a view
+            </h1>
+
+            <div style="margin-left: 89px">
+              <div class="radio-item" (click)="handleChange($event)">
+                <input type="radio" id="ritema" name="ritem" value="ropt1"  [checked]='true' />
+                <label for="ritema">Application</label>
+              </div>
+
+              <div class="radio-item" (click)="handleChange1($event)">
+                <input type="radio" id="ritemb" name="ritem" value="ropt2" />
+                <label for="ritemb">Infrastructure</label>
+              </div>
+
+              <div class="radio-item" (click)="handleChange2($event)">
+                <input type="radio" id="ritemc" name="ritem" value="ropt3" />
+                <label for="ritemc">Process</label>
+              </div>
+
+              <div [hidden]="!openform1">
+                <form [formGroup]="registerForm1" (ngSubmit)="Compare()">
+                  <div form-group>
+            
+                    <mat-select
+                      [(value)]="selected_version_1"
+                      (change)="dropDownChanged($event)"
+                      style="
+                        background-color: white;
+                        margin-top: 26px;
+                        width: 445px;
+                        margin-left: 8px;
+                        border-color: purple;
+                      "
+                    >
+                      <mat-option value="" [disabled]="true"
+                        >Select Version</mat-option
+                      >
+                      <mat-option
+                        [value]="Version"
+                        *ngFor="let Version of verList"
+                        >{{ Version[0] }}</mat-option
+                      >
+                    </mat-select>
+
+                    <mat-select
+                      [(value)]="selected_version_2"
+                      (change)="dropDownChanged($event)"
+                      style="
+                        background-color: white;
+                        margin-top: 26px;
+                        width: 445px;
+                        margin-left: 8px;
+                        border-color: purple;
+                      "
+                    >
+                      <mat-option value="" [disabled]="true"
+                        >Select Version</mat-option
+                      >
+                      <mat-option
+                        [value]="Version"
+                        *ngFor="let Version of verList"
+                        >{{ Version[0] }}</mat-option
+                      >
+                    </mat-select>
+
+                
+                  </div>
+                </form>
+              </div>
+
+              <div [hidden]="!openform2">
+                <form [formGroup]="registerForm2">
+                  <div form-group>
+                    <mat-select
+                      [(value)]="selected_version_1"
+                      (change)="dropDownChanged($event)"
+                      style="
+                        background-color: white;
+                        margin-top: 26px;
+                        width: 445px;
+                        margin-left: 8px;
+                        border-color: purple;
+                      "
+                    >
+                      <mat-option value="" [disabled]="true"
+                        >Select Version</mat-option
+                      >
+                      <mat-option
+                        [value]="Version"
+                        *ngFor="let Version of infraVerList"
+                        >{{ Version[0] }}</mat-option
+                      >
+                    </mat-select>
+
+                    <mat-select
+                      [(value)]="selected_version_2"
+                      (change)="dropDownChanged($event)"
+                      style="
+                        background-color: white;
+                        margin-top: 26px;
+                        width: 445px;
+                        margin-left: 8px;
+                        border-color: purple;
+                      "
+                    >
+                      <mat-option value="" [disabled]="true"
+                        >Select Version</mat-option
+                      >
+                      <mat-option
+                        [value]="Version"
+                        *ngFor="let Version of infraVerList"
+                        >{{ Version[0] }}</mat-option
+                      >
+                    </mat-select>
+                  </div>
+                </form>
+              </div>
+
+              <div [hidden]="!openform3">
+                <form [formGroup]="registerForm3">
+                  <div form-group>
+                    <mat-select
+                    [(value)]="selected_version_1"
+                    (change)="dropDownChanged($event)"
+                    style="
+                      background-color: white;
+                      margin-top: 26px;
+                      width: 445px;
+                      margin-left: 8px;
+                      border-color: purple;
+                    "
+                  >
+                    <mat-option value="" [disabled]="true"
+                      >Select Version</mat-option
+                    >
+                    <mat-option
+                      [value]="Version"
+                      *ngFor="let Version of processVerList"
+                      >{{ Version[0] }}</mat-option
+                    >
+                  </mat-select>
+
+                  <mat-select
+                    [(value)]="selected_version_2"
+                    (change)="dropDownChanged($event)"
+                    style="
+                      background-color: white;
+                      margin-top: 26px;
+                      width: 445px;
+                      margin-left: 8px;
+                      border-color: purple;
+                    "
+                  >
+                    <mat-option value="" [disabled]="true"
+                      >Select Version</mat-option
+                    >
+                    <mat-option
+                      [value]="Version"
+                      *ngFor="let Version of processVerList"
+                      >{{ Version[0] }}</mat-option
+                    >
+                  </mat-select>
+                  </div>
+                </form>
+              </div>
+
+              <div
+                style="
+                  margin-top: 25px;
+                  margin-left: 369px;
+                  padding-bottom: -34px;
+                "
+              >
+                <a
+                  (click)="compareClicked()"
+                  class="square_btn"
+                  style="
+                    padding-left: 4%;
+                    margin-left: 0px;
+                    margin-top: 10px;
+                    width: 222px;
+                    height: 43px;
+                    padding-top: 7px;
+                    font-size: 19px;
+                    color: white;
+                  "
+                  >&nbsp;&nbsp;Compare The File</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+         
+        <div class="container" id="element" >
+             
+            
+          <div *ngIf="compare">
+            <div
+            style="
+              margin-top: 25px;
+              margin-left: 937px;
+              padding-bottom: -34px;
+            "
+          >
+            <a
+            (click)="exportAsXLSX()"
+              class="square_btn"
+              style="
+                padding-left: -10%;
+                margin-left: -23px;
+                margin-top: 10px;
+                width: 207px;
+                height: 43px;
+                padding-top: 7px;
+                font-size: 19px;
+                color: white;
+              "
+              >&nbsp;&nbsp;Extract to Excel</a
+            >
+          </div>
+
+        <div
+          class="article_title"
+          style="margin-top: 0px; margin-left: 44px"
+        >
+          <h1
+            id="to"
+            style="color: grey; margin-top: 0px; margin-left: 37px"
+          >
+            Application Modified
+          </h1>
+        </div>
+
+        <div class="row col-md-9 col-md-offset-2 custyle">
+          <table
+            style="background-color: white; margin-left: 86px; width: 929px"
+          >
+            <tr>
+              <th>App System</th>
+              <th>Attribute</th>
+              <th>Old Value</th>
+              <th>New Value</th>
+            </tr>
+            <tr *ngFor="let version of compList ">
+
+              <!--<div *ngFor="let v of version">-->
+
+      
+                <td> {{version.AppSystem}}</td>
+
+                <td> {{version.AttributeName}}</td>
+
+                <td> {{version.OldValue}}</td>
+                  <td> {{version.NewValue}}</td>
+       
+       
+      
+            </tr>
+          </table>
+        </div>
+
+        <div class="row col-md-9 col-md-offset-2 custyle">
+          <h1
+            id="to"
+            style="color: grey; margin-top: 0px; margin-left: 82px"
+          >
+            Application Deleted
+          </h1>
+          <table
+            style="
+              background-color: white;
+              margin-left: 87px;
+              margin-top: 8px;
+              width: 929px;
+            "
+          >
+            <tr>
+              <th>App System</th>
+              <th>LOB</th>
+              <th>ET Director</th>
+              <th>ET Manager</th>
+            </tr>
+            <tr>
+              <td>No changes</td>
+              <td>No changes</td>
+              <td>No changes</td>
+              <td>No changes</td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="row col-md-9 col-md-offset-2 custyle">
+          <h1
+            id="to"
+            style="color: grey; margin-top: 0px; margin-left: 88px"
+          >
+            Application Added
+          </h1>
+          <table
+            style="
+              background-color: white;
+              margin-left: 89px;
+              margin-top: 27px;
+              width: 929px;
+            "
+          >
+            <tr>
+              <th>App System</th>
+              <th>LOB</th>
+              <th>ET Director</th>
+              <th>ET Manager</th>
+            </tr>
+            <tr>
+              <td>No changes</td>
+              <td>No changes</td>
+              <td>No changes</td>
+              <td>No changes</td>
+            </tr>
+            <tr>
+              <!-- <td>ok</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr> -->
+            </tr>
+          </table>
+      
+        </div>
+
+
+
+      </div>
+
+    </div>
+ 
+  </div>
+</header>
+</body>
+</html>
+<!--<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+  crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+  crossorigin="anonymous">
+<link rel="stylesheet" href="test-git.component.css">
+<title>Bootstrap Theme</title>
+
+
+
+</head>
+
+
+<app-menu-headers></app-menu-headers>
+<body data-spy="scroll" data-target="#main-nav" id="home">
+
+  <header id="home-section">
+
+    <div class="dark-overlay ">
+
+        <div style=" margin-left:11px;">
+
+
+            <h1 class="display-4" style="color: grey;margin-top: 19px;    margin-left: 93px;">
+
+                   <strong>Application Baseline Data Comparison Analysis
+                </strong>
+                 </h1>
+                 <div class="dark-overlay1"> <h1 id="to"  style="color: grey; margin-top: 36px;   margin-left: 90px;">
+                 Select a view
+
+               </h1>
+
+               <div style="    margin-left: 89px;">
+                 <div class="radio-item">
+                  <input type="radio" id="ritema" name="ritem" value="ropt1">
+                  <label for="ritema">Application</label>
+              </div>
+
+              <div class="radio-item">
+                  <input type="radio" id="ritemb" name="ritem" value="ropt2">
+                  <label for="ritemb">Infrastructure</label>
+              </div>
+
+              <div class="radio-item">
+                <input type="radio" id="ritemc" name="ritem" value="ropt3">
+                <label for="ritemc">Process</label>
+              </div>
+
+                                                                            <div class="radio-item" (click)="handleChange2($event)">
+                                                                            <input type="radio" id="ritemc" name="ritem" value="ropt3">
+                                                                            <label for="ritemc">Process</label>
+                                                                            </div>
+
+
+
+
+
+                                                                            <div [hidden]="!openform1">
+
+                                                                              <form [formGroup]="registerForm1">
+                                                                                  <div form-group>
+                                                  <select class="form-control"
+                                                  style="background-color: white;margin-top: 26px; width: 445px;margin-left: 8px; border-style: solid;
+                                                  border-color: purple;" (click)="selectChangeHandler($event)"  >
+                                                 <option value="" selected="selected" style="color: purple;" disabled >Select Version</option>
+                                                 <option value="Version"  style="color: purple;"*ngFor="let Version of verList">{{Version}}</option>
+                                                 </select>
+
+
+                                                  <select class="form-control"
+                                                  style="background-color: white;margin-top: -33px;
+                                                   width: 445px;
+                                                   margin-left: 477px; border-style: solid;
+                                                    border-color: purple;" (click)="selectChangeHandler1($event)" (click)=alert() >
+                                                  <option value="" selected="selected" style="color: purple;" disabled >Select Version</option>
+                                                <option value="Version"  style="color: purple;"*ngFor="let Version of verList" >{{Version}}</option>
+
+
+
+  </select>
+
+
+  <select class="form-control"
+  style="background-color: white;margin-top: -33px;
+  width: 445px;
+  margin-left: 477px; border-style: solid;
+    border-color: purple;" >
+     <option value="" selected="selected" style="color: purple;">V2</option>
+     <option value="" selected="selected" style="color: purple;">V1</option>
+     <option value="" selected="selected" style="color: purple;">select version</option>
+
+
+
+   </select>
+
+
+        <div style="margin-top:25px;margin-left:369px;padding-bottom: -34px;">
+          <a (click)="compareClicked(id1,id2)" class="square_btn" style="    padding-left: 4%;
+          margin-left: 0px;
+          margin-top: 10px;
+          width: 222px;
+          height: 43px;
+          padding-top: 7px;
+          font-size: 19px;color: white;">&nbsp;&nbsp;Compare The File</a>
+
+
+
+          </div>
+
+        </div>
+      </div>
+
+         </div>
+         <div *ngIf="compare">
+         <div class="container" >
+            <div style="    margin-top: -106px;
+            margin-left: 1017px;
+            margin-bottom: -32px;">
+           <a href="#" class="square_btn" style="    padding-left: 69%;
+           margin-left: -241%;
+           margin-top: 127px;
+           width: 222px;
+           height: 43px;
+           padding-top: 7px;
+           font-size: 19px;"> <img src="assets/Images/output-onlinepngtools.png" style="    width: 23px;
+           margin-bottom: 0px;
+           margin-left: -25px;
+           margin-top: 5px;
+           height: 23px;
+       ">&nbsp;&nbsp;Extract in CSV</a>
+            </div>
+            <div class="article_title" style="margin-top: 0px;margin-left: 44px;">
+            <h1 id="to"  style="color: grey;margin-top: 0px;margin-left: 37px;">
+                Application Modified
+
+             </h1>
+            </div>
+
+
+
+                <div class="row col-md-9 col-md-offset-2 custyle" >
+
+                    <table  style="background-color: white;margin-left: 86px;width: 929px;">
+                      <tr>
+                        <th>App System</th>
+                        <th>Attribute
+                        </th>
+                        <th>Old Value
+                        </th>
+                        <th>New Value
+                        </th>
+                      </tr>
+
+<tr *ngFor="let version of compList | value;let i = index ">
+
+
+
+                   <td> {{version.AppSystem}}</td>
+
+
+                   <td> {{version.AttributeName}}</td>
+
+                   <td> {{version.OldVal}}</td>
+                   <td> {{version.NewVal}}</td>
+
+
+
+                      </tr>
+
+
+                    </table>
+                </div>
+
+
+                <div class="row col-md-9 col-md-offset-2 custyle" >
+                    <h1 id="to"  style="color: grey;margin-top: 0px;margin-left: 82px">
+                        Application Deleted
+
+
+                     </h1>
+                    <table  style="background-color: white;margin-left: 87px;;margin-top: 8px;width: 929px;">
+                      <tr>
+                        <th>App System</th>
+                        <th>LOB
+
+                        </th>
+                        <th>ET Director
+
+                        </th>
+                        <th>ET Manager
+
+                        </th>
+                      </tr>
+                      <tr>
+                        <td>No changes</td>
+                        <td>No changes</td>
+                           <td>No changes</td>
+                           <td>No changes</td>
+                      </tr>
+
+
+                    </table>
+                </div>
+
+
+
+
+                <div class="row col-md-9 col-md-offset-2 custyle" >
+                    <h1 id="to"  style="color: grey;margin-top: 0px;margin-left: 88px">
+                        Application Added
+
+
+
+                     </h1>
+                    <table  style="background-color: white;margin-left: 89px;;margin-top: 27px;width: 929px;">
+                      <tr>
+                        <th>App System</th>
+                        <th>LOB
+
+                        </th>
+                        <th>ET Director
+
+                        </th>
+                        <th>ET Manager
+
+                        </th>
+                      </tr>
+                      <tr>
+                        <td>No changes</td>
+                        <td>No changes</td>
+                           <td>No changes</td>
+                           <td>No changes</td>
+                      </tr>
+                      <tr>
+
+
+                    </table>
+                </div>
+
+
+
+
+         </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+  </header>
+
+
+
+</body>
+</html>-->

@@ -1,0 +1,56 @@
+.container{
+  border-radius: 25px;
+  background: lightgrey;
+  padding: 20px;
+  width: 625px;
+
+  height: 223px;
+  margin-top: 12%;
+}
+.btn-block{
+  width:50%;
+  display:inline-block;
+  border-radius: 18px;
+
+}
+.md-form {
+  margin-bottom: 2rem;
+
+  margin-left: -13%;
+  width: 75%;
+}
+
+.fa{
+  color: grey;
+
+  font-size: large;
+  margin-left: -6%;
+}
+.selectBox{
+  width:140px;
+  height:40px;
+  border:0px;
+  outline:none;
+}
+
+.md-form .form-control {
+  margin: 0 0 0.5rem 0;
+  border-radius: 106;
+  padding: 0.6rem 0 0.4rem 0;
+  background-color: white;
+  height: auto;
+  border-radius: 9px;
+
+  margin-left: -2%;
+}
+
+
+
+#label{
+  color:purple;
+  margin-top: -12%;
+  margin-left: 20%;
+  white-space: nowrap;
+  font-weight: bold;
+  font-size: large;
+}

@@ -1,0 +1,117 @@
+<app-header-apr></app-header-apr>
+<div class="container-fluid mt-5 mx-4">
+  <div class="row mt-5">
+    <div style="width: 531px; font-size: large; color: rgba(34, 40, 49, 1)">
+      Select view:
+ 
+
+        <mat-select
+          placeholder="select a view"
+          [(ngModel)]="viewtype"
+          (selectionChange)="changed()"
+        >
+          <mat-option value="1">Appplication</mat-option>
+          <mat-option value="2">Infrastructure</mat-option>
+          <mat-option value="3">Process</mat-option>
+        </mat-select>
+
+    </div>
+  </div>
+  <div>
+    <div class="row" style="font-size: large; color: rgba(34, 40, 49, 1)">
+      Select Version to Compare
+    </div>
+    <div class="row">
+      <mat-select
+        placeholder="select version 1"
+        class="mr-4"
+        style="width: 445px"
+        [(ngModel)]="dropdown1"
+      >
+        <mat-option [value]="Version" *ngFor="let Version of verList">{{
+          Version[0]
+        }}</mat-option>
+      </mat-select>
+
+      <mat-select
+        placeholder="select version 2"
+        style="background-color: white; width: 445px"
+        [(ngModel)]="dropdown2"
+      >
+        <mat-option [value]="Version" *ngFor="let Version of verList">{{
+          Version[0]
+        }}</mat-option>
+      </mat-select>
+      <div class="ml-auto mr-5">
+        <button class="btn btn-primary" (click)="compare()">Compare</button>
+      </div>
+    </div>
+  </div>
+</div>
+  <mat-tab-group class="mx-4">
+    <mat-tab  label="Modified Data">
+      <div 
+        *ngIf="ModifiedTabel"
+        class=" mt-5  "
+      >
+      <div  class="mx-4 ">
+        <table *ngIf="viewtype=='1'" class="table  table-responsive-md ">
+          <tr>
+            <th>Application Name</th>
+            <th>Attribute</th>
+            <th>Old Value</th>
+            <th>New Value</th>
+          </tr>
+          <tr *ngFor="let version of compListapp">
+            <td>{{ version['Application Name'] }}</td>
+
+            <td>{{ version['Attribute Name'] }}</td>
+
+            <td>{{ version['Old Value'] }}</td>
+            <td>{{ version['New Value'] }}</td>
+          </tr>
+        </table>
+      
+        <table *ngIf="viewtype=='2'" class="table  table-responsive-md ">
+          <tr>
+            <th>Application Name</th>
+            <th>Attribute</th>
+            <th>Old Value</th>
+            <th>New Value</th>
+          </tr>
+          <tr *ngFor="let version of compListinfra">
+            
+
+            <td>{{ version['Application Name'] }}</td>
+
+            <td>{{ version['Attribute Name'] }}</td>
+
+            <td>{{ version['Old Value'] }}</td>
+            <td>{{ version['New Value'] }}</td>
+          </tr>
+        </table>
+        <div class="pull-right">
+          <button class="btn btn-primary" (click)="exportAsXLSX()">Export As XLSX</button>
+        </div>
+      </div>
+      </div>
+    </mat-tab>
+    <mat-tab label="Deleted Data"> No Data</mat-tab>
+    <mat-tab label="Added Data"> No Data</mat-tab>
+  </mat-tab-group>
+  <div>
+    <div
+      class="row"
+      style="
+      margin-top: 320px;
+        border-top: 1px solid rgba(0, 65, 109);
+        line-height: 50px;
+        text-align: center;
+      "
+    >
+      <span> <p style="margin-left: 618px">Copyright DTB - 2021</p></span>
+    </div>
+  </div>
+  
+
+ 

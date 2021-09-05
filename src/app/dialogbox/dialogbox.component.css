@@ -1,0 +1,77 @@
+h4{
+    
+    font-family: 'Open Sans';
+    
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 30px;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    color: rgba(34, 40, 49, 0.9);
+    position: relative;
+}
+mat-form-field{
+    height: 48px;
+     width: 340px;
+     
+     border-radius: 4px;
+}
+
+.mat-dialog-actions {
+    padding: 8px 0;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 52px;
+    align-items: center;
+     margin-bottom: 0px !important;
+}
+
+
+.mat-dialog-container{
+    min-height: unset !important;
+}
+
+.submitBtn{
+    display: flex;
+    color: white;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 9px 16px;
+    position: absolute;
+    width: 180px;
+    height: 56px;
+    right: 1%;
+    margin-top: -1%;
+    background: #0062A3;
+    border-radius: 4px;
+    }
+    ::ng-deep .mat-form-field-flex > .mat-form-field-infix { padding: 0.4em 0px !important;}
+::ng-deep .mat-form-field-label-wrapper { top: -1.5em; }
+
+::ng-deep .mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
+    transform: translateY(-1.1em) scale(.75);
+    width: 133.33333%;
+}
+    .mat-dialog-title{
+        position: absolute;
+width: 276px;
+height: 32px;
+top:5%;
+left:20%;
+
+/* SemiBold/24 */
+
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 32px;
+/* identical to box height, or 133% */
+
+font-feature-settings: 'tnum' on, 'lnum' on;
+
+/* Main / 02 */
+
+color: #00416D;
+    }

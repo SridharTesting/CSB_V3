@@ -1,0 +1,16 @@
+.container{
+  border-radius: 25px;
+  background: lightgrey;
+  padding: 20px;
+  width: 200px;
+
+  height: 145px;
+  margin-top: 12%;
+
+  text-align: center;
+}
+
+.btn{
+  text-transform: none;
+  height: 44px;
+}

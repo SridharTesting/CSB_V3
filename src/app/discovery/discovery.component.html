@@ -1,0 +1,36 @@
+
+  
+  <mat-drawer-container>
+    
+    <mat-drawer-content class="content">
+       
+      
+      <mat-card>
+
+
+        <div class="form-group">
+            <label for="file">Discovery Files</label>
+            <input type="file"
+                   id="file"
+                   (change)="handleFileInput($event.target.files)">
+        </div>
+        <button type="submit" class="btn btn-primary">Upload</button>
+        <hr>
+
+        <div class="form-group">
+            <label for="file">Rules Files</label>
+            <input type="file"
+                   id="file"
+                   (change)="handleFileInput($event.target.files)">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Upload</button>
+       
+       
+      
+      </mat-card>
+        
+    </mat-drawer-content>
+  </mat-drawer-container>
+
+ 

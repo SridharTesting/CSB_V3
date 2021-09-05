@@ -1,0 +1,26 @@
+.heading
+{
+    margin-left: 70px;
+    margin-top: 3%;
+    width:90%;
+    font-size: 23px;
+    line-height: 2rem;
+    font-weight: 500;
+}
+.heading1
+{
+    margin-left: 388px;
+    font-size: 23px;
+    line-height: 2rem;
+    font-weight: 500;
+}
+input, button, select, textarea {
+    font-family: inherit;
+    font-size: 20px;
+    line-height: inherit;
+}
+.title{
+    padding-left: 30px;
+    font-size: 20px;
+  
+}

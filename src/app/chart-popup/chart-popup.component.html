@@ -1,0 +1,50 @@
+
+
+<button class="btn btn-secondary pull-right mb-5" mat-button [mat-dialog-close]="false">
+    Cancel
+  </button>
+
+
+<div class="content-container" mt-4 mb-4 pb-5>
+
+
+<span style="
+padding-left: 11px;
+
+
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 55px;
+color:rgba(34, 40, 49, 0.9);
+">{{piechartname}} > {{title}}</span>
+<div class="card-body p-0">
+  <table class="table table-responsive-md text-center">
+    <thead>
+      <tr>
+        <th style="border-bottom: 1px solid rgba(65, 128, 245, 0.6); " class="column">#</th>
+        <th  style="border-bottom: 1px solid rgba(65, 128, 245, 0.6); " class="column" >LOB</th>
+        <th  style="border-bottom: 1px solid rgba(65, 128, 245, 0.6); "  class="column">Application Id</th>
+        <th  style="border-bottom: 1px solid rgba(65, 128, 245, 0.6); "  class="column">Application Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let g of chartvalue; let i=index ">
+        <td class="mat-cell"style="text-align: left">{{ i+1 }}</td>
+        <td class="mat-cell"style="text-align: left">{{ g.lobname }}</td>
+        <td class="mat-cell">{{ g.appid }}</td>
+        <td class="mat-cell">{{ g.appname }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<!-- 
+<button   class=" pull-right mt-3 mb-3 "(click)="cancel()">
+  Cancel
+</button> -->
+<div class="pt-5 pb-5 ">
+<button class="btn btn-secondary pull-right mb-5 " mat-button [mat-dialog-close]="false">
+    Cancel
+  </button>
+</div>
+</div>

@@ -1,0 +1,519 @@
+<app-header></app-header>
+<div class="contanier-fluid ml-3 mt-4 pt-4" style="margin-top: 70px">
+  <div class="row row-2 ml-4">
+    <div class="row" style="margin-top: 14px">
+      <div class="col-sm-12">
+        <h5
+          style="
+            color: #00416d;
+            margin-top: 10px;
+            font-size: 40px;
+
+            margin-left: 27px;
+            font-weight: normal;
+          "
+        >
+          Discovery Summary
+        </h5>
+      </div>
+    </div>
+
+    <!-- //starts -->
+
+    <div class="row row px-5" style="width: 100%; margin-left: 0%">
+      <div class="col">
+        <div class="card card1 pl-3" style="text-align: center">
+          <div class="card-block">No. of Data Center</div>
+
+          <span
+            ><h2
+              style="
+                left: 39.7%;
+                right: 39.39%;
+                top: 41.98%;
+                bottom: 9.88%;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 32px;
+                line-height: 20px;
+                color: #00416d;
+              "
+            >
+              {{ datacentercount }}
+            </h2></span
+          >
+        </div>
+      </div>
+      <div class="col">
+        <div class="card card1" style="text-align: center">
+          <div class="card-block">No. of Servers</div>
+          <span
+            ><h2
+              style="
+                left: 39.7%;
+                right: 39.39%;
+                top: 41.98%;
+                bottom: 9.88%;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 32px;
+                line-height: 20px;
+                color: #00416d;
+              "
+            >
+              {{ infradatacountdisplay }}
+            </h2></span
+          >
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card card1" style="text-align: center">
+          <div class="card-block">No. of Environments</div>
+          <span
+            ><h2
+              style="
+                left: 39.7%;
+                right: 39.39%;
+                top: 41.98%;
+                bottom: 9.88%;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 32px;
+                line-height: 20px;
+                color: #00416d;
+              "
+            >
+              {{ Environmentcounting }}
+            </h2></span
+          >
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card card1" style="text-align: center">
+          <div class="card-block">No. of LOB</div>
+          <span
+            ><h2
+              class
+              style="
+                left: 39.7%;
+                right: 39.39%;
+                top: 41.98%;
+                bottom: 9.88%;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 32px;
+                line-height: 20px;
+                color: #00416d;
+              "
+            >
+              {{ lobcount }}
+            </h2></span
+          >
+        </div>
+      </div>
+      <div class="col">
+        <div class="card card1" style="text-align: center">
+          <div class="card-block">No. of Application</div>
+          <span
+            ><h2
+              style="
+                font-style: normal;
+                font-weight: 500;
+                font-size: 32px;
+                line-height: 21px;
+                color: #00416d;
+              "
+            >
+              {{ applicationcount }}
+            </h2></span
+          >
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card card1" style="text-align: center">
+          <div class="card-block">No. of Vendor Apps</div>
+          <span
+            ><h2
+              style="
+                left: 39.7%;
+                right: 39.39%;
+                top: 41.98%;
+                bottom: 9.88%;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 32px;
+                line-height: 20px;
+                color: #00416d;
+              "
+            >
+              {{ vendorcount }}
+            </h2></span
+          >
+        </div>
+      </div>
+    </div>
+    <div class="row px-5" style="margin-top: -16px">
+      <div class="col-sm-6" style="margin-left: 14px">
+        <div
+          class="card"
+          style="margin-bottom: 30px; height: 126px; width: 570px"
+        >
+          <p class="pheader">Environment</p>
+          <div class="row" style="margin: -14px auto; margin-bottom: 20px">
+            <div
+              class="mt-4"
+              style="display: flex; justify-content: center"
+              id="dynamicdivenv"
+            ></div>
+          </div>
+        </div>
+      </div>
+      <!-- new -->
+      <div class="col-sm-5" style="margin-left: -6px">
+        <div
+          class="card"
+          style="margin-bottom: 30px; height: 126px; width: 572px"
+        >
+          <p class="pheader">OS Type</p>
+          <div class="row" style="margin: -14px auto; margin-bottom: 20px">
+            <div
+              class="mt-4"
+              style="display: flex; justify-content: center"
+              id="dynamicdiv"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //ends -->
+  </div>
+  <!--Technical,Progress, Total progress start-->
+
+  <!-- Left col -->
+
+  <div class="col-md-8" style="padding-left: 21px">
+    <!-- PRODUCT LIST -->
+    <div class="card" [style.display]="appSurvey ? 'block' : 'none'">
+      <div>
+        <h3 class="card-title ml-3 mt-2">Survey Progress</h3>
+      </div>
+      <!-- /.card-header -->
+      <div class="card-body p-0">
+        <table class="table table-responsive-md text-center">
+          <thead>
+            <tr>
+              <th class="column">Line of Business</th>
+              <th class="column">No. of Applications</th>
+              <th class="column" style="width: 433px">Survey Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="mat-celll" *ngFor="let g of lobarr">
+              <td class="mat-cell" style="text-align: left">{{ g.lobname }}</td>
+              <td class="mat-cell">
+                <span class="danger">{{ g.total }}</span>
+              </td>
+              <td class="mat-cell" style="width: 40vw">
+                <div class="ml-2" [ngClass]="{
+                  'ok-bar': g.active == g.total,
+                  'warn-bar': g.active != g.total
+                }">
+                  <!-- <mat-progress-bar mode="determinate" 
+                                        [value]="g.active"></mat-progress-bar>  -->
+
+                  <mat-progress-bar
+                    class="progress"
+                    mode="determinate"
+                    style="width: 210px; height: 15px"
+                    [value]="(g.active / g.total) * 100"
+                  ></mat-progress-bar>
+
+                  <div
+                    class="danger"
+                    style="margin-top: -39px; margin-left: 219px"
+                  >
+                    {{ g.active }}/{{ g.total }}
+
+                    <span class="pl-4" *ngIf="g.active != g.total"
+                    style="color: #E59617"
+                      >Please take Survey</span
+                    >
+                    <span
+                      class="pl-3"
+                      *ngIf="g.active == g.total"
+                      style="color: #019D8D"
+                      >Survey Complete</span
+                    >
+                  </div>
+                  <div style="margin-top: -20px; margin-left: 218px">
+                    <mat-select
+                      *ngIf="g.active != g.total"
+                      style="width: 237px; color: #00416d"
+                      (selectionChange)="
+                        appnamechanged($event.value, g.lobname)
+                      "
+                    >
+                      <mat-option
+                        *ngFor="let app of g.notactiveapplications"
+                        value="{{ app.appname }}"
+                      >
+                        {{ app.appname }}
+                      </mat-option>
+                    </mat-select>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- /.card-body -->
+      <!-- /.card-footer -->
+    </div>
+    <!-- /.card -->
+  </div>
+
+  <div class="col-md-3" id="totalprogress">
+    <!-- Info Boxes Style 2 -->
+
+    <!-- Info Boxes Style 2 -->
+    <div
+      class="card"
+      [style.display]="appSurvey ? 'block' : 'none'"
+      style="height: 274px; width: 408px"
+    >
+      <div>
+        <h3 class="card-title ml-3 mt-2">Total Survey Status</h3>
+      </div>
+      <!-- /.card-header -->
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-9 ml-auto mr-5 pl-5">
+            <div>
+              <circle-progress
+                [percent]="evaluatedapps"
+                [titleFontSize]="50"
+                [subtitle]="subTitle"
+                [subtitleFontSize]="20"
+                [space]="-10"
+                [radius]="70"
+                [outerStrokeWidth]="10"
+                [innerStrokeWidth]="10"
+                [outerStrokeColor]="'#00416D'"
+                [innerStrokeColor]="'#e7e8ea'"
+                [animation]="true"
+                [animationDuration]="1000"
+              >
+              </circle-progress>
+            </div>
+
+            <!-- ./chart-responsive -->
+          </div>
+        </div>
+        <!-- /.row -->
+      </div>
+    </div>
+  </div>
+
+  <div class="row px-4" [style.display]="appSurvey ? 'block' : 'none'">
+    <div class="col-md-4">
+    
+      <div class="card direct-chat direct-chat-warning" style="width: 406px">
+        <div
+          class="card-header1"
+          style="
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 32px;
+
+            display: flex;
+            align-items: center;
+            color: rgba(34, 40, 49, 0.9);
+          "
+        >
+          <h3 class="card-title ml-2 mt-2">6 R's Status</h3>
+        </div>
+      
+        <div
+          id="chartdivEnvironmentvsServer"
+          style="height: 217px; width: 382px; margin-left: 23px"
+        ></div>
+        
+      </div>
+    </div>
+    <div class="col-md-4">
+    
+      <div class="card direct-chat direct-chat-warning" style="width: 411px">
+        <div class="card-header1 mb-2">
+          <h3 class="card-title ml-2 mt-2">6 R's Evaluation Progress</h3>
+        </div>
+
+        <div class="ml-5 pl-5 mb-4">
+          <circle-progress
+            [percent]="rlanePercent"
+            [titleFontSize]="50"
+            [subtitle]="rlanesubtitle"
+            [subtitleFontSize]="20"
+            [space]="-10"
+            [radius]="80"
+            [outerStrokeWidth]="10"
+            [innerStrokeWidth]="10"
+            [outerStrokeColor]="'#00416D'"
+            [innerStrokeColor]="'#e7e8ea'"
+            [animation]="true"
+            [animationDuration]="1000"
+          >
+          </circle-progress>
+        </div>
+      </div>
+    </div>
+
+    <!-- //pdf bar graph on IP  -->
+    <div class="col-md-4">
+      <div
+        class="card direct-chat direct-chat-warning"
+        style="width: 401px; margin-left: 6px"
+      >
+        <div class="card-header1">
+          <h3 class="card-title ml-2 mt-2">Migration Status</h3>
+        </div>
+
+        <div class="ml-5 pl-5 mb-4 mt-2">
+          <circle-progress
+            [percent]="0"
+            [titleFontSize]="50"
+            [subtitle]="0 / 101"
+            [subtitleFontSize]="20"
+            [space]="-10"
+            [radius]="80"
+            [outerStrokeWidth]="10"
+            [innerStrokeWidth]="10"
+            [outerStrokeColor]="'#00416D'"
+            [innerStrokeColor]="'#e7e8ea'"
+            [animation]="true"
+            [animationDuration]="1000"
+          >
+          </circle-progress>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row row-3 mx-4" [style.display]="appSurvey ? 'block' : 'none'">
+    <div class="mt-4">
+      <div class="col-md-4">
+        <!-- DIRECT CHAT -->
+        <div style="width: 392px; margin-left: 10px">
+          <div>
+            <h3 class="card-title">Rehost</h3>
+          </div>
+          <!-- /.card-header -->
+          <div id="rehosting" style="width: 399px; height: 218px"></div>
+          <!-- <div id="chartdivck" style="width: 399px; height: 218px;"> -->
+          <!--/.direct-chat -->
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <!-- DIRECT CHAT -->
+        <div style="width: 399px">
+          <div>
+            <h3 class="card-title" style="font-weight: bold">Replatform</h3>
+          </div>
+          <!-- /.card-header -->
+          <div id="Replatformdata" style="width: 399px; height: 218px">
+            <!-- Conversations are loaded here -->
+
+            <!-- /.card-body -->
+          </div>
+
+          <!--/.direct-chat -->
+        </div>
+      </div>
+      <div class="col-md-4">
+        <!-- DIRECT CHAT -->
+        <div>
+          <div>
+            <h3 class="card-title" style="font-weight: bold">Replace</h3>
+          </div>
+          <!-- /.card-header -->
+          <div id="Replacedata" style="width: 399px; height: 218px">
+            <!-- Conversations are loaded here -->
+
+            <!-- /.card-body -->
+          </div>
+
+          <!--/.direct-chat -->
+        </div>
+      </div>
+      <div class="col-md-4">
+        <!-- DIRECT CHAT -->
+        <div class="ml-3" style="width: 389px">
+          <div>
+            <h3 class="card-title" style="font-weight: bold">Rearchitect</h3>
+          </div>
+          <!-- /.card-header -->
+
+          <div style="width: 399px; height: 218px" #chartElement></div>
+          <!--/.direct-chat -->
+        </div>
+      </div>
+      <div class="col-md-4">
+        <!-- DIRECT CHAT -->
+        <div style="width: 399px">
+          <div>
+            <h3 class="card-title" style="font-weight: bold">ReBuild</h3>
+          </div>
+          <!-- /.card-header -->
+          <div id="Retiredata" style="width: 399px; height: 218px">
+            <!-- Conversations are loaded here -->
+          </div>
+
+          <!--/.direct-chat -->
+        </div>
+      </div>
+      <div class="col-md-4">
+        <!-- DIRECT CHAT -->
+        <div>
+          <div>
+            <h3 class="card-title" style="font-weight: bold">Retain</h3>
+          </div>
+          <!-- /.card-header -->
+          <div id="Retaindata" style="width: 399px; height: 218px">
+            <!-- Conversations are loaded here -->
+
+            <!-- Message. Default to the left -->
+
+            <!-- <div id="chartdiv" style="width: 102%; height: 118px;"></div> -->
+
+            <!-- /.direct-chat-msg -->
+
+            <!-- /.card-body -->
+          </div>
+
+          <!--/.direct-chat -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--DataCriticality Ends -->
+</div>
+
+<div>
+  <div
+    class="row"
+    style="
+      border-top: 1px solid rgba(0, 65, 109);
+      line-height: 50px;
+      text-align: center;
+    "
+  >
+    <span> <p style="margin-left: 618px">Copyright DTB - 2021</p></span>
+  </div>
+</div>

@@ -1,0 +1,136 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import 'https://fonts.googleapis.com/icon?family=Material+Icons';
+@import '~bootstrap/dist/css/bootstrap.min.css';
+body,html{
+margin: auto;
+    font-family: "apercu",sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    color: #202121;
+    background: #f4f7f6;
+    overflow-x: hidden !important;
+    
+    padding: 0mm;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    min-height: 100vh;
+
+}
+
+.mat-toolbar header .mat-toolbar-multiple-rows{
+  position: fixed;
+  z-index: 302;
+}
+
+
+.mat-drawer-content {
+  position: relative;
+  z-index: 1;
+  display: block;
+  height: 100%;
+
+  overflow:unset !important;
+}
+#viz {
+  width: 170%;
+  height: 379px;
+  border: '1px solid lightgray !important';
+  font: '22pt arial !important';
+  /* margin-top: -158%; */
+  margin-left: -35%;
+  margin-top: -35%;
+}
+.active-amml-item{
+  color:blue
+}
+.mat-accent {
+
+  color: rgb(70, 6, 129) !important;
+}
+#top {
+ color: rgb(70, 6, 129);
+  font-size: 32px;
+  /* line-height: 0px; */
+  padding-bottom: 22px;
+  margin-top: -6%;
+  margin-left: -8%;
+}
+.btn-block{
+  width:16%;
+}
+#divider{
+  width: 112%;
+
+    margin-left: -6%;
+}
+.article_title {
+  width: 477px;
+  display: inline-block;
+}
+#reset-this-parent {
+  all: initial;
+
+}
+span.label {
+  color: inherit;
+}
+.mat-toolbar {
+ all:unset
+}
+.mat-drawer-inner-container{
+  all:unset
+}
+
+
+.col-md-6 {
+    width: 51%;
+}
+.mat-dialog-container{
+  /* background-color: rgb(34, 28, 28); */
+  border-radius: 50px;
+  height:70vh !important;
+  min-height: unset !important;
+}
+.mat-dialog-title{
+  text-align: center;
+  color: #00416d;
+}
+.mat-select-arrow {
+  margin-top: 1px !important;
+}
+.mat-tab-link-container {
+  display: flex;
+  flex-grow: 1;
+  overflow: hidden;
+  z-index: 1;
+  background-color: white !important;
+}
+
+.mat-tab-nav-bar .mat-tab-header .mat-primary{
+  background-color: white !important;
+  height: 0% !important;
+}
+.amcharts-chart-div a {display:none !important;}
+
+
+/*.mat-dialog-container {
+  display: block;
+  padding: 0px !important;
+  border-radius: 4px;
+  box-sizing: border-box;
+
+  overflow: visible !important;
+  outline: 0;
+  width: 100% !important;
+  height: 50% !important;;
+  min-height: inherit;
+  max-height: inherit;
+
+  margin-top:8%;
+  margin-left: 10%;
+}*/
+
+
+

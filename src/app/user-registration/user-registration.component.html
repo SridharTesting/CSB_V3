@@ -1,0 +1,105 @@
+<div class="container" [formGroup]="registerForm" >
+
+  <h2 mat-dialog-title>User Setup</h2>
+  
+  
+  <input type="text" formControlName="firstname" placeholder="First Name"> 
+  <div *ngIf="submitted &amp;&amp; registerForm.controls.firstname.errors" class="text-danger">
+      <div *ngIf="registerForm.controls.firstname.errors.required">Please enter valid First Name</div>
+      </div>
+
+  <input type="text"  formControlName="lastname" placeholder="Last Name">
+  <div *ngIf="submitted &amp;&amp; registerForm.controls.lastname.errors" class="text-danger">
+    <div *ngIf="registerForm.controls.lastname.errors.required">Please enter a valid Last Name </div>
+  </div>
+
+  <!--Email-->
+   
+    <input type="email" formControlName="email" placeholder="Email Id"
+    [ngClass]="{ 'is-invalid': submitted &amp;&amp; registerForm.controls.email.errors }" required />
+    <div *ngIf="submitted &amp;&amp; registerForm.controls.email.errors" class="text-danger">
+      <div *ngIf="registerForm.controls.email.errors.required">Please enter a valid EmailId</div>
+      <div *ngIf="registerForm.controls.email.errors.pattern">Please enter a valid EmailId</div>
+    </div>
+
+
+
+<!--password-->
+  
+    <input type="password" formControlName="password" placeholder="Password"
+    [ngClass]="{ 'is-invalid': submitted &amp;&amp; registerForm.controls.password.errors }" required />
+    <div *ngIf="submitted &amp;&amp; registerForm.controls.password.errors" class="text-danger">
+      <div *ngIf="registerForm.controls.password.errors.required">Please enter a valid password</div>
+      <div *ngIf="registerForm.controls.password.errors.pattern">Please enter a valid password</div>
+    </div>
+  
+
+  <!--reenter password-->
+
+    <input type="password" formControlName="pswd" placeholder="Re-Enter Password"
+    [ngClass]="{ 'is-invalid': submitted &amp;&amp; registerForm.controls.pswd.errors }" required />
+    <div *ngIf="submitted &amp;&amp; registerForm.controls.pswd.errors" class="text-danger">
+      <div *ngIf="registerForm.controls.pswd.errors.required">Please enter a valid password</div>
+      <div *ngIf="registerForm.controls.pswd.errors.pattern">Please enter a valid password</div>
+    </div>
+   
+  
+<!--LOB-->
+<div class="form-group">
+  <label  class="ddlabel">LOB</label>
+  <select class="form-control"  formControlName="lobId">
+    <option *ngFor="let user of userList |uniqueValues"  [ngValue]="user.lobId">
+ 
+   {{user.lobName}}
+ 
+     
+    </option>
+  </select>
+  <!-- Select Lob :
+  <mat-form-field>
+    
+    <mat-select class="form-control"  formControlName="lobId" >
+      <mat-option  *ngFor="let user of userList |uniqueValues"  [value]="user.lobId">
+          {{user.lobName}}
+        </mat-option>
+      
+    </mat-select>
+  </mat-form-field> -->
+</div>
+
+<!--Role-->
+
+<div class="form-group">
+  <label  class="ddlabel">Role Type</label>
+  <select class="form-control" id="UserRoleType" formControlName="UserRoleId">
+    <option *ngFor="let user of roleList"  [ngValue]="user.UserRoleId">
+ 
+   {{user.UserRoleType}}
+ 
+     
+    </option>
+  </select>
+</div>
+
+
+
+       <div class="mt-4 mx-auto">
+        <button  class="btn btn-default mr-4"  mat-dialog-close=false >Cancel</button>
+        <button type="submit" class="btn btn-primary pull right" (click)="usersetup()" >Submit</button>
+       </div>
+    </div>
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+

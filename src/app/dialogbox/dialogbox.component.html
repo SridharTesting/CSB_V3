@@ -1,0 +1,171 @@
+
+  
+  <mat-tab-group class="tab-group" [dynamicHeight]=true  #matgroup>
+    <mat-tab label="Discovery Data Upload">
+      <div >
+        <form>
+  
+          <div class="container">
+            <h2 mat-dialog-title>Upload Data to Proceed</h2>
+          
+                       
+                       
+            <mat-dialog-content>
+                <div style="    text-align: center;
+                /* background-color: blue; */
+                color: white;
+                font-family: 'Open Sans';
+                position: absolute;
+                width: 707px;
+                height: 33px;
+                left: -96px;
+                top: 21%;
+                background: rgba(0, 65, 109, 0.3);">
+                    <h3 style="position: absolute;
+                    width: 489px;
+                    height: 36px;
+                   
+                    
+                    /* SemiBold / 22 */
+                    
+                    font-family: 'Open Sans';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size:19px;
+                    left: 12%;
+                    line-height: 36px;
+                    /* identical to box height, or 164% */
+                    
+                    font-feature-settings: 'tnum' on, 'lnum' on;
+                    
+                    /* Secondary/90 */
+                    
+                    color: rgba(34, 40, 49, 0.9);"><b>Download Template > Populate Data > Upload File</b></h3>
+                </div>
+                     <div>
+                         <h4 style="margin-top: 25%;
+                         margin-left: 7%;
+                         /* position: absolute; */
+                         width: 414px;
+                         height: 28px;
+                         /* left: 435px; */
+                         /* top: 467px; */
+                         font-family: 'Open Sans';
+                         font-style: normal;
+                         font-weight: normal;
+                         font-size: 18px;
+                         line-height: 28px;
+                         font-feature-settings: 'tnum' on, 'lnum' on;
+                         color: #00416D;">Download templates to upload data from here:</h4>
+                     </div>
+                     <ol class="list-unstyled">
+                             <ol style="position: absolute;
+                             width: 364px;
+                             height: 60px;
+                             /* left: 435px; */
+                             /* top: 519px; */
+                             font-family: 'Open Sans';
+                             font-style: normal;
+                             font-weight: 600;
+                             font-size: 16px;
+                             line-height: 30px;
+                             font-feature-settings: 'tnum' on, 'lnum' on;
+                             color: #00416D;
+                             white-space: nowrap;
+                             ">
+                               
+                                 <li><a href="assets/Infrastructure_new_template.xlsx">Infrastructure Discovery Data Template</a></li>
+                                 <li><a href="assets/Application_new_template.xlsx">Application Discovery Data Template</a></li>
+                             </ol>
+                     </ol>
+                      
+                    
+                      
+                      </mat-dialog-content> 
+                       
+                    
+     
+                    
+                       
+                     <mat-dialog-actions style="padding: 8px 0;
+                     display: flex;
+                     flex-wrap: wrap;
+                     min-height: 172px !important;
+                     align-items: center;
+                     margin-bottom: 0px !important;
+                     margin-left: 40%;">
+                      <button  class="btn btn-primary "  style="margin-left: 28%;
+                      position: static;
+                      /* width: 279px; */
+                      /* height: 36px; */
+                      left: calc(50% - 241px/2);
+                      top: calc(50% - 36px/2);
+                      font-family: 'Open Sans';
+                      font-weight: 600;
+                      font-size: 18px;
+                      line-height: 17px;
+                      display: flex;
+                      align-items: center;
+                      text-align: center;
+                      font-feature-settings: 'tnum' on, 'lnum' on;
+                      color: #F9F9F9;
+                      flex: none;
+                      order: 0;
+                      flex-grow: 0;
+                      margin: 1px 58px;
+                      bottom: 2%;
+                      text-transform: none;
+                      margin-bottom: -25%;" (click)="gotToUpload()">Upload Discovery Data</button>
+                    </mat-dialog-actions>
+              
+               
+            </div>
+        </form>
+  
+  
+      </div>
+    </mat-tab>
+    
+    <mat-tab label="Discovery Tool Configuration">
+      <div class="tab-content">
+        <form class="example-container" #addDiscoveryForm="ngForm"  [formGroup]="group">
+          <div class="formContainer">
+          <div class="mt-4"style="margin-left: 58px;width: 80%;">
+           <h4>Select Discovery Tool</h4>
+           
+           <mat-form-field appearance="outline">
+            <mat-label>Discovery Tool</mat-label>
+            <mat-select>
+              <mat-option *ngFor="let tool of tools" [value]="tool.value">
+                {{tool.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+            </div>
+        <div  class="mt-3" style="margin-left: 58px;width: 80%;">
+          <h4>Enter Host  Name</h4>
+          <mat-form-field appearance="outline" class="formField">
+            <mat-label>Host Name</mat-label>
+            <input matInput style="height:20%" placeholder="name" formControlName="cNameControl">
+           
+            <mat-error *ngIf="cNameControl?.hasError('required')">
+                Category Name is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+      </div>
+      <br>
+      <br>
+    
+        <mat-dialog-actions>
+          <button mat-raised-button class="submitBtn" >Submit</button>
+        </mat-dialog-actions>
+         
+              
+                  
+        
+      </div>
+        </form>
+        
+      </div>
+    </mat-tab>
+  </mat-tab-group>

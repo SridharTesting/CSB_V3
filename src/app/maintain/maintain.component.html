@@ -1,0 +1,447 @@
+<app-menu-headers></app-menu-headers>
+  <div class="admin">
+    <span><p style="margin-left: 23px;font-weight: 500;
+      font-size: 30px;color: #387BB7; margin-top: 35px;"> Maintain Information</p>
+      <p style="   margin-left: 313px;font-weight: 500;
+    margin-top: -31px;
+    font-size: 30px;color: #979797;">- Cloud Assesment</p></span>
+     <i class="fa fa-university" aria-hidden="true" style=" margin-left: 1204px;
+     position: fixed;
+     margin-top: -50px;
+     font-size: 40px;
+     color: #2e75b6;" *ngIf="loggedIn"></i>
+    <h1 style="color: #2e75b6;
+    position: fixed;
+    margin-top: -45px;
+    margin-left: 1253px;
+    font-size: 20px;
+    font-weight: bold;" > {{orgName}}</h1>
+      </div>
+
+     
+      <div style="    margin-left: 89px;">
+        <div class="radio-item" (click)="onapplication()" style="margin-left:-52px;">
+         <input type="radio" id="ritema" name="ritem" value="ropt1"  value="" checked="checked">
+             <label for="ritema" style="font-size: larger;">Application</label>
+         </div>
+
+         <div class="radio-item" (click)="oninfrastructure()">
+         <input type="radio" id="ritemb" name="ritem" value="ropt2">
+          <label for="ritemb" style="font-size: larger;" >Infrastructure</label>
+         </div>
+
+          <div class="radio-item" (click)="onprocess()">
+          <input type="radio" id="ritemc" name="ritem" value="ropt3">
+          <label for="ritemc" style="font-size: larger;">Process</label>
+          </div>
+
+   
+
+
+
+    <div [hidden]="!openform">
+        <form [formGroup]="registerForm">
+            <div form-group>
+                  <div class="card" style="    height: 86%;
+                  width: 96%;
+                  margin-top: 53px;
+                  margin-left: 18px;">
+                    <div class="card-body">
+                        <div id="table" class="table-editable" style="overflow-x: auto;">
+
+
+                            <table class="table table-bordered table-responsive-md table-striped text-center">
+                               <thead>
+                                  <tr>
+                                    <th class="text-center">App ID</th>
+                                    <th class="text-center">AppSystem</th>
+                                       <th class="text-center">Business Owner </th>
+                                       <th class="text-center">Business Owner Employee ID</th>
+                                       <th class="text-center">Business Manager</th>
+                                       <th class="text-center">Business Manager Employee ID</th>
+                                       
+                                       <th class="text-center">ET Director</th>
+                                       <th class="text-center">ET Director Employee ID</th>
+                                       <th class="text-center">ET Manager</th>
+                                       <th class="text-center">ET Manager Employee ID</th>
+                                       <th class="text-center">ET Primary Technical</th>
+                                       <th class="text-center">ET Primary Technical Employee ID</th>
+                                       <th class="text-center">ET Secondary Technical</th>
+                                       <th class="text-center">ET Secondary Technical Employee ID</th>
+                                       <th class="text-center">LOB</th>
+                                       <th class="text-center">SC Name</th>
+                                       <th class="text-center">Domain</th>
+                                       <th class="text-center">Manager Certification</th>
+                                       <th class="text-center">Quality Score</th>
+                                       <th class="text-center">DR Exercise Results</th>
+                                       <th class="text-center">Application DR Plan</th>
+                                       <th class="text-center">DR Exercise Date</th>
+                                       <th class="text-center">DR Tier</th>
+                                       <th class="text-center">DR Plan Date</th>
+                                       
+                
+                
+                                  </tr>
+                              </thead>
+                                          <tbody>
+                                            <tr  *ngFor="let process of processList | paginate: { id: 'listing_pagination_Process',
+                                            itemsPerPage: 5,
+                                            currentPage: page,
+                                            totalItems: totalRecords }; let id = index" [attr.data-index]="id" >
+                                            <td class="pt-3-half" contenteditable="false" >{{process.appId}} </td>
+                                            <td class="pt-3-half" contenteditable="false">{{process.appSystem}}</td>
+                            <td class="pt-3-half" contenteditable="true" disableHtmlEncode ="true" (keyup)="changeValueProcess( id,'businessOwner', $event,process)">{{process.businessOwner}}
+                              <!-- <span contenteditable="true" (keyup)="changeValueProcess( id,'businessOwner', $event,process)">{{process.businessOwner}}</span> -->
+                            </td>
+
+                            <td class="pt-3-half">
+                              <span type = "text" contenteditable="true" (keyup)="changeValueProcess( id,'businessOwnerEmployeeID', $event,process)">{{process.businessOwnerEmployeeID}}</span>
+                            </td>
+                            <td class="pt-3-half">
+                              <span contenteditable="true" (keyup)="changeValueProcess( id,'businessManager', $event,process)">{{process.businessManager}}</span>
+                            </td>
+                            <td class="pt-3-half">
+                              <span contenteditable="true" (keyup)="changeValueProcess( id,'businessManagerEmployeeID', $event,process)">{{process.businessManagerEmployeeID}}</span>
+                            </td>
+                            <td class="pt-3-half">
+                              <span contenteditable="true" (keyup)="changeValueProcess( id,'eTDirector', $event,process)">{{process.eTDirector}}</span>
+                            </td>
+                            <td class="pt-3-half">
+                              <span contenteditable="true" (keyup)="changeValueProcess( id,'eTDirectorEmployeeID', $event,process)">{{process.eTDirectorEmployeeID}}</span>
+                            </td>
+                            <td class="pt-3-half">
+                              <span contenteditable="true" (keyup)="changeValueProcess( id,'eTManager', $event,process)">{{process.eTManager}}</span>
+                            </td>
+                            <td class="pt-3-half">
+                              <span contenteditable="true" (keyup)="changeValueProcess( id,'eTPrimaryTechnical', $event,process)">{{process.eTPrimaryTechnical}}</span>
+                            </td>
+
+                            <td class="pt-3-half">
+                              <span contenteditable="true" (keyup)="changeValueProcess( id,'eTPrimaryTechnicalEmployeeID', $event,process)">{{process.eTPrimaryTechnicalEmployeeID}}</span>
+                            </td>
+
+                            <td class="pt-3-half">
+                              <span contenteditable="true" (keyup)="changeValueProcess( id,'eTSecondaryTechnical', $event,process)">{{process.eTSecondaryTechnical}}</span>
+                            </td>
+                            <td class="pt-3-half">
+                              <span contenteditable="true" (keyup)="changeValueProcess( id,'eTSecondaryTechnicalEmployeeID', $event,process)">{{process.eTSecondaryTechnicalEmployeeID}}</span>
+                            </td>
+                            <td class="pt-3-half">
+                              <span contenteditable="true" (keyup)="changeValueProcess( id,'lob', $event,process)">{{process.lob}}</span>
+                            </td>
+                            <td class="pt-3-half">
+                              <span contenteditable="true" (keyup)="changeValueProcess( id,'scName', $event,process)">{{process.scName}}</span>
+                            </td>
+                            <td class="pt-3-half">
+                              <span contenteditable="true" (keyup)="changeValueProcess( id,'domain', $event,process)">{{process.domain}}</span>
+                            </td>
+                            <td class="pt-3-half">
+                              <span contenteditable="true" (keyup)="changeValueProcess( id,'managerCertification', $event,process)">{{process.managerCertification}}</span>
+                            </td>
+
+
+                      
+                            <td class="pt-3-half">
+                              <span contenteditable="true" (keyup)="changeValueProcess(id, 'qualityScore', $event,process)">{{process.qualityScore}}</span>
+                            </td>
+                            <td class="pt-3-half">
+                              <span contenteditable="true" (keyup)="changeValueProcess( id,'dRExerciseResults', $event,process)">{{process.dRExerciseResults}}</span>
+                            </td>
+                            <td class="pt-3-half">
+                              <span contenteditable="true" (keyup)="changeValueProcess( id,'applicationDRPlan', $event,process)">{{process.applicationDRPlan}}</span>
+                            </td>
+                            <td class="pt-3-half">
+                              <span contenteditable="true" (keyup)="changeValueProcess( id,'dRExerciseResults', $event,process)">{{process.dRExerciseResults}}</span>
+                            </td>
+                            <td class="pt-3-half">
+                              <span contenteditable="true" (keyup)="changeValueProcess( id,'dRExerciseDate', $event,process)">{{process.dRExerciseDate}}</span>
+                            </td>
+                            <td class="pt-3-half">
+                              <span contenteditable="true" (keyup)="changeValueProcess( id,'dRTier', $event,process)">{{process.dRTier}}</span>
+                            </td>
+                            <td class="pt-3-half">
+                              <span contenteditable="true" (keyup)="changeValueProcess( id,'dRPlanDate', $event,process)">{{process.dRPlanDate}}</span>
+                            </td>
+
+                             
+                            
+                              
+                
+                            </tr>
+
+
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                
+                   
+            <div>   <button type="button" class="btn btn-primary btn-xs  btn-block" style="float: right;
+              margin-top: -3%;
+              margin-top: 0%;
+              padding-right: 16px;
+              width: 10%;
+              margin-right: 3%;" (click)="openDialogforProcess()" >Save</button>
+              
+              
+              <button type="button" class="btn btn-primary btn-xs  btn-block" style="    float: right;
+              margin-right: 1%;
+              margin-top: 0%;
+              padding-right: 16px;
+              width: 10%;">Cancel</button>
+              
+              <button type="button" class="btn btn-primary btn-xs  btn-block" style="float: right;
+              margin-right: 1%;
+              margin-top: 0%;
+              padding-right: 16px;
+              width: 10%;"  (click)="saveBaselineDataforProcess()">Baseline Data</button>
+              </div>
+            
+        </div>
+        <div class="pagination" style="padding-left: 405px;">
+          <pagination-controls  id="listing_pagination_Process" maxSize="4" directionLinks="true" (pageChange)="page = $event"></pagination-controls>
+       </div>
+       </form>
+      
+          
+</div>
+      <div [hidden]="!openform1">
+
+        <form [formGroup]="registerForm1">
+            <div form-group>
+
+
+                  <div class="card" style="    height: 86%;
+                  width: 96%;
+                  margin-top: 53px;
+                  margin-left: 18px;">
+                    <div class="card-body">
+                      <div id="table" class="table-editable" style="overflow-x: auto;">
+
+                        <table class="table table-bordered table-responsive-md table-striped text-center">
+                          <thead>
+                            <tr>
+                        
+
+                                       <th class="text-center">AppId</th>
+                                       <th class="text-center">App System</th>
+                                       <th class="text-center">System Admin</th>
+                                       <th class="text-center">System Admin EmployeeID</th>
+                                       <th class="text-center">DR Relationship Manager</th>
+                                       <th class="text-center">DR RelationshipManager EmployeeID</th>
+                                       <th class="text-center">Main Platform</th>
+                                       <th class="text-center">Last Update</th>
+                                       <th class="text-center">Network Exposure</th>
+                                       <th class="text-center">RTO</th>
+                                     
+                                       <!-- <th class="text-center">networkExposure</th> -->
+                                       <!-- <th class="text-center">oS</th>
+                                       <th class="text-center">location</th> -->
+                                       <!-- <th class="text-center">rTO</th> -->
+
+
+                                       <!-- <th class="text-center">Value</th>
+                                       <th class="text-center">Version</th> -->
+
+
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr  *ngFor="let infra of infraList| paginate: { id: 'listing_pagination_infra',
+                            itemsPerPage: 5,
+                            currentPage: page,
+                            totalItems: totalRecords };let i = index" [attr.data-index]="i">
+
+                             
+                              <td class="pt-3-half" contenteditable="true">{{infra.appId}}</td>
+                              <td class="pt-3-half" contenteditable="true">{{infra.appSystem}}</td>
+                              <td class="pt-3-half" contenteditable="true" (keyup)="changeValueInfra( 'systemAdmin', $event,infra)">{{infra.systemAdmin}}</td>
+                              <td class="pt-3-half" contenteditable="true" (keyup)="changeValueInfra( 'systemAdminEmployeeID', $event,infra)">{{infra.systemAdminEmployeeID}}</td>
+                              <td class="pt-3-half" contenteditable="true" (keyup)="changeValueInfra( 'dRRelationshipManager', $event,infra)">{{infra.dRRelationshipManager}}</td>
+                              <td class="pt-3-half" contenteditable="true" (keyup)="changeValueInfra( 'dRRelationshipManagerEmployeeID', $event,infra)">{{infra.dRRelationshipManagerEmployeeID}}</td>
+                              <td class="pt-3-half" contenteditable="true" (keyup)="changeValueInfra( 'mainPlatform', $event,infra)">{{infra.mainPlatform}}</td>
+                              <td class="pt-3-half" contenteditable="true" (keyup)="changeValueInfra( 'lastUpdate', $event,infra)">{{infra.lastUpdate}}</td>
+                              <td class="pt-3-half" contenteditable="true" (keyup)="changeValueInfra( 'networkExposure', $event,infra)">{{infra.networkExposure}}</td>
+                              <td class="pt-3-half" contenteditable="true" (keyup)="changeValueInfra( 'rto', $event,infra)">{{infra.rto}}</td>
+                             
+                
+
+
+                            </tr>
+
+
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <div>   <button type="button" class="btn btn-primary btn-xs  btn-block" style="float: right;
+                    margin-top: -3%;
+                    margin-top: 0%;
+                    padding-right: 16px;
+                    width: 10%;
+                    margin-right: 3%;" (click)="openDialogInfra()" >Save</button>
+
+
+                    <button type="button" class="btn btn-primary btn-xs  btn-block" style="    float: right;
+                    margin-right: 1%;
+                    margin-top: 0%;
+                    padding-right: 16px;
+                    width: 10%;">Cancel</button>
+
+                    <button type="button" class="btn btn-primary btn-xs  btn-block" style="float: right;
+                    margin-right: 1%;
+                    margin-top: 0%;
+                    padding-right: 16px;
+                    width: 10%;"  (click)="saveBaselineDataInfrastructure()">Baseline Data</button>
+                    </div>
+
+              </div>
+              <div class="pagination" style="padding-left: 405px;">
+                <pagination-controls  id="listing_pagination_infra" maxSize="4" directionLinks="true" (pageChange)="page = $event"></pagination-controls>
+              </div>
+</form>
+
+      </div>   
+
+      <div [hidden]="!openform2">
+      <form [formGroup]="registerForm2">
+        <div form-group>
+
+
+              <div class="card" style="    height: 86%;
+              width: 96%;
+              margin-top: 53px;
+              margin-left: 18px;">
+                <div class="card-body">
+                  <div id="table" class="table-editable" style="overflow-x:auto;">
+
+
+                    <table class="table table-bordered table-responsive-md table-striped text-center" style="white-space: nowrap;">
+                      <thead>
+                        <tr>
+                          <th class="text-center">App ID</th>
+                          <th class="text-center">AppSystem</th>
+                          <th class="text-center">Description</th>
+                          
+                          <th class="text-center"> Hours of Operation</th>
+                         
+                          <th class="text-center">Data Cricticality</th>
+                          
+                         
+                          <th class="text-center">Customer Facing</th>
+
+                          <th class="text-center">RTA</th>
+                          <th class="text-center">RPO</th>
+                          <th class="text-center">RPA</th>
+                          <th class="text-center">Vendor Confirmation</th>
+                          <th class="text-center">Vendor</th>
+                          <th class="text-center">Delete </th>
+                          
+                         
+                          
+                          
+                         
+                          
+                          
+                          
+                         
+                       
+                         
+                          
+                          
+                
+            
+            
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr  *ngFor="let app of appList| paginate: { id: 'listing_pagination',
+                        itemsPerPage: 4,
+                        currentPage: page,
+                        totalItems: totalRecords };let i = index" [attr.data-index]="i" (click)="getClient(app)">
+
+                          <td class="pt-3-half" contenteditable="false" >{{app.appId}} </td>
+                          <td class="pt-3-half" contenteditable="false">{{app.appSystem}}</td>
+                          <td class="pt-3-half">
+                            <span contenteditable="true" (keyup)="changeValue( 'description', $event,app)">{{app.description}}</span>
+                          </td>
+                          <td class="pt-3-half">
+                            <span contenteditable="true" (keyup)="changeValue( 'hoursofOp', $event,app)">{{app.hoursofOp}}</span>
+                          </td>
+
+
+                          <td class="pt-3-half">
+                            <span contenteditable="true" (keyup)="changeValue( 'dataCatApp', $event,app)">{{app.dataCatApp}}</span>
+                          </td>
+                          
+                          
+                          <td class="pt-3-half">
+                            <span contenteditable="true" (keyup)="changeValue( 'customerFacing', $event,app)">{{app.customerFacing}}</span>
+                          </td>
+
+                          <td class="pt-3-half">
+                            <span contenteditable="true" (keyup)="changeValue('rta', $event,app)">{{app.rta}}</span>
+                          </td>
+                          <td class="pt-3-half">
+                            <span contenteditable="true" (keyup)="changeValue('rpo', $event,app)">{{app.rpo}}</span>
+                          </td>
+                          <td class="pt-3-half">
+                            <span contenteditable="true" (keyup)="changeValue('rpa', $event,app)">{{app.rpa}}</span>
+                          </td>
+
+                          
+                          
+                          
+                         
+                          <td class="pt-3-half">
+                            <span contenteditable="true" (keyup)="changeValue('vendorConfirmation', $event,app)">{{app.vendorConfirmation}}</span>
+                          </td>
+                          <td class="pt-3-half">
+                            <span contenteditable="true" (keyup)="changeValue('vendor', $event,app)">{{app.vendor}}</span>
+                          </td>
+                          <td class="pt-3-half" (click)="DeleteApplication(app.appId)"><span class="material-icons" style="color: red;cursor: pointer;">delete</span></td>
+
+
+
+
+
+                        </tr>
+
+
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+            <div>   <button type="button" class="btn btn-primary btn-xs  btn-block" style="float: right;
+              margin-top: -3%;
+              margin-top: 0%;
+              padding-right: 16px;
+              width: 10%;
+              margin-right: 3%;" (click)="openDialog()" >Save</button>
+
+
+              <button type="button" class="btn btn-primary btn-xs  btn-block" style="    float: right;
+              margin-right: 1%;
+              margin-top: 0%;
+              padding-right: 16px;
+              width: 10%;">Cancel</button>
+
+              <button type="button" class="btn btn-primary btn-xs  btn-block" style="float: right;
+              margin-right: 1%;
+              margin-top: 0%;
+              padding-right: 16px;
+              width: 10%;"  (click)="saveBaselineData()">Baseline Data</button>
+              </div>
+
+        </div>
+        <div class="pagination" style="padding-left: 405px;">
+          <pagination-controls  id="listing_pagination" maxSize="4" directionLinks="true" (pageChange)="page = $event"></pagination-controls>
+        </div>
+      </form>
+
+
+    </div>

@@ -1,0 +1,86 @@
+
+  <div class="container">
+          
+          <form  [formGroup]="registerForm" (ngSubmit)="usersetup()">
+            
+              
+
+                        <div class="form-group">
+                          <label for="orgname">LOB Name</label>
+                          <select class="form-control" id="lobname" formControlName="lobId">
+                            <option *ngFor="let user of userList |uniqueValues"  [ngValue]="user.lobId">
+                         
+                           {{user.lobName}}
+                         
+                             
+                            </option>
+                          </select>
+                        </div>
+                        
+                    <div class="md-form">
+                        <label for="firstname">First Name<span style="color: #ff0000">*</span></label>
+                        <input type="text" class="form-control" id="firstname" formControlName="firstname" placeholder="cbase"/> 
+                        <div *ngIf="submitted &amp;&amp; registerForm.controls.firstname.errors" class="text-danger">
+                            <div *ngIf="registerForm.controls.firstname.errors.required">Please enter valid First Name</div>
+                            </div>  
+                    </div>
+                
+                    <div class="md-form">
+                      <label for="lastname">Last Name<span style="color: #ff0000">*</span></label>
+                      <input type="text" class="form-control" id="lastname" formControlName="lastname"
+                      placeholder="koralli" 
+                      [ngClass]="{ 'is-invalid': submitted &amp;&amp; registerForm.controls.lastname.errors }" required />
+                      <div *ngIf="submitted &amp;&amp; registerForm.controls.lastname.errors" class="text-danger">
+                        <div *ngIf="registerForm.controls.lastname.errors.required">Please enter a valid Last Name </div>
+                      </div>
+                    </div>
+
+                    <div class="md-form">
+                        <label for="email">Email Id<span style="color: #ff0000">*</span></label>
+                        <input type="email" class="form-control" id="emailId" formControlName="email" 
+                        [ngClass]="{ 'is-invalid': submitted &amp;&amp; registerForm.controls.email.errors }" required />
+                        <div *ngIf="submitted &amp;&amp; registerForm.controls.email.errors" class="text-danger">
+                          <div *ngIf="registerForm.controls.email.errors.required">Please enter a valid EmailId</div>
+                          <div *ngIf="registerForm.controls.email.errors.pattern">Please enter a valid EmailId</div>
+                        </div>
+                      </div>
+
+                      <div class="md-form">
+                        <label for="password">Password<span style="color: #ff0000">*</span></label>
+                        <input type="password" class="form-control" id="password" formControlName="password" 
+                        [ngClass]="{ 'is-invalid': submitted &amp;&amp; registerForm.controls.password.errors }" required />
+                        <div *ngIf="submitted &amp;&amp; registerForm.controls.password.errors" class="text-danger">
+                          <div *ngIf="registerForm.controls.password.errors.required">Please enter a valid password</div>
+                          <div *ngIf="registerForm.controls.password.errors.pattern">Please enter a valid password</div>
+                        </div>
+                      </div>
+
+                      <div class="md-form">
+                        <label for="pswd">Re-Enter Password<span style="color: #ff0000">*</span></label>
+                        <input type="password" class="form-control" id="pswd" formControlName="pswd" 
+                        [ngClass]="{ 'is-invalid': submitted &amp;&amp; registerForm.controls.pswd.errors }" required />
+                        <div *ngIf="submitted &amp;&amp; registerForm.controls.pswd.errors" class="text-danger">
+                          <div *ngIf="registerForm.controls.pswd.errors.required">Please enter a valid password</div>
+                          <div *ngIf="registerForm.controls.pswd.errors.pattern">Please enter a valid password</div>
+                        </div>
+                      </div>
+                      <div class="md-form">
+                    
+                      <label class="container1" > 
+                      <input type="checkbox"  data-md-icheck (change)="toggleVisibility($event)"/>
+             Admin <span *ngIf="marked"></span><span *ngIf="!marked"></span>
+          
+            <span class="checkmark"></span>
+                    </label>
+                      </div>
+                      <hr>
+                      <br>
+          
+                      <button type="submit" class="btn btn-primary" >Submit</button>
+                    </form>
+                    </div>
+                   
+    
+
+
+

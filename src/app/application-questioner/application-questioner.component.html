@@ -1,0 +1,314 @@
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+  />
+  <title>DTB-Login</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+    crossorigin="anonymous"
+  />
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"
+  ></script>
+  <link rel="stylesheet" href="/src/assets/css/main.css" />
+</head>
+
+<app-header></app-header>
+<div class=" mr-5"  *ngIf ="roleId==3">
+  <button  class="btn btn-primary  pull-right  mr-8" (click)="addDelegate()">Delegate Survey</button>
+  
+  </div>
+<!-- <div class="row "> -->
+<div class="title  ">
+  <h1  style="color: #00416d; ">Application Survey Questionnaire</h1>
+</div>
+  
+
+
+<div>
+  <div class="mx-auto">
+    <mat-horizontal-stepper #stepper class="align-middle" [@.disabled]="true">
+      <mat-step
+        *ngFor="
+          let m of categories;
+          let count = index;
+          let first = first;
+          let last = last
+        "
+        class="stepwizard-row setup-panel"
+        active="true"
+      >
+        <ng-template matStepLabel>{{ m }}</ng-template>
+
+        <div>
+          <div
+            *ngFor="let q of arraytobackend; let i = index"
+            [formGroup]="q"
+            class="quest-content"
+          >
+            <div *ngIf="q.controls.questioner_category.value == m">
+              <div class="mt-3 mx-auto question">
+                {{ q.controls.questionName.value }}
+              </div>
+
+              <div
+                *ngIf="q.controls.response_Type.value == 'Dropdown'"
+                class="mt-3"
+              >
+                <mat-select
+                  *ngIf="
+                    q.controls.questionName.value ==
+                    'What type of application server is being used?'
+                  "
+                  placeholder="Select Appropriate Response"
+                  [(ngModel)]="q.controls.selected_val.value"
+                  (click)="ApplicationSelectionCheck()"
+                  (selectionChange)="ddchanged($event.value)"
+                  formControlName="selectedoption"
+                >
+                  <mat-option
+                    *ngFor="let c of q.get('options')['controls']"
+                    [value]="c.value"
+                  >
+                    {{ c.value }}
+                  </mat-option>
+                </mat-select>
+
+                <mat-select
+                  *ngIf="
+                    q.controls.questionName.value ==
+                    'What is the version of application server used?'
+                  "
+                  placeholder="Select Appropriate Response"
+                  [(ngModel)]="q.controls.selected_val.value"
+                  (click)="ApplicationSelectionCheck()"
+                  formControlName="selectedoption"
+                >
+                  <mat-option
+                    *ngFor="let c of osversion"
+                    [value]="c.questioner_sublookup_values"
+                  >
+                    {{ c.questioner_sublookup_values }}
+                  </mat-option>
+                </mat-select>
+
+                <mat-select
+                  *ngIf="
+                    q.controls.questionName.value ==
+                    'What is the Version of database used?'
+                  "
+                  placeholder="Select Appropriate Response"
+                  [(ngModel)]="q.controls.selected_val.value"
+                  (click)="ApplicationSelectionCheck()"
+                  formControlName="selectedoption"
+                >
+                  <mat-option
+                    *ngFor="let c of dbsublookup"
+                    [value]="c.questioner_sublookup_values"
+                  >
+                    {{ c.questioner_sublookup_values }}
+                  </mat-option>
+                </mat-select>
+
+
+                <mat-select
+                *ngIf="
+                  q.controls.questionName.value ==
+                  'What is the version of Operating system database is running on?'
+                "
+                placeholder="Select Appropriate Response"
+                [(ngModel)]="q.controls.selected_val.value"
+                (click)="ApplicationSelectionCheck()"
+                formControlName="selectedoption"
+              >
+                <mat-option
+                  *ngFor="let c of dbOssublookup"
+                  [value]="c.questioner_sublookup_values"
+                >
+                  {{ c.questioner_sublookup_values }}
+                </mat-option>
+              </mat-select>
+
+                <mat-select
+                  *ngIf="
+                    q.controls.questionName.value ==
+                    'What is the application back end database?'
+                  "
+                  placeholder="Select Appropriate Response"
+                  [(ngModel)]="q.controls.selected_val.value"
+                  (selectionChange)="ddchangedappbachendDB($event.value)"
+                  (click)="ApplicationSelectionCheck()"
+                  formControlName="selectedoption"
+                >
+                  <mat-option
+                  *ngFor="let c of q.get('options')['controls']"
+                  [value]="c.value"
+                >
+                  {{ c.value }}
+                  </mat-option>
+                </mat-select>
+
+                <mat-select
+                *ngIf="
+                  q.controls.questionName.value ==
+                  'What is the Operating system database is running on?'
+                "
+                placeholder="Select Appropriate Response"
+                [(ngModel)]="q.controls.selected_val.value"
+                (selectionChange)="ddchangedDBOS($event.value)"
+                (click)="ApplicationSelectionCheck()"
+                formControlName="selectedoption"
+              >
+                <mat-option
+                *ngFor="let c of q.get('options')['controls']"
+                [value]="c.value"
+              >
+                {{ c.value }}
+                </mat-option>
+              </mat-select>
+
+
+                <mat-select
+                *ngIf="
+                q.controls.questionName.value !=
+                  'What type of application server is being used?' &&
+                q.controls.questionName.value !=
+                  'What is the version of application server used?' && 
+                  q.controls.questionName.value!='What is the application back end database?'
+                  && q.controls.questionName.value!='What is the Version of database used?'
+                  && q.controls.questionName.value!='What is the Operating system database is running on?'
+                  && q.controls.questionName.value!='What is the version of Operating system database is running on?'
+
+              "
+                  placeholder="Select Appropriate Response "
+                  [(ngModel)]="q.controls.selected_val.value"
+                  (click)="ApplicationSelectionCheck()"
+                  formControlName="selectedoption"
+                >
+                  <mat-option
+                    *ngFor="let c of q.get('options')['controls']"
+                    [value]="c.value"
+                  >
+                    {{ c.value }}
+                  </mat-option>
+                </mat-select>
+                <!-- <mat-select *ngIf="q.controls.questioner_Id.value==67" placeholder="Select Appropriate Response" [(ngModel)]="q.controls.selected_val.value" 
+                  (click)="ApplicationSelectionCheck()" 
+                  formControlName = "selectedoption">
+                    <mat-option  *ngFor="let c of osversion" [value]="c.questioner_sublookup_values" >
+                      {{c.questioner_sublookup_values}}
+                    </mat-option>
+                  </mat-select> -->
+              </div>
+              <div
+                *ngIf="q.controls.response_Type.value == 'Radio'"
+                class="mt-3"
+              >
+                <mat-radio-group
+                  aria-label="Select an option"
+                  (click)="ApplicationSelectionCheck()"
+                  [(ngModel)]="q.controls.selected_val.value"
+                  formControlName="selectedoption"
+                >
+                  <mat-radio-button
+                    [value]="c.value"
+                    *ngFor="let c of q.get('options')['controls']"
+                    class="quest-content"
+                    class="ml-3"
+                    >{{ c.value }}</mat-radio-button
+                  >
+                </mat-radio-group>
+              </div>
+              <div class="mt-3">
+                <div>
+                  <input
+                    disabled
+                    *ngIf="
+                      q.controls.questionName.value ==
+                      'What is the application ID'
+                    "
+                    [value]="appidselect"
+                    style="color: #00416d; border-bottom: 1px solid #007bff"
+                    formControlName="selectedoption"
+                    [(ngModel)]="q.controls.selected_val.value"
+                  />
+                  <input
+                    disabled
+                    *ngIf="
+                      q.controls.questionName.value ==
+                      'What is the application name'
+                    "
+                    [value]="applicationamefrompop"
+                    style="color: #00416d; border-bottom: 1px solid #007bff"
+                    formControlName="selectedoption"
+                    [(ngModel)]="q.controls.selected_val.value"
+                  />
+                  <input
+                    disabled
+                    *ngIf="
+                      q.controls.questionName.value ==
+                      'Which Line of Business (LoB) or Functional Group this application belongs to?'
+                    "
+                    [value]="lobname"
+                    style="color: #00416d; border-bottom: 1px solid #007bff"
+                    formControlName="selectedoption"
+                    [(ngModel)]="q.controls.selected_val.value"
+                  />
+                  <!-- <input [value]="q.controls.selected_val.value" disabled=true style="color: #00416D;"*ngIf="c.value!=='' && q.controls.questioner_Id.value!==21 && q.controls.questioner_Id.value!==22 && q.controls.questioner_Id.value!==24"formControlName = "selectedoption" [(ngModel)]="q.controls.selected_val.value"> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="quest-content mt-3">
+            <div class="">
+              <button
+                class="btn btn-outline-primary pull-left"
+                matStepperPrevious
+                *ngIf="count != 0"
+              >
+                Previous
+              </button>
+              <button
+                class="btn btn-primary pull-right"
+                matStepperNext
+                *ngIf="!last"
+              >
+                Continue
+              </button>
+              <button
+                type="submit"
+                class="btn btn-primary pull-right"
+                *ngIf="last"
+                (click)="submitq()"
+              >
+                Submit
+              </button>
+            </div>
+          </div>
+        </div>
+      </mat-step>
+    </mat-horizontal-stepper>
+  </div>
+</div>
+<app-footer></app-footer>

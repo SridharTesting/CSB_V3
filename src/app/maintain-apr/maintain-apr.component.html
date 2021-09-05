@@ -1,0 +1,735 @@
+<app-header-apr></app-header-apr>
+<div class="container-fluid mt-5 mx-4">
+  <div class="row mt-3">
+    <div class="mt-3">
+      <div style="width: 531px; font-size: large; color: rgba(34, 40, 49, 1)">
+        Select view:
+        <mat-form-field>
+          <!-- <mat-label>select here</mat-label> -->
+          <mat-select [(ngModel)]="viewtype">
+            <mat-option value="application">Appplication</mat-option>
+            <mat-option value="infrastructure">Infrastructure</mat-option>
+            <mat-option value="process">Process</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div *ngIf="viewtype == 'application'" style="width: 531px; font-size: large; color: rgba(34, 40, 49, 1)"> Search <i class="fa fa-search" aria-hidden="true"></i> :
+      <input   placeholder=" Enter AppId or AppName" class="searchbox pl-3" type="text" [(ngModel)]="search" (ngModelChange)="SearchFilter()"/>
+    </div>
+    <div  *ngIf="viewtype == 'infrastructure'" style="width: 531px; font-size: large; color: rgba(34, 40, 49, 1)"> Search <i class="fa fa-search" aria-hidden="true"></i> :
+      <input   placeholder=" Enter Host Name & IP" class="searchbox pl-3" type="text" [(ngModel)]="searchinfra" (ngModelChange)="SearchFilterinfra()"/>
+    </div> 
+      <button
+        (click)="addApplication()"
+        *ngIf="viewtype == 'application'"
+        type="button"
+        class="btn btn-outline-secondary px-4"
+        style="
+          background: rgba(65, 128, 245, 0.2);
+          margin-left: 1141px;
+          margin-top: -116px;
+        "
+      >
+        <i
+          style="padding-right: 10px"
+          class="fas fa-plus"
+          aria-hidden="true"
+        ></i>
+        Add New
+      </button>
+      <button
+        (click)="addinfra()"
+        *ngIf="viewtype == 'infrastructure'"
+        type="button"
+        class="btn btn-outline-secondary px-4"
+        style="
+          background: rgba(65, 128, 245, 0.2);
+          margin-left: 1160px;
+          margin-top: -116px;
+        "
+      >
+        <i
+          style="padding-right: 10px"
+          class="fas fa-plus"
+          aria-hidden="true"
+        ></i>
+        Add New
+      </button>
+
+      <div *ngIf="viewtype == 'application'" class="px-4">
+        <div class="card" style="width: 96%; margin-top: -32px">
+          <div class="card-body" style="margin-bottom: -20px">
+            <div id="table" class="table-editable" style="overflow-x: auto">
+              <table id="table" class="table table-responsive-md" style="    margin-top: -32px;">
+                <thead>
+                  <tr class="head">
+                    <th
+                      style="border-bottom: 1px solid rgba(65, 128, 245, 0.6)"
+                    >
+                      Application ID
+                    </th>
+                    <th
+                      style="border-bottom: 1px solid rgba(65, 128, 245, 0.6)"
+                    >
+                      Application Name
+                    </th>
+                    <th
+                      style="border-bottom: 1px solid rgba(65, 128, 245, 0.6)"
+                    >
+                      Application Description
+                    </th>
+                    <th
+                      style="border-bottom: 1px solid rgba(65, 128, 245, 0.6)"
+                    >
+                      Application Manager
+                    </th>
+                    <th
+                      style="border-bottom: 1px solid rgba(65, 128, 245, 0.6)"
+                    >
+                      Vendor Name
+                    </th>
+                    <th
+                      style="border-bottom: 1px solid rgba(65, 128, 245, 0.6)"
+                    >
+                      Application Criticality
+                    </th>
+                    <th
+                      style="border-bottom: 1px solid rgba(65, 128, 245, 0.6)"
+                    >
+                      Data Criticality
+                    </th>
+                    <th
+                      style="border-bottom: 1px solid rgba(65, 128, 245, 0.6)"
+                    >
+                      Delete
+                    </th>
+                  </tr>
+                </thead>
+                
+                <tbody>
+                  <tr
+                    *ngFor="
+                      let data of caAppMasterData | paginate: { itemsPerPage: 5, currentPage: page } "
+                  >
+                    <td>
+                      <input
+                        style="border-bottom: none; color: #000"
+                        disabled="true"
+                        [value]="data[0].appId"
+                      />
+                    </td>
+                    <td
+                      style="color: #0c59e9"
+                     
+                      (keyup)="changed(data, $event, 'appName')"
+                    >
+                      <input
+                        style="border-bottom: none"
+                        [value]="data[0].appName"
+                      />
+                    </td>
+                    <td
+                      
+                      (keyup)="changed(data, $event, 'appDesc')"
+                    >
+                      <input
+                        style="border-bottom: none"
+                        [value]="data[0].appDesc"
+                      />
+                    </td>
+                    <td
+                      
+                      (keyup)="changed(data, $event, 'appManager')"
+                    >
+                      <input
+                        style="border-bottom: none"
+                        [value]="data[0].appManager"
+                      />
+                    </td>
+                    <td
+                      
+                      (keyup)="changed(data, $event, 'vendorName')"
+                    >
+                      <input
+                        style="border-bottom: none"
+                        [value]="data[0].vendorName"
+                      />
+                    </td>
+                    <td
+                      
+                      (keyup)="changed(data, $event, 'applicationCriticality')"
+                    >
+                      <input
+                        style="border-bottom: none"
+                        [value]="data[0].applicationCriticality"
+                      />
+                    </td>
+                    <td
+                      
+                      (keyup)="changed(data, $event, 'dataCatApp')"
+                    >
+                      <input
+                        style="border-bottom: none"
+                        [value]="data[0].dataCatApp"
+                      />
+                    </td>
+                    <td
+                      class="pt-3-half"
+                      (click)="DeleteApplication(data[0].appMasterId)"
+                    >
+                      <span
+                        class="material-icons"
+                        style="color: red; cursor: pointer"
+                        >delete</span
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div style="text-align: center">
+              <pagination-controls
+                (pageChange)="page = $event"
+              ></pagination-controls>
+            </div>
+          </div>
+          <!-- <button (click)="submitCaAppMaster()">Push</button> -->
+        </div>
+        <div>
+          <button
+            type="button"
+            class="btn btn-default btn-block"
+            style="color: #0c59e9; width: 180px; margin-left: 902px"
+            (click)="saveBaselineApplication()"
+          >
+            Baseline Data
+          </button>
+          <button
+            style="margin-left: 940px; width: 163px"
+            (click)="submitCaAppMaster()"
+            type="submit"
+            class="btn btn-primary"
+            style="margin-top: -64px; margin-left: 1096px"
+          >
+            <i class="fas fa-arrow-up"></i> Push to Database
+          </button>
+        </div>
+      </div>
+
+      <!-- //infra starts -->
+      <div *ngIf="viewtype == 'infrastructure'" class="pl-2">
+        <div class="card" style="width: 61%; margin-top: -32px">
+          <div class="card-body" style="margin-bottom: -20px">
+            <div id="table" class="table-editable" style="overflow-x: scroll">
+              <table id="table" class="table table-responsive-lg">
+                <thead>
+                  <tr>
+                    <th
+                      style="border-bottom: 1px solid rgba(65, 128, 245, 0.6)"
+                    >
+                      Host Name
+                    </th>
+                    <th
+                      style="border-bottom: 1px solid rgba(65, 128, 245, 0.6)"
+                    >
+                      IP Address
+                    </th>
+                    <th
+                      style="border-bottom: 1px solid rgba(65, 128, 245, 0.6)"
+                    >
+                      Hypervisor
+                    </th>
+                    <th
+                      style="border-bottom: 1px solid rgba(65, 128, 245, 0.6)"
+                    >
+                      OS Type
+                    </th>
+                    <th
+                      style="border-bottom: 1px solid rgba(65, 128, 245, 0.6)"
+                    >
+                      OS Version
+                    </th>
+                    <th
+                      style="border-bottom: 1px solid rgba(65, 128, 245, 0.6)"
+                    >
+                      OS Bitness
+                    </th>
+                    <th
+                      style="border-bottom: 1px solid rgba(65, 128, 245, 0.6)"
+                    >
+                      Physical OR Virtual
+                    </th>
+                    <th
+                      style="border-bottom: 1px solid rgba(65, 128, 245, 0.6)"
+                    >
+                      Server Type
+                    </th>
+                    <th
+                      style="border-bottom: 1px solid rgba(65, 128, 245, 0.6)"
+                    >
+                      Environment
+                    </th>
+                    <th
+                      style="border-bottom: 1px solid rgba(65, 128, 245, 0.6)"
+                    >
+                      Data Center
+                    </th>
+                    <th
+                      style="border-bottom: 1px solid rgba(65, 128, 245, 0.6)"
+                    >
+                      Business Unit
+                    </th>
+                    <th
+                      style="border-bottom: 1px solid rgba(65, 128, 245, 0.6)"
+                    >
+                      Server Owner
+                    </th>
+                    <th
+                      style="border-bottom: 1px solid rgba(65, 128, 245, 0.6)"
+                    >
+                      In Scope
+                    </th>
+                    <th
+                      style="border-bottom: 1px solid rgba(65, 128, 245, 0.6)"
+                    >
+                      CPU Type
+                    </th>
+                    <th
+                      style="border-bottom: 1px solid rgba(65, 128, 245, 0.6)"
+                    >
+                      CPU
+                    </th>
+                    <th
+                      style="border-bottom: 1px solid rgba(65, 128, 245, 0.6)"
+                    >
+                      Total Cores
+                    </th>
+                    <th
+                      style="border-bottom: 1px solid rgba(65, 128, 245, 0.6)"
+                    >
+                      Memory
+                    </th>
+                    <th
+                      style="border-bottom: 1px solid rgba(65, 128, 245, 0.6)"
+                    >
+                      Disk Size
+                    </th>
+                    <th
+                      style="border-bottom: 1px solid rgba(65, 128, 245, 0.6)"
+                    >
+                      Disk Free Space
+                    </th>
+                    <th
+                      style="border-bottom: 1px solid rgba(65, 128, 245, 0.6)"
+                    >
+                      Avg CPU Usage
+                    </th>
+                    <th
+                      style="border-bottom: 1px solid rgba(65, 128, 245, 0.6)"
+                    >
+                      Avg Memory Usage
+                    </th>
+                    <th
+                      style="border-bottom: 1px solid rgba(65, 128, 245, 0.6)"
+                    >
+                      Peak CPU Usage
+                    </th>
+
+                    <th
+                      style="border-bottom: 1px solid rgba(65, 128, 245, 0.6)"
+                    >
+                      Peak Memory Usage
+                    </th>
+                    <th
+                      style="border-bottom: 1px solid rgba(65, 128, 245, 0.6)"
+                    >
+                      Avg Storage IOPS
+                    </th>
+                    <th
+                      style="border-bottom: 1px solid rgba(65, 128, 245, 0.6)"
+                    >
+                      Peak Storage IOPS
+                    </th>
+                    <th
+                      style="border-bottom: 1px solid rgba(65, 128, 245, 0.6)"
+                    >
+                      Avg Storage Read IOPS
+                    </th>
+                    <th
+                      style="border-bottom: 1px solid rgba(65, 128, 245, 0.6)"
+                    >
+                      Avg Storage Write IOPS
+                    </th>
+
+                    <th
+                      style="border-bottom: 1px solid rgba(65, 128, 245, 0.6)"
+                    >
+                      Peak Network Usage
+                    </th>
+
+                    <th
+                      style="border-bottom: 1px solid rgba(65, 128, 245, 0.6)"
+                    >
+                      Delete
+                    </th>
+                  </tr>
+                  <!-- <ng-container *ngFor="let infraheader of inframasterheader">
+                    <th>
+                      {{ infraheader }}
+                    </th>
+                  </ng-container> -->
+                </thead>
+                <tbody>
+                  <tr
+                    *ngFor="
+                      let infradata of CAInfradata
+                        | paginate
+                          : {
+                              id: 'listing_pagination_infra',
+                              itemsPerPage: 5,
+                              currentPage: infrapage
+                            }
+                    "
+                  >
+                    <td
+                      
+                      class="w-25"
+                      (keyup)="changedinfra(infradata, $event, 'hostName')"
+                    >
+                      <input
+                        style="border-bottom: none ;    width: 53px;"
+                        [value]="infradata.hostName"
+                      />
+                    </td>
+                    <td
+                      
+                      (keyup)="changedinfra(infradata, $event, 'ipAddress')"
+                    >
+                      <input
+                        style="border-bottom: none"
+                        [value]="infradata.ipAddress"
+                      />
+                    </td>
+
+                    <td
+                      
+                      (keyup)="changedinfra(infradata, $event, 'hypervisor')"
+                    >
+                      <input
+                        style="border-bottom: none"
+                        [value]="infradata.hypervisor"
+                      />
+                    </td>
+                    <td
+                      
+                      (keyup)="changedinfra(infradata, $event, 'osType')"
+                    >
+                      <input
+                        style="border-bottom: none"
+                        [value]="infradata.osType"
+                      />
+                    </td>
+                    <td
+                      
+                      (keyup)="changedinfra(infradata, $event, 'osVersion')"
+                    >
+                      <input
+                        style="border-bottom: none"
+                        [value]="infradata.osVersion"
+                      />
+                    </td>
+
+                    <td
+                      
+                      (keyup)="changedinfra(infradata, $event, 'osBitness')"
+                    >
+                      <input
+                        style="border-bottom: none"
+                        [value]="infradata.osBitness"
+                      />
+                    </td>
+
+                    <td
+                      
+                      (keyup)="
+                        changedinfra(infradata, $event, 'physicalOrVirtual')
+                      "
+                    >
+                      <input
+                        style="border-bottom: none"
+                        [value]="infradata.physicalOrVirtual"
+                      />
+                    </td>
+                    <td
+                      
+                      (keyup)="changedinfra(infradata, $event, 'serverType')"
+                    >
+                      <input
+                        style="border-bottom: none"
+                        [value]="infradata.serverType"
+                      />
+                    </td>
+                    <td
+                      
+                      (keyup)="changedinfra(infradata, $event, 'environment')"
+                    >
+                      <input
+                        style="border-bottom: none"
+                        [value]="infradata.environment"
+                      />
+                    </td>
+
+                    <td
+                      
+                      (keyup)="changedinfra(infradata, $event, 'dataCenter')"
+                    >
+                      <input
+                        style="border-bottom: none"
+                        [value]="infradata.dataCenter"
+                      />
+                    </td>
+
+                    <td
+                      
+                      (keyup)="changedinfra(infradata, $event, 'businessUnit')"
+                    >
+                      <input
+                        style="border-bottom: none"
+                        [value]="infradata.businessUnit"
+                      />
+                    </td>
+
+                    <td
+                      
+                      (keyup)="changedinfra(infradata, $event, 'serverOwner')"
+                    >
+                      <input
+                        style="border-bottom: none"
+                        [value]="infradata.serverOwner"
+                      />
+                    </td>
+
+                    <td
+                      
+                      (keyup)="changedinfra(infradata, $event, 'inScope')"
+                    >
+                      <input
+                        style="border-bottom: none"
+                        [value]="infradata.inScope"
+                      />
+                    </td>
+
+                    <td
+                      
+                      (keyup)="changedinfra(infradata, $event, 'cpuType')"
+                    >
+                      <input
+                        style="border-bottom: none"
+                        [value]="infradata.cpuType"
+                      />
+                    </td>
+
+                    <td
+                      
+                      (keyup)="changedinfra(infradata, $event, 'cpu')"
+                    >
+                      <input
+                        style="border-bottom: none"
+                        [value]="infradata.cpu"
+                      />
+                    </td>
+                    <td
+                      
+                      (keyup)="changedinfra(infradata, $event, 'totalCores')"
+                    >
+                      <input
+                        style="border-bottom: none"
+                        [value]="infradata.totalCores"
+                      />
+                    </td>
+                    <td
+                      
+                      (keyup)="changedinfra(infradata, $event, 'memory')"
+                    >
+                      <input
+                        style="border-bottom: none"
+                        [value]="infradata.memory"
+                      />
+                    </td>
+                    <td
+                      
+                      (keyup)="changedinfra(infradata, $event, 'diskSize')"
+                    >
+                      <input
+                        style="border-bottom: none"
+                        [value]="infradata.diskSize"
+                      />
+                    </td>
+
+                    <td
+                      
+                      (keyup)="changedinfra(infradata, $event, 'diskFreeSpace')"
+                    >
+                      <input
+                        style="border-bottom: none"
+                        [value]="infradata.diskFreeSpace"
+                      />
+                    </td>
+                    <td
+                      
+                      (keyup)="changedinfra(infradata, $event, 'avgCpuUsage')"
+                    >
+                      <input
+                        style="border-bottom: none"
+                        [value]="infradata.avgCpuUsage"
+                      />
+                    </td>
+                    <td
+                      
+                      (keyup)="
+                        changedinfra(infradata, $event, 'avgMemoryUsage')
+                      "
+                    >
+                      <input
+                        style="border-bottom: none"
+                        [value]="infradata.avgMemoryUsage"
+                      />
+                    </td>
+                    <td
+                      
+                      (keyup)="changedinfra(infradata, $event, 'peakCpuUsage')"
+                    >
+                      <input
+                        style="border-bottom: none"
+                        [value]="infradata.peakCpuUsage"
+                      />
+                    </td>
+                    <td
+                      
+                      (keyup)="
+                        changedinfra(infradata, $event, 'peakMemoryUsage')
+                      "
+                    >
+                      <input
+                        style="border-bottom: none"
+                        [value]="infradata.peakMemoryUsage"
+                      />
+                    </td>
+
+                    <td
+                      
+                      (keyup)="
+                        changedinfra(infradata, $event, 'avarageStorageIOPS')
+                      "
+                    >
+                      <input
+                        style="border-bottom: none"
+                        [value]="infradata.avarageStorageIOPS"
+                      />
+                    </td>
+                    <td
+                      
+                      (keyup)="
+                        changedinfra(infradata, $event, 'peakStorageIOPS')
+                      "
+                    >
+                      <input
+                        style="border-bottom: none"
+                        [value]="infradata.peakStorageIOPS"
+                      />
+                    </td>
+
+                    <td
+                      
+                      (keyup)="
+                        changedinfra(infradata, $event, 'avgStorageReadIOPS')
+                      "
+                    >
+                      <input
+                        style="border-bottom: none"
+                        [value]="infradata.avgStorageReadIOPS"
+                      />
+                    </td>
+                    <td
+                      
+                      (keyup)="
+                        changedinfra(infradata, $event, 'avgStorageWriteIOPS')
+                      "
+                    >
+                      <input
+                        style="border-bottom: none"
+                        [value]="infradata.avgStorageWriteIOPS"
+                      />
+                    </td>
+                    <td
+                      
+                      (keyup)="
+                        changedinfra(infradata, $event, 'peakNetworkUsage')
+                      "
+                    >
+                      <input
+                        style="border-bottom: none"
+                        [value]="infradata.peakNetworkUsage"
+                      />
+                    </td>
+                    <td
+                      
+                      (keyup)="
+                        changedinfra(infradata, $event, 'peakNetworkUsage')
+                      "
+                    >
+                      <input
+                        style="border-bottom: none"
+                        [value]="infradata.peakNetworkUsage"
+                      />
+                    </td>
+
+                    <td
+                      class="pt-3-half"
+                      (click)="DeleteApplicationinfra(infradata.infraId)"
+                    >
+                      <span
+                        class="material-icons"
+                        style="color: red; cursor: pointer"
+                        >delete</span
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div style="text-align: center">
+              <pagination-controls
+                id="listing_pagination_infra"
+                maxSize="4"
+                directionLinks="true"
+                (pageChange)="infrapage = $event"
+              ></pagination-controls>
+            </div>
+          </div>
+        </div>
+        <div>
+          <button
+            type="button"
+            class="btn btn-default btn-block"
+            style="color: #0c59e9; width: 180px; margin-left: 902px"
+            (click)="saveBaselineinfra()"
+          >
+            Baseline Data
+          </button>
+          <button
+            style="width: 258px"
+            (click)="submitinfra()"
+            type="submit"
+            class="btn btn-primary"
+            style="margin-top: -64px; margin-left: 1128px"
+          >
+            <i class="fas fa-arrow-up"></i> Push to Database
+          </button>
+        </div>
+      </div>
+      <div class="card" *ngIf="viewtype == 'process'">process</div>
+    </div>
+  </div>
+</div>

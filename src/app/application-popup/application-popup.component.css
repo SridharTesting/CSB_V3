@@ -1,0 +1,64 @@
+.container{
+
+    background: white;
+    padding: 20px;
+    width: 622px;
+  
+    height: 400px;
+    margin-top: 12%;
+  }
+  .mat-dialog-container {
+   width:30% !important;
+  }
+  #label{
+    color:purple;
+    margin-top: -12%;
+    margin-left: -2%;
+    white-space: nowrap;
+    font-weight: bold;
+    font-size: large;
+  }
+  
+  
+  .btn{
+    text-transform: none;
+    height: 44px;
+    width: 150px;
+  }
+
+  p{
+ 
+/* Regular / 22 */
+
+
+font-style: normal;
+font-weight: normal;
+font-size: 22px;
+line-height: 30px;
+/* identical to box height, or 136% */
+
+display: flex;
+align-items: center;
+font-feature-settings: 'tnum' on, 'lnum' on;
+
+/* Main / 02 */
+
+color: #00416D;
+  }
+  mat-select{
+    
+/* White / 100 */
+
+background: #F9F9F9;
+/* Main / 04 */
+
+border: 2px solid #007ACC;
+box-sizing: border-box;
+border-radius: 4px;
+  }
+
+
+
+  ::ng-deep .mat-select-placeholder {
+ color:#00416D ;
+  }

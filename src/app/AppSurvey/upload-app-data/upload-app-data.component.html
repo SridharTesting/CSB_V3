@@ -1,0 +1,41 @@
+
+<div class="article_title">
+  <h1 id="top">
+   Upload App Data
+  </h1>
+</div>
+<mat-divider id="divider"></mat-divider>
+
+ <mat-drawer-container>
+  <mat-drawer-content class="content" >
+    <div class="card">
+<div class="dropdown">
+  <mat-form-field appearance="outline" fxFlex="100">
+    <mat-label>Organization</mat-label>
+  
+    <mat-select  required   name="org" [(ngModel)]="appsMappedToLObs.org" #lob   (selectionChange)="onChangeOrg($event.value)">
+      <mat-option *ngFor="let org of orgs"  [value]="org.orgId"
+      >
+      {{org.orgName}}
+  </mat-option>
+</mat-select>
+</mat-form-field><br/>
+
+
+ 
+<label class="btn btn-default">
+  <input #myInput type="file" name="filename" (change)="selectFile($event)">
+</label>
+ 
+<button class="btn btn-success" [disabled]="!selectedFiles" (click)="upload()">Upload</button>
+<div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" attr.aria-valuenow="{{progress.percentage}}"
+    aria-valuemin="0" aria-valuemax="100" [ngStyle]="{width:progress.percentage+'%'}">
+    {{progress.percentage}}%</div>
+    </div>
+
+  </div>
+      
+    </mat-drawer-content>
+    
+    </mat-drawer-container>
+  

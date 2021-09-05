@@ -1,0 +1,219 @@
+
+<app-header></app-header>
+
+  
+    <nav class="navbar navbar-light" >
+      <h2 style="text-align: center;">Organization Set Up</h2>
+    </nav>
+    
+    <mat-drawer-container>
+      <mat-drawer mode="side" opened class="sibebar-content" style="left:-1%">
+          <ng-material-multilevel-menu 
+            *ngIf="displayList"
+            [configuration]='config' 
+            [items]='appitems' 
+            [expandCollapseStatus]="expandCollapseStatus"
+            (selectedItem)="selectedItem($event)"
+          ></ng-material-multilevel-menu>
+      </mat-drawer>
+      <mat-drawer-content class="content" style="margin-left:420px"> 
+  
+
+
+        <div class="row" [hidden]="!deleteMessage">  
+             
+         
+          <div class="col-sm-4">  
+                  <div class="alert alert-info alert-dismissible">  
+                          <button type="button" class="close" data-dismiss="alert">×</button>  
+                          <strong>Organization Data Deleted</strong>  
+                  </div>  
+          </div> 
+        </div> 
+        
+        <div class="test" >
+          <div [hidden]="!pageListdata"  >
+        <div class="container">
+          
+              <div class="row col-md-6 col-md-offset-2 custyle">
+              <table class="table table-striped custab">
+              <thead>
+                  <tr>
+                      
+                      <th>Organization Name</th>
+                      <th>Organization Type</th>
+                      <th>Organization Address</th>
+                      <th>Zipcode</th>
+                      <th>Contact Name</th>
+                      <th>Contact Number</th>
+                      <th>Contact Mail</th>
+                      
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr *ngFor="let org of organisation| paginate: { id: 'listing_pagination',
+                  itemsPerPage: 5,
+                  currentPage: page,
+                  totalItems: totalRecords }">
+                      
+                      <td>{{org.orgName}}</td>
+                      <td>{{org.orgType}}</td>
+                      <td>{{org.orgAdd}}</td>
+                      <td>{{org.orgPostCd}}</td>
+                      <td>{{org.orgCntName}}</td>
+                      <td>{{org.orgCntNum}}</td>
+                      <td>{{org.orgCntMail}}</td>
+                     
+                      
+                      <td class="text-center"><button class="btn btn-primary btn-xs"  (click)="update(org)"  > Update</button></td>
+                      
+                      
+                      <td><button (click)="deleteOrg(org.orgId)" class='btn btn-primary btn-xs'><i class="fa fa-futboll-0">Delete</i></button>   
+
+                      
+
+                      
+                    </tr>
+              </tbody>
+              </table>
+              <div class="pagination">
+                <pagination-controls  id="listing_pagination" maxSize="5" directionLinks="true" (pageChange)="page = $event"></pagination-controls>
+              </div>
+              <div id="button" >
+                <button type="button" class="btn btn-primary btn-xs" (click)="onClickOpenForm()" (click)="removeButton()">Add new Organization</button>
+              </div>
+              </div>
+          </div>
+        
+      
+          
+      
+        </div>
+
+        <div [hidden]="pageListdata">
+          <div>
+            <button type="button" class="btn btn-primary btn-xs " (click)="onClickOpenForm()" (click)="removeButton()">Add new Organization</button>
+          </div>
+        </div>
+
+
+
+
+
+          
+          <div [hidden]="!openform"  >
+  
+          
+          <form  [formGroup]="registerForm" (ngSubmit)="saveOrg(saveOrg)">
+            <h3>Organization Details:</h3>
+            
+              <div class="form-row">
+                <div class="col-md-6">
+                  <div class="md-form">
+                    <label for="orgname">Name<span style="color: #ff0000">*</span></label>
+                    <input type="text"  class="form-control" id="orgname" formControlName="orgName" placeholder="Organization name" 
+                     [ngClass]="{ 'is-invalid': submitted &amp;&amp; registerForm.controls.orgName.errors }" required />
+                    <div *ngIf="submitted &amp;&amp; registerForm.controls.orgName.errors" class="text-danger">
+                      <div *ngIf="registerForm.controls.orgName.errors.required">Please enter a valid Name</div>
+                      
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="md-form">
+                    <label for="orgtype">Type<span style="color: #ff0000">*</span></label>
+                    <input type="text" class="form-control" id="orgtype"  formControlName="orgType" placeholder="Organization type"/>
+                    <div *ngIf="submitted &amp;&amp; registerForm.controls.orgType.errors" class="text-danger">
+                      <div *ngIf="registerForm.controls.orgType.errors.required">Please enter valid Organization type</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="form-row">
+                  <div class="col-md-6">
+                    <div class="md-form">
+                      <label for="inputAddress">Address1<span style="color: #ff0000">*</span></label>
+                      <input type="text" class="form-control" id="inputAddress" formControlName="add1"
+                      placeholder="1234 Main St" 
+                      [ngClass]="{ 'is-invalid': submitted &amp;&amp; registerForm.controls.add1.errors }" required />
+                      <div *ngIf="submitted &amp;&amp; registerForm.controls.add1.errors" class="text-danger">
+                        <div *ngIf="registerForm.controls.add1.errors.required">Please enter a valid Address </div>
+                      </div>
+                    </div>
+                  </div>
+            
+              
+                
+              </div> <br><br>
+              <hr><br>
+  
+              <br>
+              <h3>Contact Details:</h3>
+        
+              <div class="form-row">
+                <div class="col-md-6">
+                  <div class="md-form">
+                    <label for="contactname">Name<span style="color: #ff0000">*</span></label>
+                    <input type="text" class="form-control" id="contactname" formControlName="contactName" 
+                    placeholder="Abcd" />
+                    <div *ngIf="submitted &amp;&amp; registerForm.controls.contactName.errors" class="text-danger">
+                      <div *ngIf="registerForm.controls.contactName.errors.required">Enter a valid name</div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="col-md-6">
+                  <div class="md-form">
+                    <label for="contactnumber">Mobile Number<span style="color: #ff0000">*</span></label>
+                    <input type="text" class="form-control" id="contactnumber" formControlName="contact" 
+                    placeholder="8234672914"  
+                    [ngClass]="{ 'is-invalid': submitted &amp;&amp; registerForm.controls.contact.errors }" 
+                    onKeyPress="if(this.value.length==10) return false;" required />
+                    <div *ngIf="submitted &amp;&amp; registerForm.controls.contact.errors" class="text-danger">
+                      <div *ngIf="registerForm.controls.contact.errors.required">Cotact is required</div>
+                      <div *ngIf="registerForm.controls.contact.errors.pattern">Please enter numbers</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="form-row">
+                <div class="col-md-6">
+                  <div class="md-form">
+                    <label for="email">Email Id<span style="color: #ff0000">*</span></label>
+                    <input type="email" class="form-control" id="emailId" formControlName="email" 
+                    [ngClass]="{ 'is-invalid': submitted &amp;&amp; registerForm.controls.email.errors }" required />
+                    <div *ngIf="submitted &amp;&amp; registerForm.controls.email.errors" class="text-danger">
+                      <div *ngIf="registerForm.controls.email.errors.required">Please enter a valid EmailId</div>
+                      <div *ngIf="registerForm.controls.email.errors.pattern">Please enter a valid EmailId</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="md-form">
+                    <label for="inputZip">Zip Code</label>
+                    <input type="text" class="form-control" id="inputZip" formControlName="zipCode" />
+                    
+                  </div>
+                </div>
+              </div>
+              
+              
+              
+              <hr>
+              <hr>
+              <br><br><br><br>
+  
+              <button type="submit" class="btn btn-primary" style="float:right;">Submit</button>
+            
+             
+            </form>
+            
+        </div>
+      </div>
+      </mat-drawer-content>
+    </mat-drawer-container>
+  
+  
+  

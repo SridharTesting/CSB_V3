@@ -1,0 +1,45 @@
+
+
+<app-header></app-header>
+  <div class="title mt-4" style="color: #00416d;">
+    <h1> Organisation Survey Questionnaire</h1>
+  </div>
+  <div class="stepwizard mx-auto" >
+  <mat-horizontal-stepper #stepper *ngIf="showcsb" class="pull-right" [@.disabled] = "true" >
+    
+
+    <mat-step *ngFor="let m of categories;let count = index;let first = first ;let last = last;" class="stepwizard-row setup-panel" active ="true" >
+      <ng-template matStepLabel>{{m}}</ng-template>
+
+      <div class="align-middle mx-auto" class="stepwizard-step">
+      <div *ngFor="let q of arraytobackend;let i = index"  [formGroup]="q" class="quest-content">
+        <div *ngIf="q.controls.questioner_category.value == m">
+          <div class="mx-auto mt-3 question">{{ q.controls.questionName.value }}</div>
+          <div *ngIf="q.controls.response_Type.value == 'Dropdown'" class="mt-3">
+            <mat-select placeholder="Select Appropriate Response" [(ngModel)]="q.controls.selected_val.value"
+            formControlName = "selectedoption">
+              <mat-option  *ngFor="let c of q.get('options')['controls']" [value]="c.value" >
+                {{c.value}}
+              </mat-option>
+            </mat-select>
+          </div>
+          <div *ngIf="q.controls.response_Type.value == 'Radio'" class="mt-3">
+            <mat-radio-group aria-label="Select an option" [(ngModel)]="q.controls.selected_val.value" formControlName = "selectedoption" >
+              <mat-radio-button  [value]="c.value" *ngFor="let c of q.get('options')['controls']" class="quest-content" class="ml-3">{{c.value}}</mat-radio-button>
+            </mat-radio-group>
+          </div>
+      </div>
+    </div>
+    <div class="quest-content mt-3">
+      <div class="">
+        <button  class="btn btn-outline-primary pull-left" matStepperPrevious *ngIf="count!=0">Previous</button>
+              <button  class="btn btn-primary pull-right" matStepperNext *ngIf="!last">Continue</button>
+              <button type="submit"  class="btn btn-primary pull-right" *ngIf="last" (click)="submitq()">Submit</button>
+      </div>
+  </div>
+  </div>
+     </mat-step>
+  </mat-horizontal-stepper>
+</div>
+  
+  

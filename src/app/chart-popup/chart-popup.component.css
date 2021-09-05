@@ -1,0 +1,91 @@
+/* .column
+{
+  color: white;
+  background-color: #326689;
+  text-align: left;
+}
+.tablecolour
+{
+  background-color: #D3D3D3;
+}
+
+td, th {
+
+  text-align: left;
+  padding: 19px;
+}
+
+tr:nth-child(odd) {
+  background-color: #dddddd;
+} */
+
+::ng-deep .mat-progress-bar-fill::after {
+  background-color: #5AA469;
+}
+
+::ng-deep .mat-progress-bar-buffer {
+  background: #E4E8EB;
+}
+
+/* .table{
+
+margin-bottom: 0rem;
+} */
+
+
+.column
+          {
+           
+            text-align: left;
+          }
+          .tablecolour
+          {
+            background-color: white;
+          }
+
+           th {
+            border-bottom-color: rgba(65, 128, 245, 0.6);
+
+            text-align: center;
+            padding: 19px;
+          }
+
+          tr{
+                       
+            border-bottom: 1px solid rgba(65, 128, 245, 0.6);
+          }
+          td{
+                       
+            border-bottom: 1px solid rgba(65, 128, 245, 0.6);
+          }
+        .column{
+          border-bottom: 1px solid rgba(65, 128, 245, 0.6); 
+          font-family: Open Sans;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 23px;
+    
+        
+        
+          
+          color: rgba(34, 40, 49, 0.9);
+          
+          
+        }
+        .mat-cell{
+          font-family: Open Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 23px;
+
+
+
+text-align: left;
+
+
+
+color: rgba(34, 40, 49, 0.9);
+
+        }

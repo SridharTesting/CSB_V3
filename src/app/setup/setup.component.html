@@ -1,0 +1,39 @@
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="article_title">
+    <h1 id="top">
+       Setup
+    </h1>
+  </div>
+  
+  <mat-divider id="divider"></mat-divider><br><br>
+ <!--<div class="rates">
+   <mat-radio-group aria-label="Select an option">
+      <mat-radio-button value="1" name='component' style="margin-left: 355px;">Organization</mat-radio-button>
+      <mat-radio-button value="2" name='component'style="margin-left: 142px;">Line of business</mat-radio-button>
+      <mat-radio-button value="3" name='component'style="margin-left: 129px;">Users tool</mat-radio-button>
+    <mat-radio-button value="4"name='component' style="margin-left: 103px;">Business Process</mat-radio-button>
+   </mat-radio-group>
+   
+
+<br>
+<br>
+<br><br><br><br><br><br><br><br><br><br><br>
+-->
+<div class="card">
+<mat-radio-group
+  aria-labelledby="example-radio-group-label"
+  class="example-radio-group"
+  [(ngModel)]="favoriteComponent" style="font-size: 18px;">
+  <mat-radio-button class="example-radio-button" *ngFor="let season of seasons" [value]="season">
+    {{season}}
+  </mat-radio-button>
+</mat-radio-group>
+</div>
+<div style="text-align: center;margin-top:70px;margin-right:250px;">Download {{favoriteComponent}} template</div>
+<button class="btn"><i class="fa fa-download"></i></button><br>
+<form action="/action_page.php" style="margin-left: 614px;">
+  <label for="myfile"></label>
+  <input type="file" id="myfile" name="myfile" style="padding-top: 107px;"><br><br>
+  <input type="submit" style="margin-top: -15px;color: darkgrey;">
+</form>
